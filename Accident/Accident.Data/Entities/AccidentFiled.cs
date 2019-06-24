@@ -19,5 +19,7 @@ namespace Accident.Data
 		public string PartialVictimName { get; set; }
 
 		public string PartialViolationName { get; set; }
+		public string PartialCity { get; set; }
+		public string PartialState { get; set; }
 	}
 }
