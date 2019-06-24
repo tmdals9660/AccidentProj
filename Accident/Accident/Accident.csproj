@@ -68,6 +68,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Control\LocationInfoControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\LocationInfoControl.Designer.cs">
+      <DependentUpon>LocationInfoControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Control\SearchFilterControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -85,6 +91,12 @@
     </Compile>
     <Compile Include="Control\SearchSearchControl.Designer.cs">
       <DependentUpon>SearchSearchControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="From\LocationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="From\LocationForm.Designer.cs">
+      <DependentUpon>LocationForm.cs</DependentUpon>
     </Compile>
     <Compile Include="From\Login.cs">
       <SubType>Form</SubType>
@@ -106,6 +118,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Control\LocationInfoControl.resx">
+      <DependentUpon>LocationInfoControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Control\SearchFilterControl.resx">
       <DependentUpon>SearchFilterControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -114,6 +129,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Control\SearchSearchControl.resx">
       <DependentUpon>SearchSearchControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="From\LocationForm.resx">
+      <DependentUpon>LocationForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="From\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

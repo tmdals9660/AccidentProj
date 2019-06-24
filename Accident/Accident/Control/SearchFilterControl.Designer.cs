@@ -43,11 +43,15 @@
             this.ccbDNN = new System.Windows.Forms.CheckBox();
             this.ccbDOW = new System.Windows.Forms.CheckBox();
             this.ccbDate = new System.Windows.Forms.CheckBox();
+            this.ccbCity = new System.Windows.Forms.CheckBox();
+            this.ccbState = new System.Windows.Forms.CheckBox();
             this.gbOption.SuspendLayout();
             this.SuspendLayout();
             // 
             // gbOption
             // 
+            this.gbOption.Controls.Add(this.ccbCity);
+            this.gbOption.Controls.Add(this.ccbState);
             this.gbOption.Controls.Add(this.btnCommit);
             this.gbOption.Controls.Add(this.ccbVictim);
             this.gbOption.Controls.Add(this.ccbAttacker);
@@ -66,13 +70,13 @@
             this.gbOption.Location = new System.Drawing.Point(0, 0);
             this.gbOption.Margin = new System.Windows.Forms.Padding(5, 5, 5, 10);
             this.gbOption.Name = "gbOption";
-            this.gbOption.Size = new System.Drawing.Size(704, 69);
+            this.gbOption.Size = new System.Drawing.Size(704, 79);
             this.gbOption.TabIndex = 7;
             this.gbOption.TabStop = false;
             // 
             // btnCommit
             // 
-            this.btnCommit.Location = new System.Drawing.Point(588, 36);
+            this.btnCommit.Location = new System.Drawing.Point(623, 33);
             this.btnCommit.Name = "btnCommit";
             this.btnCommit.Size = new System.Drawing.Size(75, 23);
             this.btnCommit.TabIndex = 33;
@@ -83,7 +87,7 @@
             // ccbVictim
             // 
             this.ccbVictim.AutoSize = true;
-            this.ccbVictim.Location = new System.Drawing.Point(499, 40);
+            this.ccbVictim.Location = new System.Drawing.Point(407, 56);
             this.ccbVictim.Name = "ccbVictim";
             this.ccbVictim.Size = new System.Drawing.Size(72, 16);
             this.ccbVictim.TabIndex = 32;
@@ -93,7 +97,7 @@
             // ccbAttacker
             // 
             this.ccbAttacker.AutoSize = true;
-            this.ccbAttacker.Location = new System.Drawing.Point(407, 40);
+            this.ccbAttacker.Location = new System.Drawing.Point(315, 56);
             this.ccbAttacker.Name = "ccbAttacker";
             this.ccbAttacker.Size = new System.Drawing.Size(72, 16);
             this.ccbAttacker.TabIndex = 31;
@@ -103,7 +107,7 @@
             // ccbLoadForm
             // 
             this.ccbLoadForm.AutoSize = true;
-            this.ccbLoadForm.Location = new System.Drawing.Point(315, 40);
+            this.ccbLoadForm.Location = new System.Drawing.Point(217, 56);
             this.ccbLoadForm.Name = "ccbLoadForm";
             this.ccbLoadForm.Size = new System.Drawing.Size(72, 16);
             this.ccbLoadForm.TabIndex = 30;
@@ -115,7 +119,7 @@
             this.ccbAccidentType.AutoSize = true;
             this.ccbAccidentType.Checked = true;
             this.ccbAccidentType.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.ccbAccidentType.Location = new System.Drawing.Point(125, 40);
+            this.ccbAccidentType.Location = new System.Drawing.Point(33, 56);
             this.ccbAccidentType.Name = "ccbAccidentType";
             this.ccbAccidentType.Size = new System.Drawing.Size(72, 16);
             this.ccbAccidentType.TabIndex = 29;
@@ -125,7 +129,7 @@
             // ccbViolation
             // 
             this.ccbViolation.AutoSize = true;
-            this.ccbViolation.Location = new System.Drawing.Point(223, 40);
+            this.ccbViolation.Location = new System.Drawing.Point(125, 56);
             this.ccbViolation.Name = "ccbViolation";
             this.ccbViolation.Size = new System.Drawing.Size(72, 16);
             this.ccbViolation.TabIndex = 28;
@@ -137,7 +141,7 @@
             this.ccbAccientFiled.AutoSize = true;
             this.ccbAccientFiled.Checked = true;
             this.ccbAccientFiled.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.ccbAccientFiled.Location = new System.Drawing.Point(33, 40);
+            this.ccbAccientFiled.Location = new System.Drawing.Point(407, 37);
             this.ccbAccientFiled.Name = "ccbAccientFiled";
             this.ccbAccientFiled.Size = new System.Drawing.Size(72, 16);
             this.ccbAccientFiled.TabIndex = 27;
@@ -147,7 +151,7 @@
             // ccbInjury
             // 
             this.ccbInjury.AutoSize = true;
-            this.ccbInjury.Location = new System.Drawing.Point(591, 18);
+            this.ccbInjury.Location = new System.Drawing.Point(315, 37);
             this.ccbInjury.Name = "ccbInjury";
             this.ccbInjury.Size = new System.Drawing.Size(72, 16);
             this.ccbInjury.TabIndex = 26;
@@ -157,17 +161,17 @@
             // ccbSlight
             // 
             this.ccbSlight.AutoSize = true;
-            this.ccbSlight.Location = new System.Drawing.Point(499, 18);
+            this.ccbSlight.Location = new System.Drawing.Point(217, 37);
             this.ccbSlight.Name = "ccbSlight";
-            this.ccbSlight.Size = new System.Drawing.Size(60, 16);
+            this.ccbSlight.Size = new System.Drawing.Size(72, 16);
             this.ccbSlight.TabIndex = 25;
-            this.ccbSlight.Text = "경상자";
+            this.ccbSlight.Text = "경상자수";
             this.ccbSlight.UseVisualStyleBackColor = true;
             // 
             // ccbSeriously
             // 
             this.ccbSeriously.AutoSize = true;
-            this.ccbSeriously.Location = new System.Drawing.Point(407, 18);
+            this.ccbSeriously.Location = new System.Drawing.Point(125, 37);
             this.ccbSeriously.Name = "ccbSeriously";
             this.ccbSeriously.Size = new System.Drawing.Size(72, 16);
             this.ccbSeriously.TabIndex = 24;
@@ -177,7 +181,7 @@
             // ccbDeath
             // 
             this.ccbDeath.AutoSize = true;
-            this.ccbDeath.Location = new System.Drawing.Point(315, 18);
+            this.ccbDeath.Location = new System.Drawing.Point(33, 37);
             this.ccbDeath.Name = "ccbDeath";
             this.ccbDeath.Size = new System.Drawing.Size(72, 16);
             this.ccbDeath.TabIndex = 23;
@@ -187,7 +191,7 @@
             // ccbDNN
             // 
             this.ccbDNN.AutoSize = true;
-            this.ccbDNN.Location = new System.Drawing.Point(125, 18);
+            this.ccbDNN.Location = new System.Drawing.Point(315, 18);
             this.ccbDNN.Name = "ccbDNN";
             this.ccbDNN.Size = new System.Drawing.Size(54, 16);
             this.ccbDNN.TabIndex = 22;
@@ -197,7 +201,7 @@
             // ccbDOW
             // 
             this.ccbDOW.AutoSize = true;
-            this.ccbDOW.Location = new System.Drawing.Point(223, 18);
+            this.ccbDOW.Location = new System.Drawing.Point(407, 18);
             this.ccbDOW.Name = "ccbDOW";
             this.ccbDOW.Size = new System.Drawing.Size(48, 16);
             this.ccbDOW.TabIndex = 21;
@@ -216,13 +220,37 @@
             this.ccbDate.Text = "날짜/시간";
             this.ccbDate.UseVisualStyleBackColor = true;
             // 
+            // ccbCity
+            // 
+            this.ccbCity.AutoSize = true;
+            this.ccbCity.Checked = true;
+            this.ccbCity.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.ccbCity.Location = new System.Drawing.Point(125, 18);
+            this.ccbCity.Name = "ccbCity";
+            this.ccbCity.Size = new System.Drawing.Size(54, 16);
+            this.ccbCity.TabIndex = 35;
+            this.ccbCity.Text = "시/도";
+            this.ccbCity.UseVisualStyleBackColor = true;
+            // 
+            // ccbState
+            // 
+            this.ccbState.AutoSize = true;
+            this.ccbState.Checked = true;
+            this.ccbState.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.ccbState.Location = new System.Drawing.Point(217, 18);
+            this.ccbState.Name = "ccbState";
+            this.ccbState.Size = new System.Drawing.Size(72, 16);
+            this.ccbState.TabIndex = 34;
+            this.ccbState.Text = "시/군/구";
+            this.ccbState.UseVisualStyleBackColor = true;
+            // 
             // SearchFilterControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.gbOption);
             this.Name = "SearchFilterControl";
-            this.Size = new System.Drawing.Size(704, 69);
+            this.Size = new System.Drawing.Size(704, 79);
             this.gbOption.ResumeLayout(false);
             this.gbOption.PerformLayout();
             this.ResumeLayout(false);
@@ -246,5 +274,7 @@
         private System.Windows.Forms.CheckBox ccbDOW;
         private System.Windows.Forms.CheckBox ccbDate;
         private System.Windows.Forms.Button btnCommit;
+        private System.Windows.Forms.CheckBox ccbCity;
+        private System.Windows.Forms.CheckBox ccbState;
     }
 }

@@ -26,7 +26,9 @@ namespace Accident.Data
                                 ViolationName = x.Violation.ViiolationName,
                                 RoadFormName2 = x.RoadForm.RoadFormName,
                                 AttackerName = x.AttackerType.AttackerTypeName,
-                                VictimName = x.VictimType.VictimTypeName
+                                VictimName = x.VictimType.VictimTypeName,
+                                CityName = x.Location.City.CityName,
+                                StateName = x.Location.State.StateName
                             };
 
                 if (id.HasValue)
@@ -42,6 +44,8 @@ namespace Accident.Data
                     x.Incident.PartialRoadFormName = x.RoadFormName2;
                     x.Incident.PartialAttackerName = x.AttackerName;
                     x.Incident.PartialVictimName = x.VictimName;
+                    x.Incident.PartialCity = x.CityName;
+                    x.Incident.PartialState = x.StateName;
                 }
 
                 return list.ConvertAll(x => x.Incident);

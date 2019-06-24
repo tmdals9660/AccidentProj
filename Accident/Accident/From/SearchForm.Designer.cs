@@ -36,9 +36,9 @@
             // uscList
             // 
             this.uscList.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.uscList.Location = new System.Drawing.Point(0, 143);
+            this.uscList.Location = new System.Drawing.Point(0, 156);
             this.uscList.Name = "uscList";
-            this.uscList.Size = new System.Drawing.Size(726, 352);
+            this.uscList.Size = new System.Drawing.Size(726, 339);
             this.uscList.TabIndex = 2;
             // 
             // uscFilter
@@ -46,10 +46,10 @@
             this.uscFilter.Dock = System.Windows.Forms.DockStyle.Top;
             this.uscFilter.Location = new System.Drawing.Point(0, 76);
             this.uscFilter.Name = "uscFilter";
-            this.uscFilter.Size = new System.Drawing.Size(726, 67);
+            this.uscFilter.Size = new System.Drawing.Size(726, 80);
             this.uscFilter.TabIndex = 1;
             this.uscFilter.Visible = false;
-            this.uscFilter.FilterCheck += new System.EventHandler<Accident.Control.SearchFilterControl.FilterCheckEventArgs>(this.UscFilter_FilterCheck);
+            this.uscFilter.OptionCheck += new System.EventHandler<Accident.Control.SearchFilterControl.OptionCheckEventArgs>(this.UscFilter_OptionCheck);
             // 
             // uscSearch
             // 

@@ -18,66 +18,68 @@ namespace Accident.Control
         }
 
 
+        #region OptionCheck event things for C# 3.0
+        public event EventHandler<OptionCheckEventArgs> OptionCheck;
 
-
-        #region FilterCheck event things for C# 3.0
-        public event EventHandler<FilterCheckEventArgs> FilterCheck;
-
-        protected virtual void OnFilterCheck(FilterCheckEventArgs e)
+        protected virtual void OnOptionCheck(OptionCheckEventArgs e)
         {
-            if (FilterCheck != null)
-                FilterCheck(this, e);
+            if (OptionCheck != null)
+                OptionCheck(this, e);
         }
 
-        private FilterCheckEventArgs OnFilterCheck(bool _date, bool dnn, bool wod, bool death, bool serious, bool slight, bool injury, bool filed, bool type, bool violation, bool road, bool attacker, bool victim)
+        private OptionCheckEventArgs OnOptionCheck(bool dateTime, bool city, bool state, bool dayAndNight, bool dayOfWeek, bool deathCount, bool seriouslyCount, bool slightlyCount, bool injuryCount, bool accidentField, bool accidentType, bool violation, bool roadForm, bool attacker, bool victim)
         {
-            FilterCheckEventArgs args = new FilterCheckEventArgs(_date, dnn, wod, death, serious, slight, injury, filed, type, violation, road, attacker, victim);
-            OnFilterCheck(args);
+            OptionCheckEventArgs args = new OptionCheckEventArgs(dateTime, city, state, dayAndNight, dayOfWeek, deathCount, seriouslyCount, slightlyCount, injuryCount, accidentField, accidentType, violation, roadForm, attacker, victim);
+            OnOptionCheck(args);
 
             return args;
         }
 
-        private FilterCheckEventArgs OnFilterCheckForOut()
+        private OptionCheckEventArgs OnOptionCheckForOut()
         {
-            FilterCheckEventArgs args = new FilterCheckEventArgs();
-            OnFilterCheck(args);
+            OptionCheckEventArgs args = new OptionCheckEventArgs();
+            OnOptionCheck(args);
 
             return args;
         }
 
-        public class FilterCheckEventArgs : EventArgs
+        public class OptionCheckEventArgs : EventArgs
         {
-            public bool __date { get; set; }
-            public bool Dnn { get; set; }
-            public bool Wod { get; set; }
-            public bool Death { get; set; }
-            public bool Serious { get; set; }
-            public bool Slight { get; set; }
-            public bool Injury { get; set; }
-            public bool Filed { get; set; }
-            public bool Type { get; set; }
+            public bool DateTime { get; set; }
+            public bool City { get; set; }
+            public bool State { get; set; }
+            public bool DayAndNight { get; set; }
+            public bool DayOfWeek { get; set; }
+            public bool DeathCount { get; set; }
+            public bool SeriouslyCount { get; set; }
+            public bool SlightlyCount { get; set; }
+            public bool InjuryCount { get; set; }
+            public bool AccidentField { get; set; }
+            public bool AccidentType { get; set; }
             public bool Violation { get; set; }
-            public bool Road { get; set; }
+            public bool RoadForm { get; set; }
             public bool Attacker { get; set; }
             public bool Victim { get; set; }
 
-            public FilterCheckEventArgs()
+            public OptionCheckEventArgs()
             {
             }
 
-            public FilterCheckEventArgs(bool _date, bool dnn, bool wod, bool death, bool serious, bool slight, bool injury, bool filed, bool type, bool violation, bool road, bool attacker, bool victim)
+            public OptionCheckEventArgs(bool dateTime, bool city, bool state, bool dayAndNight, bool dayOfWeek, bool deathCount, bool seriouslyCount, bool slightlyCount, bool injuryCount, bool accidentField, bool accidentType, bool violation, bool roadForm, bool attacker, bool victim)
             {
-                __date = _date;
-                Dnn = dnn;
-                Wod = wod;
-                Death = death;
-                Serious = serious;
-                Slight = slight;
-                Injury = injury;
-                Filed = filed;
-                Type = type;
+                DateTime = dateTime;
+                City = city;
+                State = state;
+                DayAndNight = dayAndNight;
+                DayOfWeek = dayOfWeek;
+                DeathCount = deathCount;
+                SeriouslyCount = seriouslyCount;
+                SlightlyCount = slightlyCount;
+                InjuryCount = injuryCount;
+                AccidentField = accidentField;
+                AccidentType = accidentType;
                 Violation = violation;
-                Road = road;
+                RoadForm = roadForm;
                 Attacker = attacker;
                 Victim = victim;
             }
@@ -86,11 +88,12 @@ namespace Accident.Control
 
         private void BtnCommit_Click(object sender, EventArgs e)
         {
-            OnFilterCheck(ccbDate.Checked, ccbDNN.Checked, ccbDOW.Checked,
-                ccbDeath.Checked, ccbSeriously.Checked, ccbSlight.Checked,
-                ccbInjury.Checked, ccbAccientFiled.Checked, ccbAccidentType.Checked,
-                ccbViolation.Checked, ccbLoadForm.Checked, ccbAttacker.Checked,
-                ccbVictim.Checked);
+            
+            OnOptionCheck(ccbDate.Checked, ccbCity.Checked, ccbState.Checked, ccbDNN.Checked, ccbDOW.Checked,
+               ccbDeath.Checked, ccbSeriously.Checked, ccbSlight.Checked,
+               ccbInjury.Checked, ccbAccientFiled.Checked, ccbAccidentType.Checked,
+               ccbViolation.Checked, ccbLoadForm.Checked, ccbAttacker.Checked,
+               ccbVictim.Checked);
         }
     }
 }
