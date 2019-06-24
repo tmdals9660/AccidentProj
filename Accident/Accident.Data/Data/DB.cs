@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Accident.Data
 {
-	class DB
+	public class DB
 	{
 		static DB()
 		{

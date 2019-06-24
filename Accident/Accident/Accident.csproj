@@ -46,6 +46,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Control\SearchFilterControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\SearchFilterControl.Designer.cs">
+      <DependentUpon>SearchFilterControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\SearchListControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\SearchListControl.Designer.cs">
+      <DependentUpon>SearchListControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\SearchSearchControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\SearchSearchControl.Designer.cs">
+      <DependentUpon>SearchSearchControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="From\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,6 +78,15 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Control\SearchFilterControl.resx">
+      <DependentUpon>SearchFilterControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\SearchListControl.resx">
+      <DependentUpon>SearchListControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Control\SearchSearchControl.resx">
+      <DependentUpon>SearchSearchControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="From\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -94,8 +121,6 @@
       <Name>Accident.Data</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Control\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
