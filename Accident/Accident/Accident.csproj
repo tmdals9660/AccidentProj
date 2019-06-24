@@ -68,6 +68,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Control\LocationInfoControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\LocationInfoControl.Designer.cs">
+      <DependentUpon>LocationInfoControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Control\SearchFilterControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -92,6 +98,18 @@
     <Compile Include="From\AddAdminInfo.Designer.cs">
       <DependentUpon>AddAdminInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="From\Admin\Modify.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="From\Admin\Modify.Designer.cs">
+      <DependentUpon>Modify.cs</DependentUpon>
+    </Compile>
+    <Compile Include="From\LocationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="From\LocationForm.Designer.cs">
+      <DependentUpon>LocationForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="From\Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,6 +130,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Control\LocationInfoControl.resx">
+      <DependentUpon>LocationInfoControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Control\SearchFilterControl.resx">
       <DependentUpon>SearchFilterControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -123,6 +144,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="From\AddAdminInfo.resx">
       <DependentUpon>AddAdminInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="From\Admin\Modify.resx">
+      <DependentUpon>Modify.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="From\LocationForm.resx">
+      <DependentUpon>LocationForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="From\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -142,6 +169,8 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="bin\Debug\Accident.Data.dll.config" />
+    <None Include="bin\Debug\Accident.exe.config" />
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Accident.Data.City.datasource" />
     <None Include="Properties\DataSources\Accident.Data.Incident.datasource" />
@@ -175,6 +204,22 @@
       <Project>{10d6a1b3-c801-42c4-8882-7fe80f37fe67}</Project>
       <Name>Accident.Data</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\Accident.Data.dll" />
+    <Content Include="bin\Debug\Accident.Data.pdb" />
+    <Content Include="bin\Debug\Accident.exe" />
+    <Content Include="bin\Debug\Accident.pdb" />
+    <Content Include="bin\Debug\AdminInfo.txt" />
+    <Content Include="bin\Debug\EntityFramework.dll" />
+    <Content Include="bin\Debug\EntityFramework.SqlServer.dll" />
+    <Content Include="bin\Debug\EntityFramework.SqlServer.xml" />
+    <Content Include="bin\Debug\EntityFramework.xml" />
+    <Content Include="bin\Debug\ko\EntityFramework.resources.dll" />
+    <Content Include="bin\Debug\ko\EntityFramework.SqlServer.resources.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Release\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

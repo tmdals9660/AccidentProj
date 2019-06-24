@@ -33,7 +33,6 @@ namespace Accident.From
 				wr.Close();
 				Close();
 				MessageBox.Show("Success");
-
 			}
 			else
 				MessageBox.Show("Fail");

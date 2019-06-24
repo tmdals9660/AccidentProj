@@ -9,14 +9,7 @@ namespace Accident.Data
 		{
 
 		}
-
-
-		public List<int> Search(int incId)
-		{
-			using (AccidentEntities context = new AccidentEntities())
-			{
-				return context.Locations.Select(x => x.IncidentId).ToList();
-			}
-		}
-	}
+       
+       
+    }
 }

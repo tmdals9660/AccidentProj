@@ -20,7 +20,7 @@ namespace Accident.Control
 
         private void ChkFilter_CheckedChanged(object sender, EventArgs e)
         {
-            if (chkFilter.Checked) OnSeachChangeClick();
+            if (chkPrintOpt.Checked) OnSeachChangeClick();
             else OnSeachChangeClickOff();
         }
         #region SeachChangeClick event things for C# 3.0
@@ -106,9 +106,11 @@ namespace Accident.Control
         private void BtnSearch_Click(object sender, EventArgs e)
         {
             int? id = cbbCites.Enabled ? (int?)cbbCites.SelectedValue : null;
-            DateTime? startDate = dateTimePicker1.Value ; 
-            DateTime? finishDate = dateTimePicker2.Value;
-
+            DateTime? startDate = dateTimePicker1.Enabled ?
+                dateTimePicker1.Value : new DateTime(2017,12,31);
+            DateTime? finishDate = dateTimePicker2.Enabled ?
+               dateTimePicker2.Value : new DateTime(2019, 1, 1);
+                     
             OnSearchClick(id, startDate, finishDate);
          }
 
@@ -174,6 +176,34 @@ namespace Accident.Control
             bdsCities.DataSource = DB.City.GetAll();
         }
 
-       
+        private void Label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnWeek_Click(object sender, EventArgs e)
+        {
+            dateTimePicker2.Value = dateTimePicker1.Value.AddDays(7);
+        }
+
+        private void BtnMonth_Click(object sender, EventArgs e)
+        {
+            MonthAddFunc(1);
+        }
+
+        public void MonthAddFunc(int month)
+        {
+            dateTimePicker2.Value = dateTimePicker1.Value.AddMonths(month);
+        }
+
+        private void BtnMonth3_Click(object sender, EventArgs e)
+        {
+            MonthAddFunc(3);
+        }
+
+        private void BtnMonth6_Click(object sender, EventArgs e)
+        {
+            MonthAddFunc(6);
+        }
     }
 }

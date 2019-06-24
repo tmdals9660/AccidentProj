@@ -29,9 +29,15 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvInccident = new System.Windows.Forms.DataGridView();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.sslCount = new System.Windows.Forms.ToolStripStatusLabel();
             this.bdsIncident = new System.Windows.Forms.BindingSource(this.components);
             this.dateAndTimeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PartialCity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PartialState = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dayNightDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dayOfWeekDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.deadCountDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -44,12 +50,9 @@
             this.PartialRoadFormName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.partialAttackerNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.partialVictimNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.sslCount = new System.Windows.Forms.ToolStripStatusLabel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInccident)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bdsIncident)).BeginInit();
             this.statusStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsIncident)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvInccident
@@ -59,9 +62,19 @@
             this.dgvInccident.AllowUserToResizeColumns = false;
             this.dgvInccident.AllowUserToResizeRows = false;
             this.dgvInccident.AutoGenerateColumns = false;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvInccident.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvInccident.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvInccident.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dateAndTimeDataGridViewTextBoxColumn,
+            this.PartialCity,
+            this.PartialState,
             this.dayNightDataGridViewTextBoxColumn,
             this.dayOfWeekDataGridViewTextBoxColumn,
             this.deadCountDataGridViewTextBoxColumn,
@@ -77,105 +90,14 @@
             this.dgvInccident.DataSource = this.bdsIncident;
             this.dgvInccident.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvInccident.Location = new System.Drawing.Point(0, 0);
-            this.dgvInccident.MultiSelect = false;
             this.dgvInccident.Name = "dgvInccident";
+            this.dgvInccident.ReadOnly = true;
             this.dgvInccident.RowHeadersVisible = false;
             this.dgvInccident.RowTemplate.Height = 23;
             this.dgvInccident.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvInccident.Size = new System.Drawing.Size(628, 360);
+            this.dgvInccident.Size = new System.Drawing.Size(628, 338);
             this.dgvInccident.TabIndex = 3;
-            // 
-            // bdsIncident
-            // 
-            this.bdsIncident.DataSource = typeof(Accident.Data.Incident);
-            // 
-            // dateAndTimeDataGridViewTextBoxColumn
-            // 
-            this.dateAndTimeDataGridViewTextBoxColumn.DataPropertyName = "DateAndTime";
-            this.dateAndTimeDataGridViewTextBoxColumn.HeaderText = "날짜";
-            this.dateAndTimeDataGridViewTextBoxColumn.Name = "dateAndTimeDataGridViewTextBoxColumn";
-            // 
-            // dayNightDataGridViewTextBoxColumn
-            // 
-            this.dayNightDataGridViewTextBoxColumn.DataPropertyName = "DayNight";
-            this.dayNightDataGridViewTextBoxColumn.HeaderText = "주/야";
-            this.dayNightDataGridViewTextBoxColumn.Name = "dayNightDataGridViewTextBoxColumn";
-            this.dayNightDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // dayOfWeekDataGridViewTextBoxColumn
-            // 
-            this.dayOfWeekDataGridViewTextBoxColumn.DataPropertyName = "DayOfWeek";
-            this.dayOfWeekDataGridViewTextBoxColumn.HeaderText = "요일";
-            this.dayOfWeekDataGridViewTextBoxColumn.Name = "dayOfWeekDataGridViewTextBoxColumn";
-            this.dayOfWeekDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // deadCountDataGridViewTextBoxColumn
-            // 
-            this.deadCountDataGridViewTextBoxColumn.DataPropertyName = "DeadCount";
-            this.deadCountDataGridViewTextBoxColumn.HeaderText = "사망자수";
-            this.deadCountDataGridViewTextBoxColumn.Name = "deadCountDataGridViewTextBoxColumn";
-            this.deadCountDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // seriouslyCountDataGridViewTextBoxColumn
-            // 
-            this.seriouslyCountDataGridViewTextBoxColumn.DataPropertyName = "SeriouslyCount";
-            this.seriouslyCountDataGridViewTextBoxColumn.HeaderText = "중상자수";
-            this.seriouslyCountDataGridViewTextBoxColumn.Name = "seriouslyCountDataGridViewTextBoxColumn";
-            this.seriouslyCountDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // slightlyCountDataGridViewTextBoxColumn
-            // 
-            this.slightlyCountDataGridViewTextBoxColumn.DataPropertyName = "SlightlyCount";
-            this.slightlyCountDataGridViewTextBoxColumn.HeaderText = "경상자수";
-            this.slightlyCountDataGridViewTextBoxColumn.Name = "slightlyCountDataGridViewTextBoxColumn";
-            this.slightlyCountDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // injuryCountDataGridViewTextBoxColumn
-            // 
-            this.injuryCountDataGridViewTextBoxColumn.DataPropertyName = "InjuryCount";
-            this.injuryCountDataGridViewTextBoxColumn.HeaderText = "부상자수";
-            this.injuryCountDataGridViewTextBoxColumn.Name = "injuryCountDataGridViewTextBoxColumn";
-            this.injuryCountDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // partialAccidentFiledNameDataGridViewTextBoxColumn
-            // 
-            this.partialAccidentFiledNameDataGridViewTextBoxColumn.DataPropertyName = "PartialAccidentFiledName";
-            this.partialAccidentFiledNameDataGridViewTextBoxColumn.HeaderText = "사고유형";
-            this.partialAccidentFiledNameDataGridViewTextBoxColumn.Name = "partialAccidentFiledNameDataGridViewTextBoxColumn";
-            // 
-            // partialAccidentTypeNameDataGridViewTextBoxColumn
-            // 
-            this.partialAccidentTypeNameDataGridViewTextBoxColumn.DataPropertyName = "PartialAccidentTypeName";
-            this.partialAccidentTypeNameDataGridViewTextBoxColumn.HeaderText = "사고형태";
-            this.partialAccidentTypeNameDataGridViewTextBoxColumn.Name = "partialAccidentTypeNameDataGridViewTextBoxColumn";
-            // 
-            // partialViolationNameDataGridViewTextBoxColumn
-            // 
-            this.partialViolationNameDataGridViewTextBoxColumn.DataPropertyName = "PartialViolationName";
-            this.partialViolationNameDataGridViewTextBoxColumn.HeaderText = "법규위반유형";
-            this.partialViolationNameDataGridViewTextBoxColumn.Name = "partialViolationNameDataGridViewTextBoxColumn";
-            this.partialViolationNameDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // PartialRoadFormName
-            // 
-            this.PartialRoadFormName.DataPropertyName = "PartialRoadFormName";
-            this.PartialRoadFormName.HeaderText = "도로형태";
-            this.PartialRoadFormName.Name = "PartialRoadFormName";
-            this.PartialRoadFormName.Visible = false;
-            // 
-            // partialAttackerNameDataGridViewTextBoxColumn
-            // 
-            this.partialAttackerNameDataGridViewTextBoxColumn.DataPropertyName = "PartialAttackerName";
-            this.partialAttackerNameDataGridViewTextBoxColumn.HeaderText = "가해자유형";
-            this.partialAttackerNameDataGridViewTextBoxColumn.Name = "partialAttackerNameDataGridViewTextBoxColumn";
-            this.partialAttackerNameDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // partialVictimNameDataGridViewTextBoxColumn
-            // 
-            this.partialVictimNameDataGridViewTextBoxColumn.DataPropertyName = "PartialVictimName";
-            this.partialVictimNameDataGridViewTextBoxColumn.HeaderText = "피해자유형";
-            this.partialVictimNameDataGridViewTextBoxColumn.Name = "partialVictimNameDataGridViewTextBoxColumn";
-            this.partialVictimNameDataGridViewTextBoxColumn.Visible = false;
+            this.dgvInccident.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvInccident_CellDoubleClick);
             // 
             // statusStrip1
             // 
@@ -200,18 +122,167 @@
             this.sslCount.Size = new System.Drawing.Size(14, 17);
             this.sslCount.Text = "0";
             // 
+            // bdsIncident
+            // 
+            this.bdsIncident.DataSource = typeof(Accident.Data.Incident);
+            // 
+            // dateAndTimeDataGridViewTextBoxColumn
+            // 
+            this.dateAndTimeDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.dateAndTimeDataGridViewTextBoxColumn.DataPropertyName = "DateAndTime";
+            this.dateAndTimeDataGridViewTextBoxColumn.HeaderText = "날짜";
+            this.dateAndTimeDataGridViewTextBoxColumn.Name = "dateAndTimeDataGridViewTextBoxColumn";
+            this.dateAndTimeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.dateAndTimeDataGridViewTextBoxColumn.Width = 54;
+            // 
+            // PartialCity
+            // 
+            this.PartialCity.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.PartialCity.DataPropertyName = "PartialCity";
+            this.PartialCity.HeaderText = "시/도";
+            this.PartialCity.Name = "PartialCity";
+            this.PartialCity.ReadOnly = true;
+            this.PartialCity.Width = 60;
+            // 
+            // PartialState
+            // 
+            this.PartialState.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.PartialState.DataPropertyName = "PartialState";
+            this.PartialState.HeaderText = "시/군/구";
+            this.PartialState.Name = "PartialState";
+            this.PartialState.ReadOnly = true;
+            this.PartialState.Width = 78;
+            // 
+            // dayNightDataGridViewTextBoxColumn
+            // 
+            this.dayNightDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.dayNightDataGridViewTextBoxColumn.DataPropertyName = "DayNight";
+            this.dayNightDataGridViewTextBoxColumn.HeaderText = "주/야";
+            this.dayNightDataGridViewTextBoxColumn.Name = "dayNightDataGridViewTextBoxColumn";
+            this.dayNightDataGridViewTextBoxColumn.ReadOnly = true;
+            this.dayNightDataGridViewTextBoxColumn.Visible = false;
+            this.dayNightDataGridViewTextBoxColumn.Width = 60;
+            // 
+            // dayOfWeekDataGridViewTextBoxColumn
+            // 
+            this.dayOfWeekDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.dayOfWeekDataGridViewTextBoxColumn.DataPropertyName = "DayOfWeek";
+            this.dayOfWeekDataGridViewTextBoxColumn.HeaderText = "요일";
+            this.dayOfWeekDataGridViewTextBoxColumn.Name = "dayOfWeekDataGridViewTextBoxColumn";
+            this.dayOfWeekDataGridViewTextBoxColumn.ReadOnly = true;
+            this.dayOfWeekDataGridViewTextBoxColumn.Visible = false;
+            this.dayOfWeekDataGridViewTextBoxColumn.Width = 54;
+            // 
+            // deadCountDataGridViewTextBoxColumn
+            // 
+            this.deadCountDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.deadCountDataGridViewTextBoxColumn.DataPropertyName = "DeadCount";
+            this.deadCountDataGridViewTextBoxColumn.HeaderText = "사망";
+            this.deadCountDataGridViewTextBoxColumn.Name = "deadCountDataGridViewTextBoxColumn";
+            this.deadCountDataGridViewTextBoxColumn.ReadOnly = true;
+            this.deadCountDataGridViewTextBoxColumn.Visible = false;
+            this.deadCountDataGridViewTextBoxColumn.Width = 54;
+            // 
+            // seriouslyCountDataGridViewTextBoxColumn
+            // 
+            this.seriouslyCountDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.seriouslyCountDataGridViewTextBoxColumn.DataPropertyName = "SeriouslyCount";
+            this.seriouslyCountDataGridViewTextBoxColumn.HeaderText = "중상";
+            this.seriouslyCountDataGridViewTextBoxColumn.Name = "seriouslyCountDataGridViewTextBoxColumn";
+            this.seriouslyCountDataGridViewTextBoxColumn.ReadOnly = true;
+            this.seriouslyCountDataGridViewTextBoxColumn.Visible = false;
+            this.seriouslyCountDataGridViewTextBoxColumn.Width = 54;
+            // 
+            // slightlyCountDataGridViewTextBoxColumn
+            // 
+            this.slightlyCountDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.slightlyCountDataGridViewTextBoxColumn.DataPropertyName = "SlightlyCount";
+            this.slightlyCountDataGridViewTextBoxColumn.HeaderText = "경상";
+            this.slightlyCountDataGridViewTextBoxColumn.Name = "slightlyCountDataGridViewTextBoxColumn";
+            this.slightlyCountDataGridViewTextBoxColumn.ReadOnly = true;
+            this.slightlyCountDataGridViewTextBoxColumn.Visible = false;
+            this.slightlyCountDataGridViewTextBoxColumn.Width = 54;
+            // 
+            // injuryCountDataGridViewTextBoxColumn
+            // 
+            this.injuryCountDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.injuryCountDataGridViewTextBoxColumn.DataPropertyName = "InjuryCount";
+            this.injuryCountDataGridViewTextBoxColumn.HeaderText = "부상자";
+            this.injuryCountDataGridViewTextBoxColumn.Name = "injuryCountDataGridViewTextBoxColumn";
+            this.injuryCountDataGridViewTextBoxColumn.ReadOnly = true;
+            this.injuryCountDataGridViewTextBoxColumn.Visible = false;
+            this.injuryCountDataGridViewTextBoxColumn.Width = 66;
+            // 
+            // partialAccidentFiledNameDataGridViewTextBoxColumn
+            // 
+            this.partialAccidentFiledNameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.partialAccidentFiledNameDataGridViewTextBoxColumn.DataPropertyName = "PartialAccidentFiledName";
+            this.partialAccidentFiledNameDataGridViewTextBoxColumn.HeaderText = "사고유형";
+            this.partialAccidentFiledNameDataGridViewTextBoxColumn.Name = "partialAccidentFiledNameDataGridViewTextBoxColumn";
+            this.partialAccidentFiledNameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.partialAccidentFiledNameDataGridViewTextBoxColumn.Width = 78;
+            // 
+            // partialAccidentTypeNameDataGridViewTextBoxColumn
+            // 
+            this.partialAccidentTypeNameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.partialAccidentTypeNameDataGridViewTextBoxColumn.DataPropertyName = "PartialAccidentTypeName";
+            this.partialAccidentTypeNameDataGridViewTextBoxColumn.HeaderText = "사고형태";
+            this.partialAccidentTypeNameDataGridViewTextBoxColumn.Name = "partialAccidentTypeNameDataGridViewTextBoxColumn";
+            this.partialAccidentTypeNameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.partialAccidentTypeNameDataGridViewTextBoxColumn.Width = 78;
+            // 
+            // partialViolationNameDataGridViewTextBoxColumn
+            // 
+            this.partialViolationNameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.partialViolationNameDataGridViewTextBoxColumn.DataPropertyName = "PartialViolationName";
+            this.partialViolationNameDataGridViewTextBoxColumn.HeaderText = "법규위반유형";
+            this.partialViolationNameDataGridViewTextBoxColumn.Name = "partialViolationNameDataGridViewTextBoxColumn";
+            this.partialViolationNameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.partialViolationNameDataGridViewTextBoxColumn.Visible = false;
+            this.partialViolationNameDataGridViewTextBoxColumn.Width = 102;
+            // 
+            // PartialRoadFormName
+            // 
+            this.PartialRoadFormName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.PartialRoadFormName.DataPropertyName = "PartialRoadFormName";
+            this.PartialRoadFormName.HeaderText = "도로형태";
+            this.PartialRoadFormName.Name = "PartialRoadFormName";
+            this.PartialRoadFormName.ReadOnly = true;
+            this.PartialRoadFormName.Visible = false;
+            this.PartialRoadFormName.Width = 78;
+            // 
+            // partialAttackerNameDataGridViewTextBoxColumn
+            // 
+            this.partialAttackerNameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.partialAttackerNameDataGridViewTextBoxColumn.DataPropertyName = "PartialAttackerName";
+            this.partialAttackerNameDataGridViewTextBoxColumn.HeaderText = "가해자유형";
+            this.partialAttackerNameDataGridViewTextBoxColumn.Name = "partialAttackerNameDataGridViewTextBoxColumn";
+            this.partialAttackerNameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.partialAttackerNameDataGridViewTextBoxColumn.Visible = false;
+            this.partialAttackerNameDataGridViewTextBoxColumn.Width = 90;
+            // 
+            // partialVictimNameDataGridViewTextBoxColumn
+            // 
+            this.partialVictimNameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.partialVictimNameDataGridViewTextBoxColumn.DataPropertyName = "PartialVictimName";
+            this.partialVictimNameDataGridViewTextBoxColumn.HeaderText = "피해자유형";
+            this.partialVictimNameDataGridViewTextBoxColumn.Name = "partialVictimNameDataGridViewTextBoxColumn";
+            this.partialVictimNameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.partialVictimNameDataGridViewTextBoxColumn.Visible = false;
+            this.partialVictimNameDataGridViewTextBoxColumn.Width = 90;
+            // 
             // SearchListControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.dgvInccident);
+            this.Controls.Add(this.statusStrip1);
             this.Name = "SearchListControl";
             this.Size = new System.Drawing.Size(628, 360);
             ((System.ComponentModel.ISupportInitialize)(this.dgvInccident)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bdsIncident)).EndInit();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsIncident)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -221,7 +292,12 @@
 
         private System.Windows.Forms.DataGridView dgvInccident;
         private System.Windows.Forms.BindingSource bdsIncident;
+        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
+        private System.Windows.Forms.ToolStripStatusLabel sslCount;
         private System.Windows.Forms.DataGridViewTextBoxColumn dateAndTimeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PartialCity;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PartialState;
         private System.Windows.Forms.DataGridViewTextBoxColumn dayNightDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dayOfWeekDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn deadCountDataGridViewTextBoxColumn;
@@ -234,8 +310,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn PartialRoadFormName;
         private System.Windows.Forms.DataGridViewTextBoxColumn partialAttackerNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn partialVictimNameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.StatusStrip statusStrip1;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
-        private System.Windows.Forms.ToolStripStatusLabel sslCount;
     }
 }
