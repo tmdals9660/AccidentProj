@@ -39,7 +39,7 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.chbCity = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.chkFilter = new System.Windows.Forms.CheckBox();
+            this.chkSearchOpt = new System.Windows.Forms.CheckBox();
             this.btnSearch = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bdsCities)).BeginInit();
@@ -55,7 +55,7 @@
             this.groupBox1.Controls.Add(this.dateTimePicker1);
             this.groupBox1.Controls.Add(this.chbCity);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.chkFilter);
+            this.groupBox1.Controls.Add(this.chkSearchOpt);
             this.groupBox1.Controls.Add(this.btnSearch);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
@@ -126,6 +126,7 @@
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(97, 21);
             this.dateTimePicker1.TabIndex = 7;
+            this.dateTimePicker1.Value = new System.DateTime(2018, 1, 1, 0, 0, 0, 0);
             // 
             // chbCity
             // 
@@ -148,17 +149,17 @@
             this.label1.TabIndex = 4;
             this.label1.Text = "지역 :";
             // 
-            // chkFilter
+            // chkSearchOpt
             // 
-            this.chkFilter.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.chkFilter.AutoSize = true;
-            this.chkFilter.Location = new System.Drawing.Point(451, 16);
-            this.chkFilter.Name = "chkFilter";
-            this.chkFilter.Size = new System.Drawing.Size(48, 16);
-            this.chkFilter.TabIndex = 3;
-            this.chkFilter.Text = "필터";
-            this.chkFilter.UseVisualStyleBackColor = true;
-            this.chkFilter.CheckedChanged += new System.EventHandler(this.ChkFilter_CheckedChanged);
+            this.chkSearchOpt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.chkSearchOpt.AutoSize = true;
+            this.chkSearchOpt.Location = new System.Drawing.Point(423, 16);
+            this.chkSearchOpt.Name = "chkSearchOpt";
+            this.chkSearchOpt.Size = new System.Drawing.Size(76, 16);
+            this.chkSearchOpt.TabIndex = 3;
+            this.chkSearchOpt.Text = "검색 옵션";
+            this.chkSearchOpt.UseVisualStyleBackColor = true;
+            this.chkSearchOpt.CheckedChanged += new System.EventHandler(this.ChkFilter_CheckedChanged);
             // 
             // btnSearch
             // 
@@ -191,7 +192,7 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.CheckBox chbCity;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.CheckBox chkFilter;
+        private System.Windows.Forms.CheckBox chkSearchOpt;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.CheckBox chbDate;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;

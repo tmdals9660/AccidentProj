@@ -4,16 +4,16 @@ using System.Linq;
 
 namespace Accident.Data
 {
-	public class IncidentData : EntityData<Incident>
-	{
-		public IncidentData()
-		{
-		}	
+    public class IncidentData : EntityData<Incident>
+    {
+        public IncidentData()
+        {
+        }
 
-		public List<Incident> SearchIncident2(int? id, DateTime? sdate, DateTime? fdate)
-		{
-			using (AccidentEntities context = new AccidentEntities())
-			{
+        public List<Incident> SearchIncident2(int? id, DateTime? sdate, DateTime? fdate)
+        {
+            using (AccidentEntities context = new AccidentEntities())
+            {
                 var query = from x in context.Incidents
                             where x.Location.CityId == id && x.DateAndTime <= fdate && x.DateAndTime >= sdate
                             orderby x.DateAndTime
@@ -27,7 +27,7 @@ namespace Accident.Data
                                 AttackerName = x.AttackerType.AttackerTypeName,
                                 VictimName = x.VictimType.VictimTypeName
                             };
-
+                
                 var list = query.ToList();
 
                 foreach (var x in list)
@@ -43,6 +43,7 @@ namespace Accident.Data
                 return list.ConvertAll(x => x.Incident);
 
             }
-		}
-	}
+        }
+               
+    }
 }

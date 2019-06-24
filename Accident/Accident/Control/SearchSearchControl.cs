@@ -20,7 +20,7 @@ namespace Accident.Control
 
         private void ChkFilter_CheckedChanged(object sender, EventArgs e)
         {
-            if (chkFilter.Checked) OnSeachChangeClick();
+            if (chkSearchOpt.Checked) OnSeachChangeClick();
             else OnSeachChangeClickOff();
         }
         #region SeachChangeClick event things for C# 3.0
