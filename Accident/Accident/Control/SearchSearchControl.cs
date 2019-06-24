@@ -11,9 +11,9 @@ using Accident.Data;
 
 namespace Accident.Control
 {
-    public partial class UserControl1 : UserControl
+    public partial class SearchControl : UserControl
     {
-        public UserControl1()
+        public SearchControl()
         {
             InitializeComponent();
         }
@@ -161,22 +161,17 @@ namespace Accident.Control
             cbbCites.Enabled = chbCity.Checked;
         }
 
-        private void GroupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void UserControl1_Load(object sender, EventArgs e)
-        {
-            if (DesignMode) return;
-
-            bdsCites.DataSource = DB.City.GetAll();
-        }
-
         private void ChbDate_CheckedChanged(object sender, EventArgs e)
         {
             dateTimePicker1.Enabled = chbDate.Checked;
             dateTimePicker2.Enabled = chbDate.Checked;
+        }
+
+        private void SearchControl_Load(object sender, EventArgs e)
+        {
+            if (DesignMode) return;
+
+            bdsCities.DataSource = DB.City.GetAll();
         }
     }
 }

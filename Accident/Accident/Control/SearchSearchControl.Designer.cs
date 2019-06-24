@@ -1,6 +1,6 @@
 ﻿namespace Accident.Control
 {
-    partial class UserControl1
+    partial class SearchControl
     {
         /// <summary> 
         /// Required designer variable.
@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cbbCites = new System.Windows.Forms.ComboBox();
             this.chbDate = new System.Windows.Forms.CheckBox();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
@@ -39,10 +40,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.chkFilter = new System.Windows.Forms.CheckBox();
             this.btnSearch = new System.Windows.Forms.Button();
-            this.cbbCites = new System.Windows.Forms.ComboBox();
-            this.bdsCites = new System.Windows.Forms.BindingSource(this.components);
+            this.bdsCities = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bdsCites)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsCities)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -64,7 +64,17 @@
             this.groupBox1.Size = new System.Drawing.Size(602, 98);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Enter += new System.EventHandler(this.GroupBox1_Enter);
+            // 
+            // cbbCites
+            // 
+            this.cbbCites.DataSource = this.bdsCities;
+            this.cbbCites.DisplayMember = "CityName";
+            this.cbbCites.FormattingEnabled = true;
+            this.cbbCites.Location = new System.Drawing.Point(51, 17);
+            this.cbbCites.Name = "cbbCites";
+            this.cbbCites.Size = new System.Drawing.Size(97, 20);
+            this.cbbCites.TabIndex = 12;
+            this.cbbCites.ValueMember = "CityId";
             // 
             // chbDate
             // 
@@ -156,32 +166,21 @@
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.BtnSearch_Click);
             // 
-            // cbbCites
+            // bdsCities
             // 
-            this.cbbCites.DataSource = this.bdsCites;
-            this.cbbCites.DisplayMember = "cityName";
-            this.cbbCites.FormattingEnabled = true;
-            this.cbbCites.Location = new System.Drawing.Point(51, 17);
-            this.cbbCites.Name = "cbbCites";
-            this.cbbCites.Size = new System.Drawing.Size(97, 20);
-            this.cbbCites.TabIndex = 12;
-            this.cbbCites.ValueMember = "cityId";
+            this.bdsCities.DataSource = typeof(Accident.Data.City);
             // 
-            // bdsCites
-            // 
-            this.bdsCites.DataSource = typeof(Accident.Data.City);
-            // 
-            // UserControl1
+            // SearchControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.groupBox1);
-            this.Name = "UserControl1";
+            this.Name = "SearchControl";
             this.Size = new System.Drawing.Size(602, 98);
-            this.Load += new System.EventHandler(this.UserControl1_Load);
+            this.Load += new System.EventHandler(this.SearchControl_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bdsCites)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bdsCities)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -199,6 +198,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.ComboBox cbbCites;
-        private System.Windows.Forms.BindingSource bdsCites;
+        private System.Windows.Forms.BindingSource bdsCities;
     }
 }
