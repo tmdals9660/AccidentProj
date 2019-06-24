@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Accident
+namespace Accident.From
 {
-    public partial class Form1 : Form
+    public partial class SearchForm : Form
     {
-        public Form1()
+        public SearchForm()
         {
             InitializeComponent();
         }
