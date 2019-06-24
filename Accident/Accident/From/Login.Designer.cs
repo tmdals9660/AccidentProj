@@ -51,6 +51,7 @@
 			// 
 			this.txbPw.Location = new System.Drawing.Point(21, 63);
 			this.txbPw.Name = "txbPw";
+			this.txbPw.PasswordChar = '*';
 			this.txbPw.Size = new System.Drawing.Size(247, 21);
 			this.txbPw.TabIndex = 1;
 			// 
@@ -97,6 +98,7 @@
 			this.btnSingUp.TabIndex = 6;
 			this.btnSingUp.Text = "Sing Up(&S)";
 			this.btnSingUp.UseVisualStyleBackColor = true;
+			this.btnSingUp.Click += new System.EventHandler(this.BtnSingUp_Click);
 			// 
 			// Login
 			// 
@@ -110,10 +112,12 @@
 			this.Controls.Add(this.txbId);
 			this.Controls.Add(this.txbPw);
 			this.Controls.Add(this.btnLogin);
+			this.MaximizeBox = false;
 			this.MaximumSize = new System.Drawing.Size(300, 170);
+			this.MinimizeBox = false;
 			this.MinimumSize = new System.Drawing.Size(300, 170);
 			this.Name = "Login";
-			this.Text = "Login";
+			this.Text = "r";
 			this.Load += new System.EventHandler(this.Login_Load);
 			this.ResumeLayout(false);
 			this.PerformLayout();
