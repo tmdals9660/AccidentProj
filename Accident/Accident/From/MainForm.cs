@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Accident.From;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,12 @@ namespace Accident
         public MainForm()
         {
             InitializeComponent();
+        }
+
+        private void BtnSearchEnter_Click(object sender, EventArgs e)
+        {
+            SearchForm searchForm = new SearchForm();
+            searchForm.ShowDialog();
         }
     }
 }

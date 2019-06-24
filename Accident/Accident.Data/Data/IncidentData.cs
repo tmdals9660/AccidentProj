@@ -1,44 +1,22 @@
-﻿namespace Accident.Data
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+
+namespace Accident.Data
 {
 	public class IncidentData : EntityData<Incident>
 	{
 		public IncidentData()
 		{
-		}
-
-		public List<Incident> SearchIncident(int? id, DateTime? sdate, DateTime? fdate, int columns)
-		{
-			using (AccidentEntities context = new AccidentEntities())
-			{
-				Dictionary<int, string> fieldDict = null;
-				if (columns.Has(Incident.IncidentField))
-					fieldDict = context.AccidentFileds.ToDictionary(x => x.accidentFieldId, x => x.accidentFieldName);
-
-				var typeDict = context.AccidentTypes.ToDictionary(x => x.accidentTypeId, x => x.accidentTypeName);
-
-				var query = from x in context.Incidents
-							where x.Location.cityId == id && x.date <= fdate && x.date >= sdate
-							orderby x.date
-							select x;
-
-				var list = query.ToList();
-
-				foreach (var x in list)
-				{
-					x.AccidentFiledName = fieldDict[x.accidentFiledId];
-					x.AccidentTypeName = typeDict[x.acidentTypeId];
-				}
-				return list;
-			}
-		}
+		}	
 
 		public List<Incident> SearchIncident2(int? id, DateTime? sdate, DateTime? fdate)
 		{
 			using (AccidentEntities context = new AccidentEntities())
 			{
 				var query = from x in context.Incidents
-							where x.Location.cityId == id && x.date <= fdate && x.date >= sdate
-							orderby x.date
+							where x.Location.CityId == id && x.DateAndTime <= fdate && x.DateAndTime >= sdate
+							orderby x.DateAndTime
 							select new
 							{
 								Incident = x,
