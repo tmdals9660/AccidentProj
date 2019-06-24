@@ -16,5 +16,10 @@ namespace Accident.Control
         {
             InitializeComponent();
         }
+
+        public void GetCityLabel(string city)
+        {
+            lblCity.Text = city;
+        }
     }
 }

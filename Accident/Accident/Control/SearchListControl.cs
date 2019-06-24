@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Accident.Data;
+using Accident.From;
 
 namespace Accident.Control
 {
@@ -16,7 +17,7 @@ namespace Accident.Control
         public SearchListControl()
         {
             InitializeComponent();
-            
+
         }
 
         public void SetDataSource(List<Incident> incidents)
@@ -29,7 +30,7 @@ namespace Accident.Control
             sslCount.Text = count.ToString();
         }
 
-        public void OptionCheck(bool _date,bool city, bool state, bool dnn, bool wod, bool death, bool serious, bool slight, bool injury, bool filed, bool type, bool violation, bool road, bool attacker, bool victim)
+        public void OptionCheck(bool _date, bool city, bool state, bool dnn, bool wod, bool death, bool serious, bool slight, bool injury, bool filed, bool type, bool violation, bool road, bool attacker, bool victim)
         {
             dgvInccident.Columns[0].Visible = _date;
             dgvInccident.Columns[1].Visible = city;
@@ -46,6 +47,12 @@ namespace Accident.Control
             dgvInccident.Columns[12].Visible = road;
             dgvInccident.Columns[13].Visible = attacker;
             dgvInccident.Columns[14].Visible = victim;
+
+        }
+
+        private void DgvInccident_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+           
 
         }
     }

@@ -90,13 +90,14 @@
             this.dgvInccident.DataSource = this.bdsIncident;
             this.dgvInccident.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvInccident.Location = new System.Drawing.Point(0, 0);
-            this.dgvInccident.MultiSelect = false;
             this.dgvInccident.Name = "dgvInccident";
+            this.dgvInccident.ReadOnly = true;
             this.dgvInccident.RowHeadersVisible = false;
             this.dgvInccident.RowTemplate.Height = 23;
             this.dgvInccident.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvInccident.Size = new System.Drawing.Size(628, 338);
             this.dgvInccident.TabIndex = 3;
+            this.dgvInccident.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvInccident_CellDoubleClick);
             // 
             // statusStrip1
             // 
@@ -131,6 +132,7 @@
             this.dateAndTimeDataGridViewTextBoxColumn.DataPropertyName = "DateAndTime";
             this.dateAndTimeDataGridViewTextBoxColumn.HeaderText = "날짜";
             this.dateAndTimeDataGridViewTextBoxColumn.Name = "dateAndTimeDataGridViewTextBoxColumn";
+            this.dateAndTimeDataGridViewTextBoxColumn.ReadOnly = true;
             this.dateAndTimeDataGridViewTextBoxColumn.Width = 54;
             // 
             // PartialCity
@@ -139,6 +141,7 @@
             this.PartialCity.DataPropertyName = "PartialCity";
             this.PartialCity.HeaderText = "시/도";
             this.PartialCity.Name = "PartialCity";
+            this.PartialCity.ReadOnly = true;
             this.PartialCity.Width = 60;
             // 
             // PartialState
@@ -147,6 +150,7 @@
             this.PartialState.DataPropertyName = "PartialState";
             this.PartialState.HeaderText = "시/군/구";
             this.PartialState.Name = "PartialState";
+            this.PartialState.ReadOnly = true;
             this.PartialState.Width = 78;
             // 
             // dayNightDataGridViewTextBoxColumn
@@ -155,6 +159,7 @@
             this.dayNightDataGridViewTextBoxColumn.DataPropertyName = "DayNight";
             this.dayNightDataGridViewTextBoxColumn.HeaderText = "주/야";
             this.dayNightDataGridViewTextBoxColumn.Name = "dayNightDataGridViewTextBoxColumn";
+            this.dayNightDataGridViewTextBoxColumn.ReadOnly = true;
             this.dayNightDataGridViewTextBoxColumn.Visible = false;
             this.dayNightDataGridViewTextBoxColumn.Width = 60;
             // 
@@ -164,6 +169,7 @@
             this.dayOfWeekDataGridViewTextBoxColumn.DataPropertyName = "DayOfWeek";
             this.dayOfWeekDataGridViewTextBoxColumn.HeaderText = "요일";
             this.dayOfWeekDataGridViewTextBoxColumn.Name = "dayOfWeekDataGridViewTextBoxColumn";
+            this.dayOfWeekDataGridViewTextBoxColumn.ReadOnly = true;
             this.dayOfWeekDataGridViewTextBoxColumn.Visible = false;
             this.dayOfWeekDataGridViewTextBoxColumn.Width = 54;
             // 
@@ -173,6 +179,7 @@
             this.deadCountDataGridViewTextBoxColumn.DataPropertyName = "DeadCount";
             this.deadCountDataGridViewTextBoxColumn.HeaderText = "사망";
             this.deadCountDataGridViewTextBoxColumn.Name = "deadCountDataGridViewTextBoxColumn";
+            this.deadCountDataGridViewTextBoxColumn.ReadOnly = true;
             this.deadCountDataGridViewTextBoxColumn.Visible = false;
             this.deadCountDataGridViewTextBoxColumn.Width = 54;
             // 
@@ -182,6 +189,7 @@
             this.seriouslyCountDataGridViewTextBoxColumn.DataPropertyName = "SeriouslyCount";
             this.seriouslyCountDataGridViewTextBoxColumn.HeaderText = "중상";
             this.seriouslyCountDataGridViewTextBoxColumn.Name = "seriouslyCountDataGridViewTextBoxColumn";
+            this.seriouslyCountDataGridViewTextBoxColumn.ReadOnly = true;
             this.seriouslyCountDataGridViewTextBoxColumn.Visible = false;
             this.seriouslyCountDataGridViewTextBoxColumn.Width = 54;
             // 
@@ -191,6 +199,7 @@
             this.slightlyCountDataGridViewTextBoxColumn.DataPropertyName = "SlightlyCount";
             this.slightlyCountDataGridViewTextBoxColumn.HeaderText = "경상";
             this.slightlyCountDataGridViewTextBoxColumn.Name = "slightlyCountDataGridViewTextBoxColumn";
+            this.slightlyCountDataGridViewTextBoxColumn.ReadOnly = true;
             this.slightlyCountDataGridViewTextBoxColumn.Visible = false;
             this.slightlyCountDataGridViewTextBoxColumn.Width = 54;
             // 
@@ -200,6 +209,7 @@
             this.injuryCountDataGridViewTextBoxColumn.DataPropertyName = "InjuryCount";
             this.injuryCountDataGridViewTextBoxColumn.HeaderText = "부상자";
             this.injuryCountDataGridViewTextBoxColumn.Name = "injuryCountDataGridViewTextBoxColumn";
+            this.injuryCountDataGridViewTextBoxColumn.ReadOnly = true;
             this.injuryCountDataGridViewTextBoxColumn.Visible = false;
             this.injuryCountDataGridViewTextBoxColumn.Width = 66;
             // 
@@ -209,6 +219,7 @@
             this.partialAccidentFiledNameDataGridViewTextBoxColumn.DataPropertyName = "PartialAccidentFiledName";
             this.partialAccidentFiledNameDataGridViewTextBoxColumn.HeaderText = "사고유형";
             this.partialAccidentFiledNameDataGridViewTextBoxColumn.Name = "partialAccidentFiledNameDataGridViewTextBoxColumn";
+            this.partialAccidentFiledNameDataGridViewTextBoxColumn.ReadOnly = true;
             this.partialAccidentFiledNameDataGridViewTextBoxColumn.Width = 78;
             // 
             // partialAccidentTypeNameDataGridViewTextBoxColumn
@@ -217,6 +228,7 @@
             this.partialAccidentTypeNameDataGridViewTextBoxColumn.DataPropertyName = "PartialAccidentTypeName";
             this.partialAccidentTypeNameDataGridViewTextBoxColumn.HeaderText = "사고형태";
             this.partialAccidentTypeNameDataGridViewTextBoxColumn.Name = "partialAccidentTypeNameDataGridViewTextBoxColumn";
+            this.partialAccidentTypeNameDataGridViewTextBoxColumn.ReadOnly = true;
             this.partialAccidentTypeNameDataGridViewTextBoxColumn.Width = 78;
             // 
             // partialViolationNameDataGridViewTextBoxColumn
@@ -225,6 +237,7 @@
             this.partialViolationNameDataGridViewTextBoxColumn.DataPropertyName = "PartialViolationName";
             this.partialViolationNameDataGridViewTextBoxColumn.HeaderText = "법규위반유형";
             this.partialViolationNameDataGridViewTextBoxColumn.Name = "partialViolationNameDataGridViewTextBoxColumn";
+            this.partialViolationNameDataGridViewTextBoxColumn.ReadOnly = true;
             this.partialViolationNameDataGridViewTextBoxColumn.Visible = false;
             this.partialViolationNameDataGridViewTextBoxColumn.Width = 102;
             // 
@@ -234,6 +247,7 @@
             this.PartialRoadFormName.DataPropertyName = "PartialRoadFormName";
             this.PartialRoadFormName.HeaderText = "도로형태";
             this.PartialRoadFormName.Name = "PartialRoadFormName";
+            this.PartialRoadFormName.ReadOnly = true;
             this.PartialRoadFormName.Visible = false;
             this.PartialRoadFormName.Width = 78;
             // 
@@ -243,6 +257,7 @@
             this.partialAttackerNameDataGridViewTextBoxColumn.DataPropertyName = "PartialAttackerName";
             this.partialAttackerNameDataGridViewTextBoxColumn.HeaderText = "가해자유형";
             this.partialAttackerNameDataGridViewTextBoxColumn.Name = "partialAttackerNameDataGridViewTextBoxColumn";
+            this.partialAttackerNameDataGridViewTextBoxColumn.ReadOnly = true;
             this.partialAttackerNameDataGridViewTextBoxColumn.Visible = false;
             this.partialAttackerNameDataGridViewTextBoxColumn.Width = 90;
             // 
@@ -252,6 +267,7 @@
             this.partialVictimNameDataGridViewTextBoxColumn.DataPropertyName = "PartialVictimName";
             this.partialVictimNameDataGridViewTextBoxColumn.HeaderText = "피해자유형";
             this.partialVictimNameDataGridViewTextBoxColumn.Name = "partialVictimNameDataGridViewTextBoxColumn";
+            this.partialVictimNameDataGridViewTextBoxColumn.ReadOnly = true;
             this.partialVictimNameDataGridViewTextBoxColumn.Visible = false;
             this.partialVictimNameDataGridViewTextBoxColumn.Width = 90;
             // 
