@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.gbOption = new System.Windows.Forms.GroupBox();
+            this.btnCommit = new System.Windows.Forms.Button();
             this.ccbVictim = new System.Windows.Forms.CheckBox();
             this.ccbAttacker = new System.Windows.Forms.CheckBox();
             this.ccbLoadForm = new System.Windows.Forms.CheckBox();
@@ -42,7 +43,6 @@
             this.ccbDNN = new System.Windows.Forms.CheckBox();
             this.ccbDOW = new System.Windows.Forms.CheckBox();
             this.ccbDate = new System.Windows.Forms.CheckBox();
-            this.btnCommit = new System.Windows.Forms.Button();
             this.gbOption.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -66,9 +66,19 @@
             this.gbOption.Location = new System.Drawing.Point(0, 0);
             this.gbOption.Margin = new System.Windows.Forms.Padding(5, 5, 5, 10);
             this.gbOption.Name = "gbOption";
-            this.gbOption.Size = new System.Drawing.Size(704, 83);
+            this.gbOption.Size = new System.Drawing.Size(704, 69);
             this.gbOption.TabIndex = 7;
             this.gbOption.TabStop = false;
+            // 
+            // btnCommit
+            // 
+            this.btnCommit.Location = new System.Drawing.Point(588, 36);
+            this.btnCommit.Name = "btnCommit";
+            this.btnCommit.Size = new System.Drawing.Size(75, 23);
+            this.btnCommit.TabIndex = 33;
+            this.btnCommit.Text = "적용";
+            this.btnCommit.UseVisualStyleBackColor = true;
+            this.btnCommit.Click += new System.EventHandler(this.BtnCommit_Click);
             // 
             // ccbVictim
             // 
@@ -206,23 +216,13 @@
             this.ccbDate.Text = "날짜/시간";
             this.ccbDate.UseVisualStyleBackColor = true;
             // 
-            // btnCommit
-            // 
-            this.btnCommit.Location = new System.Drawing.Point(588, 36);
-            this.btnCommit.Name = "btnCommit";
-            this.btnCommit.Size = new System.Drawing.Size(75, 23);
-            this.btnCommit.TabIndex = 33;
-            this.btnCommit.Text = "적용";
-            this.btnCommit.UseVisualStyleBackColor = true;
-            this.btnCommit.Click += new System.EventHandler(this.BtnCommit_Click);
-            // 
             // SearchFilterControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.gbOption);
             this.Name = "SearchFilterControl";
-            this.Size = new System.Drawing.Size(704, 83);
+            this.Size = new System.Drawing.Size(704, 69);
             this.gbOption.ResumeLayout(false);
             this.gbOption.PerformLayout();
             this.ResumeLayout(false);

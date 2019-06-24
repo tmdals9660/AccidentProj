@@ -180,5 +180,30 @@ namespace Accident.Control
         {
 
         }
+
+        private void BtnWeek_Click(object sender, EventArgs e)
+        {
+            dateTimePicker2.Value = dateTimePicker1.Value.AddDays(7);
+        }
+
+        private void BtnMonth_Click(object sender, EventArgs e)
+        {
+            MonthAddFunc(1);
+        }
+
+        public void MonthAddFunc(int month)
+        {
+            dateTimePicker2.Value = dateTimePicker1.Value.AddMonths(month);
+        }
+
+        private void BtnMonth3_Click(object sender, EventArgs e)
+        {
+            MonthAddFunc(3);
+        }
+
+        private void BtnMonth6_Click(object sender, EventArgs e)
+        {
+            MonthAddFunc(6);
+        }
     }
 }

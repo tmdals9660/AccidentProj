@@ -69,7 +69,7 @@
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 10);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(602, 98);
+            this.groupBox1.Size = new System.Drawing.Size(730, 76);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             // 
@@ -79,7 +79,7 @@
             this.cbbCites.DisplayMember = "CityName";
             this.cbbCites.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbCites.FormattingEnabled = true;
-            this.cbbCites.Location = new System.Drawing.Point(51, 17);
+            this.cbbCites.Location = new System.Drawing.Point(389, 19);
             this.cbbCites.Name = "cbbCites";
             this.cbbCites.Size = new System.Drawing.Size(97, 20);
             this.cbbCites.TabIndex = 12;
@@ -94,7 +94,7 @@
             this.chbDate.AutoSize = true;
             this.chbDate.Checked = true;
             this.chbDate.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chbDate.Location = new System.Drawing.Point(277, 48);
+            this.chbDate.Location = new System.Drawing.Point(278, 22);
             this.chbDate.Name = "chbDate";
             this.chbDate.Size = new System.Drawing.Size(15, 14);
             this.chbDate.TabIndex = 11;
@@ -104,7 +104,7 @@
             // dateTimePicker2
             // 
             this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(174, 42);
+            this.dateTimePicker2.Location = new System.Drawing.Point(175, 16);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(97, 21);
             this.dateTimePicker2.TabIndex = 10;
@@ -113,7 +113,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(154, 48);
+            this.label3.Location = new System.Drawing.Point(155, 22);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(14, 12);
             this.label3.TabIndex = 9;
@@ -122,7 +122,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(7, 48);
+            this.label2.Location = new System.Drawing.Point(8, 22);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(37, 12);
             this.label2.TabIndex = 8;
@@ -132,7 +132,7 @@
             // dateTimePicker1
             // 
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(51, 42);
+            this.dateTimePicker1.Location = new System.Drawing.Point(52, 16);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(97, 21);
             this.dateTimePicker1.TabIndex = 7;
@@ -143,7 +143,7 @@
             this.chbCity.AutoSize = true;
             this.chbCity.Checked = true;
             this.chbCity.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chbCity.Location = new System.Drawing.Point(158, 20);
+            this.chbCity.Location = new System.Drawing.Point(496, 22);
             this.chbCity.Name = "chbCity";
             this.chbCity.Size = new System.Drawing.Size(15, 14);
             this.chbCity.TabIndex = 6;
@@ -153,7 +153,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(7, 19);
+            this.label1.Location = new System.Drawing.Point(345, 21);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(37, 12);
             this.label1.TabIndex = 4;
@@ -163,7 +163,7 @@
             // 
             this.chkPrintOpt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.chkPrintOpt.AutoSize = true;
-            this.chkPrintOpt.Location = new System.Drawing.Point(423, 16);
+            this.chkPrintOpt.Location = new System.Drawing.Point(643, 50);
             this.chkPrintOpt.Name = "chkPrintOpt";
             this.chkPrintOpt.Size = new System.Drawing.Size(76, 16);
             this.chkPrintOpt.TabIndex = 3;
@@ -174,7 +174,7 @@
             // btnSearch
             // 
             this.btnSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSearch.Location = new System.Drawing.Point(515, 12);
+            this.btnSearch.Location = new System.Drawing.Point(643, 12);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(75, 23);
             this.btnSearch.TabIndex = 2;
@@ -184,39 +184,43 @@
             // 
             // btnWeek
             // 
-            this.btnWeek.Location = new System.Drawing.Point(58, 69);
+            this.btnWeek.Location = new System.Drawing.Point(59, 43);
             this.btnWeek.Name = "btnWeek";
             this.btnWeek.Size = new System.Drawing.Size(47, 23);
             this.btnWeek.TabIndex = 13;
             this.btnWeek.Text = "1주일";
             this.btnWeek.UseVisualStyleBackColor = true;
+            this.btnWeek.Click += new System.EventHandler(this.BtnWeek_Click);
             // 
             // btnMonth
             // 
-            this.btnMonth.Location = new System.Drawing.Point(111, 69);
+            this.btnMonth.Location = new System.Drawing.Point(112, 43);
             this.btnMonth.Name = "btnMonth";
             this.btnMonth.Size = new System.Drawing.Size(47, 23);
             this.btnMonth.TabIndex = 14;
             this.btnMonth.Text = "1개월";
             this.btnMonth.UseVisualStyleBackColor = true;
+            this.btnMonth.Click += new System.EventHandler(this.BtnMonth_Click);
             // 
             // btnMonth3
             // 
-            this.btnMonth3.Location = new System.Drawing.Point(165, 69);
+            this.btnMonth3.Location = new System.Drawing.Point(166, 43);
             this.btnMonth3.Name = "btnMonth3";
             this.btnMonth3.Size = new System.Drawing.Size(47, 23);
             this.btnMonth3.TabIndex = 15;
             this.btnMonth3.Text = "3개월";
             this.btnMonth3.UseVisualStyleBackColor = true;
+            this.btnMonth3.Click += new System.EventHandler(this.BtnMonth3_Click);
             // 
             // btnMonth6
             // 
-            this.btnMonth6.Location = new System.Drawing.Point(218, 69);
+            this.btnMonth6.Location = new System.Drawing.Point(219, 43);
             this.btnMonth6.Name = "btnMonth6";
             this.btnMonth6.Size = new System.Drawing.Size(47, 23);
             this.btnMonth6.TabIndex = 16;
             this.btnMonth6.Text = "6개월";
             this.btnMonth6.UseVisualStyleBackColor = true;
+            this.btnMonth6.Click += new System.EventHandler(this.BtnMonth6_Click);
             // 
             // SearchControl
             // 
@@ -224,7 +228,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.groupBox1);
             this.Name = "SearchControl";
-            this.Size = new System.Drawing.Size(602, 98);
+            this.Size = new System.Drawing.Size(730, 76);
             this.Load += new System.EventHandler(this.SearchControl_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

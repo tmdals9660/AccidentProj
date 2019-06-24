@@ -39,7 +39,11 @@ namespace Accident.From
             var incidents = DB.Incident.SearchIncident(e.Id, e.Stime, e.Ftime);
             uscList.SetDataSource(incidents);
             uscList.SetDataCount(incidents.Count);
-        }          
-     
+        }
+
+        private void UscSearch_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
