@@ -2,8 +2,5 @@
 {
 	public class CityData : EntityData<City>
 	{
-		public CityData()
-		{
-		}
 	}
 }

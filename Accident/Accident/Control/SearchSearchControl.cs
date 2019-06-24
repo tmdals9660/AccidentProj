@@ -173,5 +173,7 @@ namespace Accident.Control
 
             bdsCities.DataSource = DB.City.GetAll();
         }
+
+       
     }
 }

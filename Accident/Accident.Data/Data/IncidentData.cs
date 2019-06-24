@@ -14,26 +14,27 @@ namespace Accident.Data
 		{
 			using (AccidentEntities context = new AccidentEntities())
 			{
-				var query = from x in context.Incidents
-							where x.Location.CityId == id && x.DateAndTime <= fdate && x.DateAndTime >= sdate
-							orderby x.DateAndTime
-							select new
-							{
-								Incident = x,
-								FieldName = x.AccidentFiled.AccidentFieldName,
-								TypeName = x.AccidentType.AccidentTypeName
-							};
+                var query = from x in context.Incidents
+                            where x.Location.CityId == id && x.DateAndTime <= fdate && x.DateAndTime >= sdate
+                            orderby x.DateAndTime
+                            select new
+                            {
+                                Incident = x,
+                                FieldName = x.AccidentFiled.AccidentFieldName,
+                                TypeName = x.AccidentType.AccidentTypeName
+                            };
 
-				var list = query.ToList();
+                var list = query.ToList();
 
-				foreach (var x in list)
-				{
-					x.Incident.PartialAccidentFiledName = x.FieldName;
-					x.Incident.PartialAccidentTypeName = x.TypeName;
-				}
+                foreach (var x in list)
+                {
+                    x.Incident.PartialAccidentFiledName = x.FieldName;
+                    x.Incident.PartialAccidentTypeName = x.TypeName;
+                }
 
-				return list.ConvertAll(x => x.Incident);
-			}
+                return list.ConvertAll(x => x.Incident);
+
+            }
 		}
 	}
 }

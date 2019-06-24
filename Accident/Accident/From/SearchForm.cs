@@ -22,6 +22,7 @@ namespace Accident.From
         {
             uscFilter.Visible = true;
         }
+  
         private void UscSearch_SeachChangeClickOff(object sender, Control.SearchControl.SeachChangeClickOffEventArgs e)
         {
             uscFilter.Visible = false;

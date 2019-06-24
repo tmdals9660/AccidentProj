@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cbbCites = new System.Windows.Forms.ComboBox();
+            this.bdsCities = new System.Windows.Forms.BindingSource(this.components);
             this.chbDate = new System.Windows.Forms.CheckBox();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
@@ -40,7 +41,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.chkFilter = new System.Windows.Forms.CheckBox();
             this.btnSearch = new System.Windows.Forms.Button();
-            this.bdsCities = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bdsCities)).BeginInit();
             this.SuspendLayout();
@@ -75,6 +75,10 @@
             this.cbbCites.Size = new System.Drawing.Size(97, 20);
             this.cbbCites.TabIndex = 12;
             this.cbbCites.ValueMember = "CityId";
+            // 
+            // bdsCities
+            // 
+            this.bdsCities.DataSource = typeof(Accident.Data.City);
             // 
             // chbDate
             // 
@@ -165,10 +169,6 @@
             this.btnSearch.Text = "검색";
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.BtnSearch_Click);
-            // 
-            // bdsCities
-            // 
-            this.bdsCities.DataSource = typeof(Accident.Data.City);
             // 
             // SearchControl
             // 
