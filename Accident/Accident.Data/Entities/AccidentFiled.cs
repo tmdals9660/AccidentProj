@@ -4,20 +4,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Accident.Data.Entities
-{
+namespace Accident.Data
+{ 
 	partial class Incident
 	{
-		public string ParticalAccidentFiledName { get; set; }
+		public string PartialAccidentFiledName { get; set; }
 
-		public string ParticalAccidentTypeName { get; set; }
+		public string PartialAccidentTypeName { get; set; }
 
-		public string ParticalAttackerName { get; set; }
+		public string PartialAttackerName { get; set; }
 
-		public string ParticalLoadFormName { get; set; }
+		public string PartialLoadFormName { get; set; }
 
-		public string ParticalVictimName { get; set; }
+		public string PartialVictimName { get; set; }
 
-		public string ParticalViolationName { get; set; }
+		public string PartialViolationName { get; set; }
 	}
 }

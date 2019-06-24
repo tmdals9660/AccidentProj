@@ -1,4 +1,7 @@
-﻿namespace Accident.Data
+﻿using System.Collections.Generic;
+using System.Linq;
+
+namespace Accident.Data
 {
 	public class LocationData : EntityData<Location>
 	{
@@ -12,7 +15,7 @@
 		{
 			using (AccidentEntities context = new AccidentEntities())
 			{
-				return context.Locations.Select(x => x.incidentId).ToList();
+				return context.Locations.Select(x => x.IncidentId).ToList();
 			}
 		}
 	}

@@ -28,8 +28,8 @@ namespace Accident.Data
 
 				foreach (var x in list)
 				{
-					x.Incident. = x.FieldName;
-					x.Incident.AccidentTypeName = x.TypeName;
+					x.Incident.PartialAccidentFiledName = x.FieldName;
+					x.Incident.PartialAccidentTypeName = x.TypeName;
 				}
 
 				return list.ConvertAll(x => x.Incident);
