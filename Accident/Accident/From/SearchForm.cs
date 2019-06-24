@@ -36,7 +36,7 @@ namespace Accident.From
 
         private void UscSearch_SearchClick(object sender, Control.SearchControl.SearchClickEventArgs e)
         {
-            var incidents = DB.Incident.SearchIncident2(e.Id, e.Stime, e.Ftime);
+            var incidents = DB.Incident.SearchIncident(e.Id, e.Stime, e.Ftime);
             uscList.SetDataSource(incidents);
             uscList.SetDataCount(incidents.Count);
         }          

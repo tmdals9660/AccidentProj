@@ -39,14 +39,22 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.chbCity = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.chkSearchOpt = new System.Windows.Forms.CheckBox();
+            this.chkPrintOpt = new System.Windows.Forms.CheckBox();
             this.btnSearch = new System.Windows.Forms.Button();
+            this.btnWeek = new System.Windows.Forms.Button();
+            this.btnMonth = new System.Windows.Forms.Button();
+            this.btnMonth3 = new System.Windows.Forms.Button();
+            this.btnMonth6 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bdsCities)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnMonth6);
+            this.groupBox1.Controls.Add(this.btnMonth3);
+            this.groupBox1.Controls.Add(this.btnMonth);
+            this.groupBox1.Controls.Add(this.btnWeek);
             this.groupBox1.Controls.Add(this.cbbCites);
             this.groupBox1.Controls.Add(this.chbDate);
             this.groupBox1.Controls.Add(this.dateTimePicker2);
@@ -55,7 +63,7 @@
             this.groupBox1.Controls.Add(this.dateTimePicker1);
             this.groupBox1.Controls.Add(this.chbCity);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.chkSearchOpt);
+            this.groupBox1.Controls.Add(this.chkPrintOpt);
             this.groupBox1.Controls.Add(this.btnSearch);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
@@ -100,6 +108,7 @@
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(97, 21);
             this.dateTimePicker2.TabIndex = 10;
+            this.dateTimePicker2.Value = new System.DateTime(2019, 6, 24, 0, 0, 0, 0);
             // 
             // label3
             // 
@@ -113,11 +122,12 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(8, 48);
+            this.label2.Location = new System.Drawing.Point(7, 48);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(37, 12);
             this.label2.TabIndex = 8;
             this.label2.Text = "기간 :";
+            this.label2.Click += new System.EventHandler(this.Label2_Click);
             // 
             // dateTimePicker1
             // 
@@ -149,17 +159,17 @@
             this.label1.TabIndex = 4;
             this.label1.Text = "지역 :";
             // 
-            // chkSearchOpt
+            // chkPrintOpt
             // 
-            this.chkSearchOpt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.chkSearchOpt.AutoSize = true;
-            this.chkSearchOpt.Location = new System.Drawing.Point(423, 16);
-            this.chkSearchOpt.Name = "chkSearchOpt";
-            this.chkSearchOpt.Size = new System.Drawing.Size(76, 16);
-            this.chkSearchOpt.TabIndex = 3;
-            this.chkSearchOpt.Text = "검색 옵션";
-            this.chkSearchOpt.UseVisualStyleBackColor = true;
-            this.chkSearchOpt.CheckedChanged += new System.EventHandler(this.ChkFilter_CheckedChanged);
+            this.chkPrintOpt.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.chkPrintOpt.AutoSize = true;
+            this.chkPrintOpt.Location = new System.Drawing.Point(423, 16);
+            this.chkPrintOpt.Name = "chkPrintOpt";
+            this.chkPrintOpt.Size = new System.Drawing.Size(76, 16);
+            this.chkPrintOpt.TabIndex = 3;
+            this.chkPrintOpt.Text = "출력 옵션";
+            this.chkPrintOpt.UseVisualStyleBackColor = true;
+            this.chkPrintOpt.CheckedChanged += new System.EventHandler(this.ChkFilter_CheckedChanged);
             // 
             // btnSearch
             // 
@@ -171,6 +181,42 @@
             this.btnSearch.Text = "검색";
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.BtnSearch_Click);
+            // 
+            // btnWeek
+            // 
+            this.btnWeek.Location = new System.Drawing.Point(58, 69);
+            this.btnWeek.Name = "btnWeek";
+            this.btnWeek.Size = new System.Drawing.Size(47, 23);
+            this.btnWeek.TabIndex = 13;
+            this.btnWeek.Text = "1주일";
+            this.btnWeek.UseVisualStyleBackColor = true;
+            // 
+            // btnMonth
+            // 
+            this.btnMonth.Location = new System.Drawing.Point(111, 69);
+            this.btnMonth.Name = "btnMonth";
+            this.btnMonth.Size = new System.Drawing.Size(47, 23);
+            this.btnMonth.TabIndex = 14;
+            this.btnMonth.Text = "1개월";
+            this.btnMonth.UseVisualStyleBackColor = true;
+            // 
+            // btnMonth3
+            // 
+            this.btnMonth3.Location = new System.Drawing.Point(165, 69);
+            this.btnMonth3.Name = "btnMonth3";
+            this.btnMonth3.Size = new System.Drawing.Size(47, 23);
+            this.btnMonth3.TabIndex = 15;
+            this.btnMonth3.Text = "3개월";
+            this.btnMonth3.UseVisualStyleBackColor = true;
+            // 
+            // btnMonth6
+            // 
+            this.btnMonth6.Location = new System.Drawing.Point(218, 69);
+            this.btnMonth6.Name = "btnMonth6";
+            this.btnMonth6.Size = new System.Drawing.Size(47, 23);
+            this.btnMonth6.TabIndex = 16;
+            this.btnMonth6.Text = "6개월";
+            this.btnMonth6.UseVisualStyleBackColor = true;
             // 
             // SearchControl
             // 
@@ -192,7 +238,7 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.CheckBox chbCity;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.CheckBox chkSearchOpt;
+        private System.Windows.Forms.CheckBox chkPrintOpt;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.CheckBox chbDate;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
@@ -201,5 +247,9 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.ComboBox cbbCites;
         private System.Windows.Forms.BindingSource bdsCities;
+        private System.Windows.Forms.Button btnMonth6;
+        private System.Windows.Forms.Button btnMonth3;
+        private System.Windows.Forms.Button btnMonth;
+        private System.Windows.Forms.Button btnWeek;
     }
 }
