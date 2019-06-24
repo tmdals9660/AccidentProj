@@ -8,16 +8,16 @@ namespace Accident.Data.Entities
 {
 	partial class Incident
 	{
-		public string AccidentFiledName { get; set; }
+		public string ParticalAccidentFiledName { get; set; }
 
-		public string AccidentTypeName { get; set; }
+		public string ParticalAccidentTypeName { get; set; }
 
-		public string AttackerName { get; set; }
+		public string ParticalAttackerName { get; set; }
 
-		public string LoadFormName { get; set; }
+		public string ParticalLoadFormName { get; set; }
 
-		public string VictimName { get; set; }
+		public string ParticalVictimName { get; set; }
 
-		public string ViolationName { get; set; }
+		public string ParticalViolationName { get; set; }
 	}
 }

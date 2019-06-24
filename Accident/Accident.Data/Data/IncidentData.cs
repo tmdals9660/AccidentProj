@@ -20,15 +20,15 @@ namespace Accident.Data
 							select new
 							{
 								Incident = x,
-								FieldName = x.AccidentFiled.accidentFieldName,
-								TypeName = x.AccidentType.accidentTypeName
+								FieldName = x.AccidentFiled.AccidentFieldName,
+								TypeName = x.AccidentType.AccidentTypeName
 							};
 
 				var list = query.ToList();
 
 				foreach (var x in list)
 				{
-					x.Incident.AccidentFiledName = x.FieldName;
+					x.Incident. = x.FieldName;
 					x.Incident.AccidentTypeName = x.TypeName;
 				}
 
