@@ -23,5 +23,11 @@ namespace Accident
             SearchForm searchForm = new SearchForm();
             searchForm.ShowDialog();
         }
-    }
+
+		private void BtnAdminEnter_Click(object sender, EventArgs e)
+		{
+			Login login = new Login();
+			login.ShowDialog();
+		}
+	}
 }

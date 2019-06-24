@@ -86,6 +86,12 @@
     <Compile Include="Control\SearchSearchControl.Designer.cs">
       <DependentUpon>SearchSearchControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="From\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="From\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
     <Compile Include="From\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -108,6 +114,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Control\SearchSearchControl.resx">
       <DependentUpon>SearchSearchControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="From\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="From\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
