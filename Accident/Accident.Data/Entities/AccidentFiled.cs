@@ -14,7 +14,7 @@ namespace Accident.Data
 
 		public string PartialAttackerName { get; set; }
 
-		public string PartialLoadFormName { get; set; }
+		public string PartialRoadFormName { get; set; }
 
 		public string PartialVictimName { get; set; }
 

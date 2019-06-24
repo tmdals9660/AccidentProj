@@ -38,10 +38,8 @@ namespace Accident.From
         {
             var incidents = DB.Incident.SearchIncident2(e.Id, e.Stime, e.Ftime);
             uscList.SetDataSource(incidents);
-        }
-
-        
-
+            uscList.SetDataCount(incidents.Count);
+        }          
      
     }
 }

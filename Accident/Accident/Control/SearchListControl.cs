@@ -24,6 +24,11 @@ namespace Accident.Control
             bdsIncident.DataSource = incidents;
         }
 
+        public void SetDataCount(int count)
+        {
+            sslCount.Text = count.ToString();
+        }
+
         public void FilterCheck(bool _date, bool dnn, bool wod, bool death, bool serious, bool slight, bool injury, bool filed, bool type, bool violation, bool road, bool attacker, bool victim)
         {
             dgvInccident.Columns[0].Visible = _date;

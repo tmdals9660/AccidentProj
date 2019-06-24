@@ -21,7 +21,11 @@ namespace Accident.Data
                             {
                                 Incident = x,
                                 FieldName = x.AccidentFiled.AccidentFieldName,
-                                TypeName = x.AccidentType.AccidentTypeName
+                                TypeName = x.AccidentType.AccidentTypeName,
+                                ViolationName = x.Violation.ViiolationName,
+                                RoadFormName2 = x.RoadForm.RoadFormName,
+                                AttackerName = x.AttackerType.AttackerTypeName,
+                                VictimName = x.VictimType.VictimTypeName
                             };
 
                 var list = query.ToList();
@@ -30,6 +34,10 @@ namespace Accident.Data
                 {
                     x.Incident.PartialAccidentFiledName = x.FieldName;
                     x.Incident.PartialAccidentTypeName = x.TypeName;
+                    x.Incident.PartialViolationName = x.ViolationName;
+                    x.Incident.PartialRoadFormName = x.RoadFormName2;
+                    x.Incident.PartialAttackerName = x.AttackerName;
+                    x.Incident.PartialVictimName = x.ViolationName;
                 }
 
                 return list.ConvertAll(x => x.Incident);

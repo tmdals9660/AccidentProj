@@ -106,7 +106,7 @@ namespace Accident.Control
         private void BtnSearch_Click(object sender, EventArgs e)
         {
             int? id = cbbCites.Enabled ? (int?)cbbCites.SelectedValue : null;
-            DateTime? startDate = dateTimePicker1.Value; 
+            DateTime? startDate = dateTimePicker1.Value ; 
             DateTime? finishDate = dateTimePicker2.Value;
 
             OnSearchClick(id, startDate, finishDate);

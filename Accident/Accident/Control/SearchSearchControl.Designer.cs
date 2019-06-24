@@ -69,6 +69,7 @@
             // 
             this.cbbCites.DataSource = this.bdsCities;
             this.cbbCites.DisplayMember = "CityName";
+            this.cbbCites.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbCites.FormattingEnabled = true;
             this.cbbCites.Location = new System.Drawing.Point(51, 17);
             this.cbbCites.Name = "cbbCites";
