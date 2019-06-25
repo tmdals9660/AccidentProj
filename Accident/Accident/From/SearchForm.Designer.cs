@@ -38,7 +38,7 @@
             this.uscList.Dock = System.Windows.Forms.DockStyle.Fill;
             this.uscList.Location = new System.Drawing.Point(0, 156);
             this.uscList.Name = "uscList";
-            this.uscList.Size = new System.Drawing.Size(726, 339);
+            this.uscList.Size = new System.Drawing.Size(726, 346);
             this.uscList.TabIndex = 2;
             // 
             // uscFilter
@@ -67,10 +67,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(726, 495);
+            this.ClientSize = new System.Drawing.Size(726, 502);
             this.Controls.Add(this.uscList);
             this.Controls.Add(this.uscFilter);
             this.Controls.Add(this.uscSearch);
+            this.MinimumSize = new System.Drawing.Size(742, 540);
             this.Name = "SearchForm";
             this.Text = "SearchForm";
             this.ResumeLayout(false);

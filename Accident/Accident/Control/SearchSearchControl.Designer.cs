@@ -30,6 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnMonth6 = new System.Windows.Forms.Button();
+            this.btnMonth3 = new System.Windows.Forms.Button();
+            this.btnMonth = new System.Windows.Forms.Button();
+            this.btnWeek = new System.Windows.Forms.Button();
             this.cbbCites = new System.Windows.Forms.ComboBox();
             this.bdsCities = new System.Windows.Forms.BindingSource(this.components);
             this.chbDate = new System.Windows.Forms.CheckBox();
@@ -41,10 +45,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.chkPrintOpt = new System.Windows.Forms.CheckBox();
             this.btnSearch = new System.Windows.Forms.Button();
-            this.btnWeek = new System.Windows.Forms.Button();
-            this.btnMonth = new System.Windows.Forms.Button();
-            this.btnMonth3 = new System.Windows.Forms.Button();
-            this.btnMonth6 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bdsCities)).BeginInit();
             this.SuspendLayout();
@@ -72,6 +72,46 @@
             this.groupBox1.Size = new System.Drawing.Size(730, 76);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
+            // 
+            // btnMonth6
+            // 
+            this.btnMonth6.Location = new System.Drawing.Point(219, 43);
+            this.btnMonth6.Name = "btnMonth6";
+            this.btnMonth6.Size = new System.Drawing.Size(47, 23);
+            this.btnMonth6.TabIndex = 16;
+            this.btnMonth6.Text = "6개월";
+            this.btnMonth6.UseVisualStyleBackColor = true;
+            this.btnMonth6.Click += new System.EventHandler(this.BtnMonth6_Click);
+            // 
+            // btnMonth3
+            // 
+            this.btnMonth3.Location = new System.Drawing.Point(166, 43);
+            this.btnMonth3.Name = "btnMonth3";
+            this.btnMonth3.Size = new System.Drawing.Size(47, 23);
+            this.btnMonth3.TabIndex = 15;
+            this.btnMonth3.Text = "3개월";
+            this.btnMonth3.UseVisualStyleBackColor = true;
+            this.btnMonth3.Click += new System.EventHandler(this.BtnMonth3_Click);
+            // 
+            // btnMonth
+            // 
+            this.btnMonth.Location = new System.Drawing.Point(112, 43);
+            this.btnMonth.Name = "btnMonth";
+            this.btnMonth.Size = new System.Drawing.Size(47, 23);
+            this.btnMonth.TabIndex = 14;
+            this.btnMonth.Text = "1개월";
+            this.btnMonth.UseVisualStyleBackColor = true;
+            this.btnMonth.Click += new System.EventHandler(this.BtnMonth_Click);
+            // 
+            // btnWeek
+            // 
+            this.btnWeek.Location = new System.Drawing.Point(59, 43);
+            this.btnWeek.Name = "btnWeek";
+            this.btnWeek.Size = new System.Drawing.Size(47, 23);
+            this.btnWeek.TabIndex = 13;
+            this.btnWeek.Text = "1주일";
+            this.btnWeek.UseVisualStyleBackColor = true;
+            this.btnWeek.Click += new System.EventHandler(this.BtnWeek_Click);
             // 
             // cbbCites
             // 
@@ -178,49 +218,9 @@
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(75, 23);
             this.btnSearch.TabIndex = 2;
-            this.btnSearch.Text = "검색";
+            this.btnSearch.Text = "검색(&S)";
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.BtnSearch_Click);
-            // 
-            // btnWeek
-            // 
-            this.btnWeek.Location = new System.Drawing.Point(59, 43);
-            this.btnWeek.Name = "btnWeek";
-            this.btnWeek.Size = new System.Drawing.Size(47, 23);
-            this.btnWeek.TabIndex = 13;
-            this.btnWeek.Text = "1주일";
-            this.btnWeek.UseVisualStyleBackColor = true;
-            this.btnWeek.Click += new System.EventHandler(this.BtnWeek_Click);
-            // 
-            // btnMonth
-            // 
-            this.btnMonth.Location = new System.Drawing.Point(112, 43);
-            this.btnMonth.Name = "btnMonth";
-            this.btnMonth.Size = new System.Drawing.Size(47, 23);
-            this.btnMonth.TabIndex = 14;
-            this.btnMonth.Text = "1개월";
-            this.btnMonth.UseVisualStyleBackColor = true;
-            this.btnMonth.Click += new System.EventHandler(this.BtnMonth_Click);
-            // 
-            // btnMonth3
-            // 
-            this.btnMonth3.Location = new System.Drawing.Point(166, 43);
-            this.btnMonth3.Name = "btnMonth3";
-            this.btnMonth3.Size = new System.Drawing.Size(47, 23);
-            this.btnMonth3.TabIndex = 15;
-            this.btnMonth3.Text = "3개월";
-            this.btnMonth3.UseVisualStyleBackColor = true;
-            this.btnMonth3.Click += new System.EventHandler(this.BtnMonth3_Click);
-            // 
-            // btnMonth6
-            // 
-            this.btnMonth6.Location = new System.Drawing.Point(219, 43);
-            this.btnMonth6.Name = "btnMonth6";
-            this.btnMonth6.Size = new System.Drawing.Size(47, 23);
-            this.btnMonth6.TabIndex = 16;
-            this.btnMonth6.Text = "6개월";
-            this.btnMonth6.UseVisualStyleBackColor = true;
-            this.btnMonth6.Click += new System.EventHandler(this.BtnMonth6_Click);
             // 
             // SearchControl
             // 

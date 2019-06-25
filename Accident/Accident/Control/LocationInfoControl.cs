@@ -24,5 +24,49 @@ namespace Accident.Control
             lblLatitude.Text = rati.ToString();
             lblLongitude.Text = longi.ToString();
         }
+
+        #region LocationFormClose event things for C# 3.0
+        public event EventHandler<LocationFormCloseEventArgs> LocationFormClose;
+
+        protected virtual void OnLocationFormClose(LocationFormCloseEventArgs e)
+        {
+            if (LocationFormClose != null)
+                LocationFormClose(this, e);
+        }
+
+        private LocationFormCloseEventArgs OnLocationFormClose()
+        {
+            LocationFormCloseEventArgs args = new LocationFormCloseEventArgs();
+            OnLocationFormClose(args);
+
+            return args;
+        }
+
+        /*private LocationFormCloseEventArgs OnLocationFormCloseForOut()
+        {
+            LocationFormCloseEventArgs args = new LocationFormCloseEventArgs();
+            OnLocationFormClose(args);
+
+            return args;
+        }*/
+
+        public class LocationFormCloseEventArgs : EventArgs
+        {
+
+
+            /*public LocationFormCloseEventArgs()
+            {
+            }
+
+            public LocationFormCloseEventArgs()
+            {
+
+            }*/
+        }
+        #endregion
+        private void BtnClose_Click(object sender, EventArgs e)
+        {
+            OnLocationFormClose();
+        }
     }
 }

@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -29,5 +30,45 @@ namespace Accident
 			Login login = new Login();
 			login.ShowDialog();
 		}
-	}
+
+        private void MsStatistics_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MsSearch_Click(object sender, EventArgs e)
+        {
+            btnSearchEnter.PerformClick();
+        }
+
+        private void MsAdminMode_Click(object sender, EventArgs e)
+        {
+            btnAdminEnter.PerformClick();
+        }
+
+        private void MsVoca_Click(object sender, EventArgs e)
+        {
+            Process.Start("http://taas.koroad.or.kr/sta/acs/exs/wordArngPopup.do");
+        }
+
+        private void MsRef_Click(object sender, EventArgs e)
+        {
+            Process.Start("https://www.data.go.kr/");
+        }
+
+        private void MsProblemReporting_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MsFunction_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MsClose_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+    }
 }
