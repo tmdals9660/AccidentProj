@@ -71,6 +71,9 @@
     <Compile Include="AccidentType.cs">
       <DependentUpon>Accident.tt</DependentUpon>
     </Compile>
+    <Compile Include="Admin.cs">
+      <DependentUpon>Accident.tt</DependentUpon>
+    </Compile>
     <Compile Include="AttackerType.cs">
       <DependentUpon>Accident.tt</DependentUpon>
     </Compile>
@@ -79,6 +82,7 @@
     </Compile>
     <Compile Include="Data\AccidentFiledData.cs" />
     <Compile Include="Data\AccidentTypeData.cs" />
+    <Compile Include="Data\AdminData.cs" />
     <Compile Include="Data\AttackerTypeData.cs" />
     <Compile Include="Data\CityData.cs" />
     <Compile Include="Data\DB.cs" />

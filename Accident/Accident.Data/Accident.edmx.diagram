@@ -4,9 +4,10 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="78e96b4312d24f6396f344fdafd8a8f5" Name="Diagram1">
+      <Diagram DiagramId="90c28e4253c54d2587ad86a9fcc39047" Name="Diagram1">
         <EntityTypeShape EntityType="AccidentModel.AccidentFiled" Width="1.5" PointX="3" PointY="6.875" IsExpanded="true" />
         <EntityTypeShape EntityType="AccidentModel.AccidentType" Width="1.5" PointX="3" PointY="9.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="AccidentModel.Admin" Width="1.5" PointX="7.75" PointY="1.75" IsExpanded="true" />
         <EntityTypeShape EntityType="AccidentModel.AttackerType" Width="1.5" PointX="3" PointY="11.625" IsExpanded="true" />
         <EntityTypeShape EntityType="AccidentModel.City" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
         <EntityTypeShape EntityType="AccidentModel.Incident" Width="1.5" PointX="5.25" PointY="2" IsExpanded="true" />

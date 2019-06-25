@@ -19,6 +19,15 @@
           <Property Name="AccidentTypeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="AccidentTypeName" Type="nvarchar" MaxLength="50" Nullable="false" />
         </EntityType>
+        <EntityType Name="Admin">
+          <Key>
+            <PropertyRef Name="AdminId" />
+          </Key>
+          <Property Name="AdminId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="AdminIdName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="AdminPassword" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="AdminName" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
         <EntityType Name="AttackerType">
           <Key>
             <PropertyRef Name="AttackerId" />
@@ -201,6 +210,7 @@
         <EntityContainer Name="AccidentModelStoreContainer">
           <EntitySet Name="AccidentFiled" EntityType="Self.AccidentFiled" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="AccidentType" EntityType="Self.AccidentType" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Admin" EntityType="Self.Admin" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="AttackerType" EntityType="Self.AttackerType" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="City" EntityType="Self.City" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Incident" EntityType="Self.Incident" Schema="dbo" store:Type="Tables" />
@@ -266,6 +276,15 @@
           <Property Name="AccidentTypeId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="AccidentTypeName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <NavigationProperty Name="Incidents" Relationship="Self.FK_Incident_AccidentType" FromRole="AccidentType" ToRole="Incident" />
+        </EntityType>
+        <EntityType Name="Admin">
+          <Key>
+            <PropertyRef Name="AdminId" />
+          </Key>
+          <Property Name="AdminId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AdminIdName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="AdminPassword" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="AdminName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
         </EntityType>
         <EntityType Name="AttackerType">
           <Key>
@@ -465,6 +484,7 @@
         <EntityContainer Name="AccidentEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="AccidentFileds" EntityType="Self.AccidentFiled" />
           <EntitySet Name="AccidentTypes" EntityType="Self.AccidentType" />
+          <EntitySet Name="Admins" EntityType="Self.Admin" />
           <EntitySet Name="AttackerTypes" EntityType="Self.AttackerType" />
           <EntitySet Name="Cities" EntityType="Self.City" />
           <EntitySet Name="Incidents" EntityType="Self.Incident" />
@@ -529,6 +549,16 @@
               <MappingFragment StoreEntitySet="AccidentType">
                 <ScalarProperty Name="AccidentTypeId" ColumnName="AccidentTypeId" />
                 <ScalarProperty Name="AccidentTypeName" ColumnName="AccidentTypeName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Admins">
+            <EntityTypeMapping TypeName="AccidentModel.Admin">
+              <MappingFragment StoreEntitySet="Admin">
+                <ScalarProperty Name="AdminId" ColumnName="AdminId" />
+                <ScalarProperty Name="AdminIdName" ColumnName="AdminIdName" />
+                <ScalarProperty Name="AdminPassword" ColumnName="AdminPassword" />
+                <ScalarProperty Name="AdminName" ColumnName="AdminName" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

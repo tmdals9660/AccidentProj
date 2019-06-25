@@ -27,6 +27,7 @@ namespace Accident.Data
     
         public virtual DbSet<AccidentFiled> AccidentFileds { get; set; }
         public virtual DbSet<AccidentType> AccidentTypes { get; set; }
+        public virtual DbSet<Admin> Admins { get; set; }
         public virtual DbSet<AttackerType> AttackerTypes { get; set; }
         public virtual DbSet<City> Cities { get; set; }
         public virtual DbSet<Incident> Incidents { get; set; }

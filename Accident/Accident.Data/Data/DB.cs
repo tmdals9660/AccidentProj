@@ -20,6 +20,7 @@ namespace Accident.Data
 			VictimType = new VictimTypeData();
 			City = new CityData();
 			State = new StateData();
+            Admin = new Admin();
 		}
 
 		public static IncidentData Incident { get; }
@@ -32,5 +33,6 @@ namespace Accident.Data
 		public static VictimTypeData VictimType { get; }
 		public static CityData City { get; }
 		public static StateData State { get; }
+		public static Admin Admin { get; }
 	}
 }

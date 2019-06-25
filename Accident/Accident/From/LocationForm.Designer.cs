@@ -35,18 +35,18 @@
             // webBrowser1
             // 
             this.webBrowser1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.webBrowser1.Location = new System.Drawing.Point(0, 43);
+            this.webBrowser1.Location = new System.Drawing.Point(5, 48);
             this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
             this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.Size = new System.Drawing.Size(746, 619);
+            this.webBrowser1.Size = new System.Drawing.Size(974, 659);
             this.webBrowser1.TabIndex = 1;
             // 
             // uscLocation
             // 
             this.uscLocation.Dock = System.Windows.Forms.DockStyle.Top;
-            this.uscLocation.Location = new System.Drawing.Point(0, 0);
+            this.uscLocation.Location = new System.Drawing.Point(5, 5);
             this.uscLocation.Name = "uscLocation";
-            this.uscLocation.Size = new System.Drawing.Size(746, 43);
+            this.uscLocation.Size = new System.Drawing.Size(974, 43);
             this.uscLocation.TabIndex = 0;
             this.uscLocation.LocationFormClose += new System.EventHandler<Accident.Control.LocationInfoControl.LocationFormCloseEventArgs>(this.UscLocation_LocationFormClose);
             // 
@@ -54,12 +54,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(746, 662);
+            this.ClientSize = new System.Drawing.Size(984, 712);
             this.Controls.Add(this.webBrowser1);
             this.Controls.Add(this.uscLocation);
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(762, 700);
+            this.MinimumSize = new System.Drawing.Size(1000, 750);
             this.Name = "LocationForm";
+            this.Padding = new System.Windows.Forms.Padding(5);
             this.ShowIcon = false;
             this.Text = "LocationForm";
             this.Load += new System.EventHandler(this.LocationForm_Load);
