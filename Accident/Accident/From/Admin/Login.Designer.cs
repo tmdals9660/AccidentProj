@@ -34,12 +34,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnCancel = new System.Windows.Forms.Button();
-            this.btnSignUp = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(21, 90);
+            this.btnLogin.Location = new System.Drawing.Point(105, 98);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(78, 23);
             this.btnLogin.TabIndex = 2;
@@ -82,7 +81,7 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(189, 90);
+            this.btnCancel.Location = new System.Drawing.Point(189, 98);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(79, 23);
             this.btnCancel.TabIndex = 4;
@@ -90,22 +89,11 @@
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.BtnCancel_Click);
             // 
-            // btnSignUp
-            // 
-            this.btnSignUp.Location = new System.Drawing.Point(105, 90);
-            this.btnSignUp.Name = "btnSignUp";
-            this.btnSignUp.Size = new System.Drawing.Size(78, 23);
-            this.btnSignUp.TabIndex = 3;
-            this.btnSignUp.Text = "Sign Up(&S)";
-            this.btnSignUp.UseVisualStyleBackColor = true;
-            this.btnSignUp.Click += new System.EventHandler(this.BtnSingUp_Click);
-            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 132);
-            this.Controls.Add(this.btnSignUp);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -132,6 +120,5 @@
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.Button btnCancel;
-		private System.Windows.Forms.Button btnSignUp;
 	}
 }

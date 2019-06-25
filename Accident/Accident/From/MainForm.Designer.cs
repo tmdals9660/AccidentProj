@@ -93,26 +93,26 @@
             // msStatistics
             // 
             this.msStatistics.Name = "msStatistics";
-            this.msStatistics.Size = new System.Drawing.Size(180, 22);
+            this.msStatistics.Size = new System.Drawing.Size(150, 22);
             this.msStatistics.Text = "통계(&T)";
             this.msStatistics.Click += new System.EventHandler(this.MsStatistics_Click);
             // 
             // msSearch
             // 
             this.msSearch.Name = "msSearch";
-            this.msSearch.Size = new System.Drawing.Size(180, 22);
+            this.msSearch.Size = new System.Drawing.Size(150, 22);
             this.msSearch.Text = "검색(&S)";
             this.msSearch.Click += new System.EventHandler(this.MsSearch_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(147, 6);
             // 
             // msAdminMode
             // 
             this.msAdminMode.Name = "msAdminMode";
-            this.msAdminMode.Size = new System.Drawing.Size(180, 22);
+            this.msAdminMode.Size = new System.Drawing.Size(150, 22);
             this.msAdminMode.Text = "관리자모드(&A)";
             this.msAdminMode.Click += new System.EventHandler(this.MsAdminMode_Click);
             // 
@@ -163,7 +163,7 @@
             // 
             // btnAdminEnter
             // 
-            this.btnAdminEnter.Location = new System.Drawing.Point(242, 245);
+            this.btnAdminEnter.Location = new System.Drawing.Point(429, 246);
             this.btnAdminEnter.Name = "btnAdminEnter";
             this.btnAdminEnter.Size = new System.Drawing.Size(75, 23);
             this.btnAdminEnter.TabIndex = 2;
@@ -230,6 +230,7 @@
             this.Controls.Add(this.menuStrip1);
             this.Name = "MainForm";
             this.Text = "MainForm";
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.sstMain.ResumeLayout(false);

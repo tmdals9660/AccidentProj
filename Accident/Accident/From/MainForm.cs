@@ -15,9 +15,12 @@ namespace Accident
 {
     public partial class MainForm : Form
     {
+       
         public MainForm()
         {
             InitializeComponent();
+
+            
         }
 
         private void BtnSearchEnter_Click(object sender, EventArgs e)
@@ -28,9 +31,9 @@ namespace Accident
 
 		private void BtnAdminEnter_Click(object sender, EventArgs e)
 		{
-			Login login = new Login();
-			login.ShowDialog();
-		}
+            Login login = new Login(this);
+			login.Show();
+        }
 
         private void MsStatistics_Click(object sender, EventArgs e)
         {
@@ -71,6 +74,22 @@ namespace Accident
         private void MsClose_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {            
+        }
+
+        public void ModeAdmin()
+        {
+            stlMode.Text = "관리자 모드";
+            btnMakeId.Visible = true;
+        }
+
+        public void ModeUser()
+        {
+            stlMode.Text = "일반 모드";
+            btnMakeId.Visible = false;
         }
     }
 }
