@@ -187,7 +187,6 @@
 			this.btnMakeId.TabIndex = 5;
 			this.btnMakeId.UseVisualStyleBackColor = true;
 			this.btnMakeId.Visible = false;
-			this.btnMakeId.Click += new System.EventHandler(this.BtnMakeId_Click);
 			// 
 			// btnStatEnter
 			// 

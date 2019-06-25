@@ -72,10 +72,5 @@ namespace Accident
         {
             Close();
         }
-
-		private void BtnMakeId_Click(object sender, EventArgs e)
-		{
-
-		}
 	}
 }
