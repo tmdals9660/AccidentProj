@@ -42,12 +42,12 @@
 			this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
 			this.피드백보내기FToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.msFunction = new System.Windows.Forms.ToolStripMenuItem();
-			this.btnAdminEnter = new System.Windows.Forms.Button();
-			this.btnSearchEnter = new System.Windows.Forms.Button();
-			this.btnStatEnter = new System.Windows.Forms.Button();
-			this.btnMakeId = new System.Windows.Forms.Button();
 			this.sstMain = new System.Windows.Forms.StatusStrip();
 			this.stlMode = new System.Windows.Forms.ToolStripStatusLabel();
+			this.btnMakeId = new System.Windows.Forms.Button();
+			this.btnStatEnter = new System.Windows.Forms.Button();
+			this.btnSearchEnter = new System.Windows.Forms.Button();
+			this.btnAdminEnter = new System.Windows.Forms.Button();
 			this.menuStrip1.SuspendLayout();
 			this.sstMain.SuspendLayout();
 			this.SuspendLayout();
@@ -60,7 +60,7 @@
             this.도움말HToolStripMenuItem});
 			this.menuStrip1.Location = new System.Drawing.Point(0, 0);
 			this.menuStrip1.Name = "menuStrip1";
-			this.menuStrip1.Size = new System.Drawing.Size(591, 24);
+			this.menuStrip1.Size = new System.Drawing.Size(575, 24);
 			this.menuStrip1.TabIndex = 1;
 			this.menuStrip1.Text = "menuStrip1";
 			// 
@@ -161,51 +161,13 @@
 			this.msFunction.Text = "기능제안 및 문제보고(&P)";
 			this.msFunction.Click += new System.EventHandler(this.MsFunction_Click);
 			// 
-			// btnAdminEnter
-			// 
-			this.btnAdminEnter.Location = new System.Drawing.Point(238, 170);
-			this.btnAdminEnter.Name = "btnAdminEnter";
-			this.btnAdminEnter.Size = new System.Drawing.Size(110, 30);
-			this.btnAdminEnter.TabIndex = 2;
-			this.btnAdminEnter.Text = "관리자모드";
-			this.btnAdminEnter.UseVisualStyleBackColor = true;
-			this.btnAdminEnter.Click += new System.EventHandler(this.BtnAdminEnter_Click);
-			// 
-			// btnSearchEnter
-			// 
-			this.btnSearchEnter.Location = new System.Drawing.Point(215, 63);
-			this.btnSearchEnter.Name = "btnSearchEnter";
-			this.btnSearchEnter.Size = new System.Drawing.Size(130, 80);
-			this.btnSearchEnter.TabIndex = 3;
-			this.btnSearchEnter.Text = "검색들으감";
-			this.btnSearchEnter.UseVisualStyleBackColor = true;
-			this.btnSearchEnter.Click += new System.EventHandler(this.BtnSearchEnter_Click);
-			// 
-			// btnStatEnter
-			// 
-			this.btnStatEnter.Location = new System.Drawing.Point(30, 63);
-			this.btnStatEnter.Name = "btnStatEnter";
-			this.btnStatEnter.Size = new System.Drawing.Size(130, 80);
-			this.btnStatEnter.TabIndex = 4;
-			this.btnStatEnter.UseVisualStyleBackColor = true;
-			// 
-			// btnMakeId
-			// 
-			this.btnMakeId.Location = new System.Drawing.Point(405, 63);
-			this.btnMakeId.Name = "btnMakeId";
-			this.btnMakeId.Size = new System.Drawing.Size(130, 80);
-			this.btnMakeId.TabIndex = 5;
-			this.btnMakeId.Text = "아이디생성";
-			this.btnMakeId.UseVisualStyleBackColor = true;
-			this.btnMakeId.Visible = false;
-			// 
 			// sstMain
 			// 
 			this.sstMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.stlMode});
 			this.sstMain.Location = new System.Drawing.Point(0, 222);
 			this.sstMain.Name = "sstMain";
-			this.sstMain.Size = new System.Drawing.Size(591, 22);
+			this.sstMain.Size = new System.Drawing.Size(575, 22);
 			this.sstMain.TabIndex = 6;
 			this.sstMain.Text = "statusStrip1";
 			// 
@@ -216,11 +178,51 @@
 			this.stlMode.Tag = "0";
 			this.stlMode.Text = "일반 모드";
 			// 
+			// btnMakeId
+			// 
+			this.btnMakeId.Image = global::Accident.Properties.Resources.SignUp;
+			this.btnMakeId.Location = new System.Drawing.Point(405, 63);
+			this.btnMakeId.Name = "btnMakeId";
+			this.btnMakeId.Size = new System.Drawing.Size(130, 80);
+			this.btnMakeId.TabIndex = 5;
+			this.btnMakeId.UseVisualStyleBackColor = true;
+			this.btnMakeId.Visible = false;
+			this.btnMakeId.Click += new System.EventHandler(this.BtnMakeId_Click);
+			// 
+			// btnStatEnter
+			// 
+			this.btnStatEnter.Image = global::Accident.Properties.Resources.Statistics;
+			this.btnStatEnter.Location = new System.Drawing.Point(30, 63);
+			this.btnStatEnter.Name = "btnStatEnter";
+			this.btnStatEnter.Size = new System.Drawing.Size(130, 80);
+			this.btnStatEnter.TabIndex = 4;
+			this.btnStatEnter.UseVisualStyleBackColor = true;
+			// 
+			// btnSearchEnter
+			// 
+			this.btnSearchEnter.Image = global::Accident.Properties.Resources.Search;
+			this.btnSearchEnter.Location = new System.Drawing.Point(215, 63);
+			this.btnSearchEnter.Name = "btnSearchEnter";
+			this.btnSearchEnter.Size = new System.Drawing.Size(130, 80);
+			this.btnSearchEnter.TabIndex = 3;
+			this.btnSearchEnter.UseVisualStyleBackColor = true;
+			this.btnSearchEnter.Click += new System.EventHandler(this.BtnSearchEnter_Click);
+			// 
+			// btnAdminEnter
+			// 
+			this.btnAdminEnter.Image = global::Accident.Properties.Resources.Admin;
+			this.btnAdminEnter.Location = new System.Drawing.Point(225, 173);
+			this.btnAdminEnter.Name = "btnAdminEnter";
+			this.btnAdminEnter.Size = new System.Drawing.Size(110, 30);
+			this.btnAdminEnter.TabIndex = 2;
+			this.btnAdminEnter.UseVisualStyleBackColor = true;
+			this.btnAdminEnter.Click += new System.EventHandler(this.BtnAdminEnter_Click);
+			// 
 			// MainForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(591, 244);
+			this.ClientSize = new System.Drawing.Size(575, 244);
 			this.Controls.Add(this.sstMain);
 			this.Controls.Add(this.btnMakeId);
 			this.Controls.Add(this.btnStatEnter);
