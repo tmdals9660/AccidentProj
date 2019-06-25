@@ -83,10 +83,12 @@
     <Compile Include="Data\CityData.cs" />
     <Compile Include="Data\DB.cs" />
     <Compile Include="Data\EntityData.cs" />
+    <Compile Include="Entities\FuncPropose.cs" />
     <Compile Include="DbContextFactory.cs" />
     <Compile Include="Entities\AccidentFiled.cs" />
     <Compile Include="Data\IncidentData.cs" />
     <Compile Include="Data\LocationData.cs" />
+    <Compile Include="FeedbackFile.cs" />
     <Compile Include="Incident.cs">
       <DependentUpon>Accident.tt</DependentUpon>
     </Compile>

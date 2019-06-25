@@ -104,6 +104,12 @@
     <Compile Include="From\Admin\Modify.Designer.cs">
       <DependentUpon>Modify.cs</DependentUpon>
     </Compile>
+    <Compile Include="From\Feedback\FunctionPropose.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="From\Feedback\FunctionPropose.Designer.cs">
+      <DependentUpon>FunctionPropose.cs</DependentUpon>
+    </Compile>
     <Compile Include="From\LocationForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -147,6 +153,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="From\Admin\Modify.resx">
       <DependentUpon>Modify.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="From\Feedback\FunctionPropose.resx">
+      <DependentUpon>FunctionPropose.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="From\LocationForm.resx">
       <DependentUpon>LocationForm.cs</DependentUpon>
@@ -238,7 +247,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="bin\Release\" />
-    <Folder Include="From\Feedback\" />
     <Folder Include="obj\Debug\TempPE\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

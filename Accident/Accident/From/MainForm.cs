@@ -1,4 +1,5 @@
 ﻿using Accident.From;
+using Accident.From.Feedback;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -63,7 +64,8 @@ namespace Accident
 
         private void MsFunction_Click(object sender, EventArgs e)
         {
-
+            FunctionPropose functionPropose = new FunctionPropose();
+            functionPropose.ShowDialog();
         }
 
         private void MsClose_Click(object sender, EventArgs e)

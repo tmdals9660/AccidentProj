@@ -41,7 +41,6 @@
             this.msRef = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.피드백보내기FToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.msProblemReporting = new System.Windows.Forms.ToolStripMenuItem();
             this.msFunction = new System.Windows.Forms.ToolStripMenuItem();
             this.btnAdminEnter = new System.Windows.Forms.Button();
             this.btnSearchEnter = new System.Windows.Forms.Button();
@@ -146,24 +145,16 @@
             // 피드백보내기FToolStripMenuItem
             // 
             this.피드백보내기FToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.msProblemReporting,
             this.msFunction});
             this.피드백보내기FToolStripMenuItem.Name = "피드백보내기FToolStripMenuItem";
             this.피드백보내기FToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.피드백보내기FToolStripMenuItem.Text = "피드백 보내기(&F)";
             // 
-            // msProblemReporting
-            // 
-            this.msProblemReporting.Name = "msProblemReporting";
-            this.msProblemReporting.Size = new System.Drawing.Size(180, 22);
-            this.msProblemReporting.Text = "문제 보고(&P)";
-            this.msProblemReporting.Click += new System.EventHandler(this.MsProblemReporting_Click);
-            // 
             // msFunction
             // 
             this.msFunction.Name = "msFunction";
-            this.msFunction.Size = new System.Drawing.Size(180, 22);
-            this.msFunction.Text = "기능 제안(&S)";
+            this.msFunction.Size = new System.Drawing.Size(205, 22);
+            this.msFunction.Text = "기능제안 및 문제보고(&P)";
             this.msFunction.Click += new System.EventHandler(this.MsFunction_Click);
             // 
             // btnAdminEnter
@@ -224,7 +215,6 @@
         private System.Windows.Forms.ToolStripMenuItem msRef;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem 피드백보내기FToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem msProblemReporting;
         private System.Windows.Forms.ToolStripMenuItem msFunction;
         private System.Windows.Forms.ToolStripMenuItem msStatistics;
         private System.Windows.Forms.ToolStripMenuItem msSearch;
