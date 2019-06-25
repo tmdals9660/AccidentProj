@@ -3,7 +3,7 @@
   <Profiles />
   <Settings>
     <Setting Name="LoginId" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
+      <Value Profile="(Default)">aa</Value>
     </Setting>
     <Setting Name="LoginFormText" Type="System.String" Scope="User">
       <Value Profile="(Default)">Welcome</Value>
