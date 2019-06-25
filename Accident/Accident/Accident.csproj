@@ -68,6 +68,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Control\LocationInfoControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Control\LocationInfoControl.Designer.cs">
+      <DependentUpon>LocationInfoControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Control\SearchFilterControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -92,6 +98,12 @@
     <Compile Include="From\AddAdminInfo.Designer.cs">
       <DependentUpon>AddAdminInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="From\LocationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="From\LocationForm.Designer.cs">
+      <DependentUpon>LocationForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="From\Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,6 +124,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Control\LocationInfoControl.resx">
+      <DependentUpon>LocationInfoControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Control\SearchFilterControl.resx">
       <DependentUpon>SearchFilterControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -124,6 +139,9 @@
     <EmbeddedResource Include="From\AddAdminInfo.resx">
       <DependentUpon>AddAdminInfo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="From\LocationForm.resx">
+      <DependentUpon>LocationForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="From\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -133,6 +151,15 @@
     <EmbeddedResource Include="From\SearchForm.resx">
       <DependentUpon>SearchForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="obj\Debug\Accident.Control.LocationInfoControl.resources" />
+    <EmbeddedResource Include="obj\Debug\Accident.Control.SearchControl.resources" />
+    <EmbeddedResource Include="obj\Debug\Accident.Control.SearchFilterControl.resources" />
+    <EmbeddedResource Include="obj\Debug\Accident.Control.SearchListControl.resources" />
+    <EmbeddedResource Include="obj\Debug\Accident.From.LocationForm.resources" />
+    <EmbeddedResource Include="obj\Debug\Accident.From.Login.resources" />
+    <EmbeddedResource Include="obj\Debug\Accident.From.SearchForm.resources" />
+    <EmbeddedResource Include="obj\Debug\Accident.MainForm.resources" />
+    <EmbeddedResource Include="obj\Debug\Accident.Properties.Resources.resources" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -142,6 +169,15 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="bin\Debug\Accident.Data.dll.config" />
+    <None Include="bin\Debug\Accident.exe.config" />
+    <None Include="obj\Debug\Accident.csproj.CopyComplete" />
+    <None Include="obj\Debug\Accident.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\Debug\Accident.csproj.GenerateResource.cache" />
+    <None Include="obj\Debug\Accident.csprojAssemblyReference.cache" />
+    <None Include="obj\Debug\build.force" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Accident.Data.City.datasource" />
     <None Include="Properties\DataSources\Accident.Data.Incident.datasource" />
@@ -175,6 +211,25 @@
       <Project>{10d6a1b3-c801-42c4-8882-7fe80f37fe67}</Project>
       <Name>Accident.Data</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\Accident.Data.dll" />
+    <Content Include="bin\Debug\Accident.Data.pdb" />
+    <Content Include="bin\Debug\Accident.exe" />
+    <Content Include="bin\Debug\Accident.pdb" />
+    <Content Include="bin\Debug\EntityFramework.dll" />
+    <Content Include="bin\Debug\EntityFramework.SqlServer.dll" />
+    <Content Include="bin\Debug\EntityFramework.SqlServer.xml" />
+    <Content Include="bin\Debug\EntityFramework.xml" />
+    <Content Include="bin\Debug\ko\EntityFramework.resources.dll" />
+    <Content Include="bin\Debug\ko\EntityFramework.SqlServer.resources.dll" />
+    <Content Include="obj\Debug\Accident.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\Accident.exe" />
+    <Content Include="obj\Debug\Accident.pdb" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Release\" />
+    <Folder Include="obj\Debug\TempPE\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
