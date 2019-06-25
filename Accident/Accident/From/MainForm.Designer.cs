@@ -48,6 +48,7 @@
 			this.btnStatEnter = new System.Windows.Forms.Button();
 			this.btnSearchEnter = new System.Windows.Forms.Button();
 			this.btnAdminEnter = new System.Windows.Forms.Button();
+			this.button1 = new System.Windows.Forms.Button();
 			this.menuStrip1.SuspendLayout();
 			this.sstMain.SuspendLayout();
 			this.SuspendLayout();
@@ -217,11 +218,21 @@
 			this.btnAdminEnter.UseVisualStyleBackColor = true;
 			this.btnAdminEnter.Click += new System.EventHandler(this.BtnAdminEnter_Click);
 			// 
+			// button1
+			// 
+			this.button1.Image = global::Accident.Properties.Resources.Adv;
+			this.button1.Location = new System.Drawing.Point(405, 63);
+			this.button1.Name = "button1";
+			this.button1.Size = new System.Drawing.Size(130, 80);
+			this.button1.TabIndex = 7;
+			this.button1.UseVisualStyleBackColor = true;
+			// 
 			// MainForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(575, 244);
+			this.Controls.Add(this.button1);
 			this.Controls.Add(this.sstMain);
 			this.Controls.Add(this.btnMakeId);
 			this.Controls.Add(this.btnStatEnter);
@@ -261,5 +272,6 @@
         private System.Windows.Forms.Button btnMakeId;
         private System.Windows.Forms.StatusStrip sstMain;
         private System.Windows.Forms.ToolStripStatusLabel stlMode;
-    }
+		private System.Windows.Forms.Button button1;
+	}
 }
