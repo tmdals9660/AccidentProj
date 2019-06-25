@@ -28,7 +28,7 @@ namespace Accident
 
 		private void BtnAdminEnter_Click(object sender, EventArgs e)
 		{
-			Login login = new Login();
+			Login login = new Login(this);
 			login.ShowDialog();
 		}
 
@@ -72,5 +72,21 @@ namespace Accident
         {
             Close();
         }
-	}
+        public void ModeAdmin()
+        {
+            stlMode.Text = "관리자 모드";
+            btnMakeId.Enabled = true;
+        }
+
+        public void ModeUser()
+        {
+            stlMode.Text = "일반 모드";
+            btnMakeId.Enabled = false;
+        }
+
+        private void BtnMakeId_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
 }
