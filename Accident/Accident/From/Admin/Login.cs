@@ -1,4 +1,5 @@
-﻿using Accident.Properties;
+﻿using Accident.Data;
+using Accident.Properties;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -15,40 +16,22 @@ namespace Accident.From
 
         private void Login_Load(object sender, EventArgs e)
         {
-            //txbId.Text = Settings.Default.LoginId;
+           
         }
 
         private void BtnLogin_Click(object sender, EventArgs e)
         {
-            //List<AddAdminInfo> AdminLists = new List<AddAdminInfo>();
+            
+           Admin admins = DB.Admin.LoginCheck(txbId.Text, txbPw.Text);
+            if(admins != null)
+            { 
+            MessageBox.Show($"안녕하세요. {admins.AdminName.ToString()}님!" +
+                $"\n로그인 되었습니다.");
 
-            //StreamReader rd = new StreamReader("AdminInfo.txt");
-
-            //while (!rd.EndOfStream)
-            //{
-            //    string list = rd.ReadLine();
-            //    string[] cols = list.Split(',');
-
-            //    AddAdminInfo info = new AddAdminInfo();
-            //    info.AdminId = cols[0];
-            //    info.AdminPw = cols[1];
-
-            //    AdminLists.Add(info);
-
-            //    if (txbId.Text == info.AdminId && txbPw.Text == info.AdminPw)
-            //    {
-            //        MessageBox.Show("Login Success");
-
-            //        Settings.Default.LoginId = txbId.Text;
-            //        Settings.Default.Save();
-            //        Close();
-            //    }
-            //    else if (rd.EndOfStream)
-            //        MessageBox.Show("Login Fail");
-            //}
-            //rd.Close();
-
-
+            Close();
+            }
+            else
+                MessageBox.Show("존재하지 않는 ID이거나\n비밀번호가 일치하지 않습니다.");
         }
 
         private void BtnCancel_Click(object sender, EventArgs e)

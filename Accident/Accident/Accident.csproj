@@ -98,12 +98,6 @@
     <Compile Include="From\Admin\AddAdminInfo.Designer.cs">
       <DependentUpon>AddAdminInfo.cs</DependentUpon>
     </Compile>
-    <Compile Include="From\Admin\Modify.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="From\Admin\Modify.Designer.cs">
-      <DependentUpon>Modify.cs</DependentUpon>
-    </Compile>
     <Compile Include="From\Feedback\FunctionPropose.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -150,9 +144,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="From\Admin\AddAdminInfo.resx">
       <DependentUpon>AddAdminInfo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="From\Admin\Modify.resx">
-      <DependentUpon>Modify.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="From\Feedback\FunctionPropose.resx">
       <DependentUpon>FunctionPropose.cs</DependentUpon>
