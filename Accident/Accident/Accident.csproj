@@ -171,14 +171,9 @@
     <EmbeddedResource Include="obj\Debug\Accident.Properties.Resources.resources" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="bin\Debug\Accident.Data.dll.config" />
     <None Include="bin\Debug\Accident.exe.config" />
     <None Include="obj\Debug\Accident.csproj.CopyComplete" />
@@ -195,6 +190,11 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -236,9 +236,10 @@
     <Content Include="obj\Debug\Accident.csproj.FileListAbsolute.txt" />
     <Content Include="obj\Debug\Accident.exe" />
     <Content Include="obj\Debug\Accident.pdb" />
+    <None Include="Resources\Statistics.png" />
+    <None Include="Resources\SignUp.png" />
     <None Include="Resources\Search.png" />
     <None Include="Resources\Admin.png" />
-    <None Include="Resources\Statistics.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="bin\Release\" />
