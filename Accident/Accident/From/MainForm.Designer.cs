@@ -45,7 +45,11 @@
             this.btnAdminEnter = new System.Windows.Forms.Button();
             this.btnSearchEnter = new System.Windows.Forms.Button();
             this.btnStatEnter = new System.Windows.Forms.Button();
+            this.btnMakeId = new System.Windows.Forms.Button();
+            this.sstMain = new System.Windows.Forms.StatusStrip();
+            this.stlMode = new System.Windows.Forms.ToolStripStatusLabel();
             this.menuStrip1.SuspendLayout();
+            this.sstMain.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -56,7 +60,7 @@
             this.도움말HToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(481, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(591, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -71,7 +75,7 @@
             // msClose
             // 
             this.msClose.Name = "msClose";
-            this.msClose.Size = new System.Drawing.Size(180, 22);
+            this.msClose.Size = new System.Drawing.Size(113, 22);
             this.msClose.Text = "닫기(&X)";
             this.msClose.Click += new System.EventHandler(this.MsClose_Click);
             // 
@@ -126,14 +130,14 @@
             // msVoca
             // 
             this.msVoca.Name = "msVoca";
-            this.msVoca.Size = new System.Drawing.Size(180, 22);
+            this.msVoca.Size = new System.Drawing.Size(164, 22);
             this.msVoca.Text = "용어보기(&T)";
             this.msVoca.Click += new System.EventHandler(this.MsVoca_Click);
             // 
             // msRef
             // 
             this.msRef.Name = "msRef";
-            this.msRef.Size = new System.Drawing.Size(180, 22);
+            this.msRef.Size = new System.Drawing.Size(164, 22);
             this.msRef.Text = "참조사이트(&R)";
             this.msRef.Click += new System.EventHandler(this.MsRef_Click);
             // 
@@ -147,7 +151,7 @@
             this.피드백보내기FToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.msFunction});
             this.피드백보내기FToolStripMenuItem.Name = "피드백보내기FToolStripMenuItem";
-            this.피드백보내기FToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.피드백보내기FToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
             this.피드백보내기FToolStripMenuItem.Text = "피드백 보내기(&F)";
             // 
             // msFunction
@@ -159,7 +163,7 @@
             // 
             // btnAdminEnter
             // 
-            this.btnAdminEnter.Location = new System.Drawing.Point(394, 267);
+            this.btnAdminEnter.Location = new System.Drawing.Point(242, 245);
             this.btnAdminEnter.Name = "btnAdminEnter";
             this.btnAdminEnter.Size = new System.Drawing.Size(75, 23);
             this.btnAdminEnter.TabIndex = 2;
@@ -169,7 +173,7 @@
             // 
             // btnSearchEnter
             // 
-            this.btnSearchEnter.Location = new System.Drawing.Point(299, 127);
+            this.btnSearchEnter.Location = new System.Drawing.Point(242, 127);
             this.btnSearchEnter.Name = "btnSearchEnter";
             this.btnSearchEnter.Size = new System.Drawing.Size(75, 23);
             this.btnSearchEnter.TabIndex = 3;
@@ -186,11 +190,40 @@
             this.btnStatEnter.Text = "통계들으감";
             this.btnStatEnter.UseVisualStyleBackColor = true;
             // 
+            // btnMakeId
+            // 
+            this.btnMakeId.Location = new System.Drawing.Point(394, 127);
+            this.btnMakeId.Name = "btnMakeId";
+            this.btnMakeId.Size = new System.Drawing.Size(75, 23);
+            this.btnMakeId.TabIndex = 5;
+            this.btnMakeId.Text = "아이디생성";
+            this.btnMakeId.UseVisualStyleBackColor = true;
+            this.btnMakeId.Visible = false;
+            // 
+            // sstMain
+            // 
+            this.sstMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.stlMode});
+            this.sstMain.Location = new System.Drawing.Point(0, 283);
+            this.sstMain.Name = "sstMain";
+            this.sstMain.Size = new System.Drawing.Size(591, 22);
+            this.sstMain.TabIndex = 6;
+            this.sstMain.Text = "statusStrip1";
+            // 
+            // stlMode
+            // 
+            this.stlMode.Name = "stlMode";
+            this.stlMode.Size = new System.Drawing.Size(59, 17);
+            this.stlMode.Tag = "0";
+            this.stlMode.Text = "일반 모드";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(481, 302);
+            this.ClientSize = new System.Drawing.Size(591, 305);
+            this.Controls.Add(this.sstMain);
+            this.Controls.Add(this.btnMakeId);
             this.Controls.Add(this.btnStatEnter);
             this.Controls.Add(this.btnSearchEnter);
             this.Controls.Add(this.btnAdminEnter);
@@ -199,6 +232,8 @@
             this.Text = "MainForm";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.sstMain.ResumeLayout(false);
+            this.sstMain.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -223,5 +258,8 @@
         private System.Windows.Forms.Button btnAdminEnter;
         private System.Windows.Forms.Button btnSearchEnter;
         private System.Windows.Forms.Button btnStatEnter;
+        private System.Windows.Forms.Button btnMakeId;
+        private System.Windows.Forms.StatusStrip sstMain;
+        private System.Windows.Forms.ToolStripStatusLabel stlMode;
     }
 }

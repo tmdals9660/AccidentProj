@@ -23,7 +23,7 @@ namespace Accident
         private void BtnSearchEnter_Click(object sender, EventArgs e)
         {
             SearchForm searchForm = new SearchForm();
-            searchForm.ShowDialog();
+            searchForm.ShowDialog();            
         }
 
 		private void BtnAdminEnter_Click(object sender, EventArgs e)
