@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 
 namespace Accident.Data
@@ -12,7 +13,7 @@ namespace Accident.Data
 
         public List<Incident> SearchIncident(int? id, DateTime? sdate, DateTime? fdate)
         {
-            using (AccidentEntities context = new AccidentEntities())
+            using (AccidentEntities context = DbContextFactory.Create())
             {
                 var query = from x in context.Incidents
                             where x.DateAndTime <= fdate && x.DateAndTime >= sdate
@@ -55,22 +56,25 @@ namespace Accident.Data
 
         public List<Incident> SearchIncident2(int? id)
         {
-            using (AccidentEntities context = new AccidentEntities())
+            using (AccidentEntities context = DbContextFactory.Create())
             {
+                context.Database.Log = x => Debug.WriteLine(x);
+
                 var query = from x in context.Incidents
                             orderby x.DateAndTime
+                            let location = x.Location
                             select new
                             {
                                 Incident = x,
-                                LocationId = x.Location,
+                                LocationId = location,
                                 FieldName = x.AccidentFiled.AccidentFieldName,
                                 TypeName = x.AccidentType.AccidentTypeName,
                                 ViolationName = x.Violation.ViiolationName,
                                 RoadFormName2 = x.RoadForm.RoadFormName,
                                 AttackerName = x.AttackerType.AttackerTypeName,
                                 VictimName = x.VictimType.VictimTypeName,
-                                CityName = x.Location.City.CityName,
-                                StateName = x.Location.State.StateName
+                                CityName = location.City.CityName,
+                                StateName = location.State.StateName
                             };
 
                 if (id.HasValue)

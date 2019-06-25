@@ -83,6 +83,7 @@
     <Compile Include="Data\CityData.cs" />
     <Compile Include="Data\DB.cs" />
     <Compile Include="Data\EntityData.cs" />
+    <Compile Include="DbContextFactory.cs" />
     <Compile Include="Entities\AccidentFiled.cs" />
     <Compile Include="Data\IncidentData.cs" />
     <Compile Include="Data\LocationData.cs" />
@@ -92,6 +93,7 @@
     <Compile Include="Location.cs">
       <DependentUpon>Accident.tt</DependentUpon>
     </Compile>
+    <Compile Include="Partial\AccidentEntities.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Data\RoadFormData.cs" />
     <Compile Include="Data\StateData.cs" />

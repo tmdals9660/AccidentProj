@@ -12,7 +12,7 @@ namespace Accident.Data
 
         public string GetCitiesName(int incidentId)
         {
-            using (AccidentEntities context = new AccidentEntities())
+            using (AccidentEntities context = DbContextFactory.Create())
             {
                 var query = from x in context.Locations
                             where x.IncidentId == incidentId
@@ -25,7 +25,7 @@ namespace Accident.Data
 
         public string GetStateName(int incidentId)
         {
-            using (AccidentEntities context = new AccidentEntities())
+            using (AccidentEntities context = DbContextFactory.Create())
             {
                 var query = from x in context.Locations
                             where x.IncidentId == incidentId

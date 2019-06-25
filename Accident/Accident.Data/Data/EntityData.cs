@@ -10,7 +10,7 @@ namespace Accident.Data
 	{
 		public List<T> GetAll()
 		{
-			using (AccidentEntities context = new AccidentEntities())
+			using (AccidentEntities context = DbContextFactory.Create())
 			{
 				return context.Set<T>().ToList();
 			}
@@ -18,7 +18,7 @@ namespace Accident.Data
 
 		public int GetCount()
 		{
-			using (AccidentEntities context = new AccidentEntities())
+			using (AccidentEntities context = DbContextFactory.Create())
 			{
 				return context.Set<T>().Count();
 			}
