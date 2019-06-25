@@ -22,9 +22,6 @@ namespace Accident.Data
 		public string PartialCity { get; set; }
 		public string PartialState { get; set; }
 
-        public static implicit operator int(Incident v)
-        {
-            throw new NotImplementedException();
-        }
+        
     }
 }
