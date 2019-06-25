@@ -49,8 +49,7 @@ namespace Accident.From
 
         private void BtnSingUp_Click(object sender, EventArgs e)
         {
-            AddAdminInfo addInfo = new AddAdminInfo();
-            addInfo.ShowDialog();
+           
         }
     }
 }

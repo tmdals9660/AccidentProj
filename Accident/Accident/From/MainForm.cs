@@ -1,4 +1,5 @@
-﻿using Accident.From;
+﻿using Accident.Data;
+using Accident.From;
 using Accident.From.Feedback;
 using System;
 using System.Collections.Generic;
@@ -17,8 +18,9 @@ namespace Accident
     {
         public MainForm()
         {
-            InitializeComponent();
+            InitializeComponent();            
         }
+        private bool CurrentModeAdmin = false;
 
         private void BtnSearchEnter_Click(object sender, EventArgs e)
         {
@@ -74,19 +76,45 @@ namespace Accident
         }
         public void ModeAdmin()
         {
+            CurrentModeAdmin = true;
             stlMode.Text = "관리자 모드";
-            btnMakeId.Enabled = true;
+            btnAdverMakeId.Image = global::Accident.Properties.Resources.SignUp;
+            btnLogout.Visible = true;
         }
 
         public void ModeUser()
         {
+            CurrentModeAdmin = false;
             stlMode.Text = "일반 모드";
-            btnMakeId.Enabled = false;
+            btnAdverMakeId.Image = global::Accident.Properties.Resources.Adv;
+            btnLogout.Visible = false;
         }
-
+       
         private void BtnMakeId_Click(object sender, EventArgs e)
         {
+            AddAdminInfo add = new AddAdminInfo();
+            add.ShowDialog();
+        }
 
+        private void BtnAdver_Click(object sender, EventArgs e)
+        {
+
+            if (CurrentModeAdmin)
+            {
+                AddAdminInfo adminInfo = new AddAdminInfo();
+                adminInfo.ShowDialog();
+            }
+            else Process.Start("http://www.koroad.or.kr/kp_web/krNewsList.do?board_code=GABBS_060");
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void BtnLogout_Click(object sender, EventArgs e)
+        {
+            ModeUser();
         }
     }
 }
