@@ -17,9 +17,12 @@ namespace Accident.Control
             InitializeComponent();
         }
 
-        public void GetCityLabel(string city)
+        public void GetLocationInfo(string city,string state,double rati, double longi)
         {
             lblCity.Text = city;
+            lblState.Text = state;
+            lblLatitude.Text = rati.ToString();
+            lblLongitude.Text = longi.ToString();
         }
     }
 }

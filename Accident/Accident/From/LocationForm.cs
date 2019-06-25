@@ -13,18 +13,27 @@ namespace Accident.From
 {
     public partial class LocationForm : Form
     {
-        public LocationForm(Incident incident)
+        private Incident _incidentId;
+
+        public LocationForm(Incident incidentId)
         {
             InitializeComponent();
 
-            _incident = incident;
+            _incidentId = incidentId;
         }
 
-        private Incident _incident;
 
         private void ReadFromEntity()
         {
-            label1.Text = _incident.Location.City.CityName.ToString();
+            int incidentId = _incidentId.IncidentId;
+            string cityName = DB.Location.GetCitiesName(incidentId).ToString();
+            string stateName = DB.Location.GetStateName(incidentId).ToString();
+            double ratitude = _incidentId.Location.Ratitude;
+            double longitude = _incidentId.Location.Longitude;
+
+
+            uscLocation.GetLocationInfo(cityName, stateName, ratitude, longitude);
+
         }
 
         private void LocationForm_Load(object sender, EventArgs e)

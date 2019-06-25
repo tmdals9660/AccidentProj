@@ -52,7 +52,11 @@ namespace Accident.Control
 
         private void DgvInccident_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-           
+            Incident incident = dgvInccident.CurrentRow.DataBoundItem as Incident;
+            if (incident == null) return;
+            
+            LocationForm form = new LocationForm(incident);
+            form.ShowDialog();
 
         }
     }
