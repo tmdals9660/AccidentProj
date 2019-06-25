@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Accident.Data;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,34 +12,39 @@ using System.Windows.Forms;
 
 namespace Accident.From
 {
-	public partial class AddAdminInfo : Form
-	{
-		public AddAdminInfo()
-		{
-			InitializeComponent();
-		}
+    public partial class AddAdminInfo : Form
+    {
+        public AddAdminInfo(Admin admin)
+        {
+            InitializeComponent();
 
+            _admin = admin;
+        }
 
-		private void BtnSaveAddimInfo_Click(object sender, EventArgs e)
-		{
-			if (txbCode.Text == "0000")
-			{
-				string id = txbId.Text;
-				string passward = txbPassward.Text;
+        private Admin _admin;
 
-				string AdminInfo = id + "," + passward;
+        private void BtnSaveAddimInfo_Click(object sender, EventArgs e)
+        {
+            WriteToEntity();
 
-				StreamWriter wr = new StreamWriter("AdminInfo.txt", true);
-				wr.WriteLine(AdminInfo);
-				wr.Close();
-				Close();
-				MessageBox.Show("Success");
-			}
-			else
-				MessageBox.Show("Fail");
-		}
+            if (_admin.AdminId == 0)
+                DB.Admin.Insert(_admin);
+            else
+                DB.Admin.Update(_admin);
 
-		public string AdminId { get; set; }
-		public string AdminPw { get; set; }
-	}
+            Close();
+        }
+        private void WriteToEntity()
+        {
+            _admin.AdminIdName = txbId.Text;
+            _admin.AdminPassword = txbPassward.Text;
+            _admin.AdminName = txbCode.Text;
+        }
+
+        private void BtnDelete_Click(object sender, EventArgs e)
+        {
+           
+            
+        }
+    }
 }

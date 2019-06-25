@@ -92,8 +92,6 @@ namespace Accident
        
         private void BtnMakeId_Click(object sender, EventArgs e)
         {
-            AddAdminInfo add = new AddAdminInfo();
-            add.ShowDialog();
         }
 
         private void BtnAdver_Click(object sender, EventArgs e)
@@ -101,8 +99,8 @@ namespace Accident
 
             if (CurrentModeAdmin)
             {
-                AddAdminInfo adminInfo = new AddAdminInfo();
-                adminInfo.ShowDialog();
+                UserListForm userListForm = new UserListForm();
+                userListForm.ShowDialog();
             }
             else Process.Start("http://www.koroad.or.kr/kp_web/krNewsList.do?board_code=GABBS_060");
         }
