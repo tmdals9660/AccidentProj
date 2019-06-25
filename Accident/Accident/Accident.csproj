@@ -92,10 +92,10 @@
     <Compile Include="Control\SearchSearchControl.Designer.cs">
       <DependentUpon>SearchSearchControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="From\AddAdminInfo.cs">
+    <Compile Include="From\Admin\AddAdminInfo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="From\AddAdminInfo.Designer.cs">
+    <Compile Include="From\Admin\AddAdminInfo.Designer.cs">
       <DependentUpon>AddAdminInfo.cs</DependentUpon>
     </Compile>
     <Compile Include="From\Admin\Modify.cs">
@@ -110,10 +110,10 @@
     <Compile Include="From\LocationForm.Designer.cs">
       <DependentUpon>LocationForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="From\Login.cs">
+    <Compile Include="From\Admin\Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="From\Login.Designer.cs">
+    <Compile Include="From\Admin\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="From\MainForm.cs">
@@ -142,7 +142,7 @@
     <EmbeddedResource Include="Control\SearchSearchControl.resx">
       <DependentUpon>SearchSearchControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="From\AddAdminInfo.resx">
+    <EmbeddedResource Include="From\Admin\AddAdminInfo.resx">
       <DependentUpon>AddAdminInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="From\Admin\Modify.resx">
@@ -151,7 +151,7 @@
     <EmbeddedResource Include="From\LocationForm.resx">
       <DependentUpon>LocationForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="From\Login.resx">
+    <EmbeddedResource Include="From\Admin\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="From\MainForm.resx">
