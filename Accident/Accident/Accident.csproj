@@ -57,6 +57,7 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -110,6 +111,12 @@
     <Compile Include="From\Feedback\FunctionPropose.Designer.cs">
       <DependentUpon>FunctionPropose.cs</DependentUpon>
     </Compile>
+    <Compile Include="From\InsertForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="From\InsertForm.Designer.cs">
+      <DependentUpon>InsertForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="From\LocationForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -157,6 +164,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="From\Feedback\FunctionPropose.resx">
       <DependentUpon>FunctionPropose.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="From\InsertForm.resx">
+      <DependentUpon>InsertForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="From\LocationForm.resx">
       <DependentUpon>LocationForm.cs</DependentUpon>

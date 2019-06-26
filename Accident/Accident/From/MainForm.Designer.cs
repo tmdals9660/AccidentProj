@@ -44,12 +44,13 @@
             this.msFunction = new System.Windows.Forms.ToolStripMenuItem();
             this.sstMain = new System.Windows.Forms.StatusStrip();
             this.stlMode = new System.Windows.Forms.ToolStripStatusLabel();
+            this.btnLogout = new System.Windows.Forms.Button();
+            this.btnAdverMakeId = new System.Windows.Forms.Button();
             this.btnMakeId = new System.Windows.Forms.Button();
             this.btnStatEnter = new System.Windows.Forms.Button();
             this.btnSearchEnter = new System.Windows.Forms.Button();
             this.btnAdminEnter = new System.Windows.Forms.Button();
-            this.btnAdverMakeId = new System.Windows.Forms.Button();
-            this.btnLogout = new System.Windows.Forms.Button();
+            this.btnInsert = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.sstMain.SuspendLayout();
             this.SuspendLayout();
@@ -180,6 +181,27 @@
             this.stlMode.Tag = "0";
             this.stlMode.Text = "일반 모드";
             // 
+            // btnLogout
+            // 
+            this.btnLogout.Location = new System.Drawing.Point(443, 187);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(92, 23);
+            this.btnLogout.TabIndex = 8;
+            this.btnLogout.Text = "로그아웃(&L)";
+            this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.Visible = false;
+            this.btnLogout.Click += new System.EventHandler(this.BtnLogout_Click);
+            // 
+            // btnAdverMakeId
+            // 
+            this.btnAdverMakeId.Image = global::Accident.Properties.Resources.Adv;
+            this.btnAdverMakeId.Location = new System.Drawing.Point(405, 39);
+            this.btnAdverMakeId.Name = "btnAdverMakeId";
+            this.btnAdverMakeId.Size = new System.Drawing.Size(130, 80);
+            this.btnAdverMakeId.TabIndex = 7;
+            this.btnAdverMakeId.UseVisualStyleBackColor = true;
+            this.btnAdverMakeId.Click += new System.EventHandler(this.BtnAdver_Click);
+            // 
             // btnMakeId
             // 
             this.btnMakeId.Image = global::Accident.Properties.Resources.SignUp;
@@ -218,32 +240,23 @@
             this.btnAdminEnter.UseVisualStyleBackColor = true;
             this.btnAdminEnter.Click += new System.EventHandler(this.BtnAdminEnter_Click);
             // 
-            // btnAdverMakeId
+            // btnInsert
             // 
-            this.btnAdverMakeId.Image = global::Accident.Properties.Resources.Adv;
-            this.btnAdverMakeId.Location = new System.Drawing.Point(405, 39);
-            this.btnAdverMakeId.Name = "btnAdverMakeId";
-            this.btnAdverMakeId.Size = new System.Drawing.Size(130, 80);
-            this.btnAdverMakeId.TabIndex = 7;
-            this.btnAdverMakeId.UseVisualStyleBackColor = true;
-            this.btnAdverMakeId.Click += new System.EventHandler(this.BtnAdver_Click);
-            // 
-            // btnLogout
-            // 
-            this.btnLogout.Location = new System.Drawing.Point(443, 187);
-            this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(92, 23);
-            this.btnLogout.TabIndex = 8;
-            this.btnLogout.Text = "로그아웃(&L)";
-            this.btnLogout.UseVisualStyleBackColor = true;
-            this.btnLogout.Visible = false;
-            this.btnLogout.Click += new System.EventHandler(this.BtnLogout_Click);
+            this.btnInsert.Location = new System.Drawing.Point(250, 155);
+            this.btnInsert.Name = "btnInsert";
+            this.btnInsert.Size = new System.Drawing.Size(96, 23);
+            this.btnInsert.TabIndex = 9;
+            this.btnInsert.Text = "자료 추가(&I)";
+            this.btnInsert.UseVisualStyleBackColor = true;
+            this.btnInsert.Visible = false;
+            this.btnInsert.Click += new System.EventHandler(this.BtnInsert_Click);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(552, 248);
+            this.Controls.Add(this.btnInsert);
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.btnAdverMakeId);
             this.Controls.Add(this.sstMain);
@@ -255,6 +268,7 @@
             this.Name = "MainForm";
             this.Text = "MainForm";
             this.Load += new System.EventHandler(this.MainForm_Load);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.MainForm_KeyUp);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.sstMain.ResumeLayout(false);
@@ -288,5 +302,6 @@
         private System.Windows.Forms.ToolStripStatusLabel stlMode;
 		private System.Windows.Forms.Button btnAdverMakeId;
         private System.Windows.Forms.Button btnLogout;
+        private System.Windows.Forms.Button btnInsert;
     }
 }

@@ -80,6 +80,7 @@ namespace Accident
             stlMode.Text = "관리자 모드";
             btnAdverMakeId.Image = global::Accident.Properties.Resources.SignUp;
             btnLogout.Visible = true;
+            btnInsert.Visible = true;
         }
 
         public void ModeUser()
@@ -88,6 +89,7 @@ namespace Accident
             stlMode.Text = "일반 모드";
             btnAdverMakeId.Image = global::Accident.Properties.Resources.Adv;
             btnLogout.Visible = false;
+            btnInsert.Visible = false;
         }
        
         private void BtnMakeId_Click(object sender, EventArgs e)
@@ -113,6 +115,17 @@ namespace Accident
         private void BtnLogout_Click(object sender, EventArgs e)
         {
             ModeUser();
+        }
+
+        private void MainForm_KeyUp(object sender, KeyEventArgs e)
+        {
+            
+        }
+
+        private void BtnInsert_Click(object sender, EventArgs e)
+        {
+            InsertForm form = new InsertForm();
+            form.ShowDialog();
         }
     }
 }
