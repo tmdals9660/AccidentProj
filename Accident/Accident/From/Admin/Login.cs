@@ -51,5 +51,34 @@ namespace Accident.From
         {
            
         }
+
+        private void BtnLogin_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnLogin.PerformClick();
+                btnCancel.Focus();
+            }
+        }
+
+        private void TxbPw_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnLogin.PerformClick();
+                btnCancel.Focus();
+            }
+        }
+
+        private void TxbId_KeyUp(object sender, KeyEventArgs e)
+        {
+           
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnLogin.PerformClick();
+
+                btnCancel.Focus();
+            }
+        }
     }
 }

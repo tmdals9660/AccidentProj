@@ -45,6 +45,7 @@
             this.btnLogin.Text = "Login(&L)";
             this.btnLogin.UseVisualStyleBackColor = true;
             this.btnLogin.Click += new System.EventHandler(this.BtnLogin_Click);
+            this.btnLogin.KeyUp += new System.Windows.Forms.KeyEventHandler(this.BtnLogin_KeyUp);
             // 
             // txbPw
             // 
@@ -53,6 +54,7 @@
             this.txbPw.PasswordChar = '*';
             this.txbPw.Size = new System.Drawing.Size(247, 21);
             this.txbPw.TabIndex = 1;
+            this.txbPw.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TxbPw_KeyUp);
             // 
             // txbId
             // 
@@ -60,6 +62,7 @@
             this.txbId.Name = "txbId";
             this.txbId.Size = new System.Drawing.Size(247, 21);
             this.txbId.TabIndex = 0;
+            this.txbId.KeyUp += new System.Windows.Forms.KeyEventHandler(this.TxbId_KeyUp);
             // 
             // label1
             // 
