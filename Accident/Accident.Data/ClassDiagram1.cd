@@ -1,0 +1,266 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Accident.Data.AccidentEntities">
+    <Position X="27.25" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAICAAABAQAAAAAIAAQAAEAAAAAAAIAAABEAAAIA=</HashCode>
+      <FileName>Accident.Context.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Accident.Data.AccidentFiled">
+    <Position X="29" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAQAAAAAAACAAAAAAAAAEAAAAAAAAAAAA=</HashCode>
+      <FileName>AccidentFiled.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Accident.Data.AccidentType">
+    <Position X="30.75" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAEAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AccidentType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Accident.Data.Admin">
+    <Position X="32.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAEAAAAQAAAAAAAAAAQAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Admin.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Accident.Data.AttackerType">
+    <Position X="27.25" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAAAAQAAAAAAAAAAAAAAAAAAAEAAAAAAAAAA=</HashCode>
+      <FileName>AttackerType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Accident.Data.City">
+    <Position X="29" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABIAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>City.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Accident.Data.Incident">
+    <Position X="30.75" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAADAMgAQACEgAAgAQcBAAEAAAAAABAQFCIcAEAAAEA=</HashCode>
+      <FileName>Incident.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Accident.Data.Location">
+    <Position X="32.5" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABQEAAQAAoAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Location.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Accident.Data.RoadForm">
+    <Position X="27.25" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQQAAAAAQAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>RoadForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Accident.Data.State">
+    <Position X="29" Y="12.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAAAAAAAIAAAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>State.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Accident.Data.VictimType">
+    <Position X="29" Y="14.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAEAIAAAAAAA=</HashCode>
+      <FileName>VictimType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Accident.Data.Violation">
+    <Position X="32.5" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAQAAgAAAAAAAAAAAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>Violation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Accident.Data.AccidentFiledData">
+    <Position X="18" Y="6.75" Width="1.5" />
+    <InheritanceLine Type="Accident.Data.EntityData&lt;T&gt;" FixedFromPoint="true">
+      <Path>
+        <Point X="21.25" Y="9.438" />
+        <Point X="19.918" Y="9.438" />
+        <Point X="19.918" Y="7.366" />
+        <Point X="19.5" Y="7.366" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Data\AccidentFiledData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Accident.Data.AccidentTypeData">
+    <Position X="18" Y="9.75" Width="1.5" />
+    <InheritanceLine Type="Accident.Data.EntityData&lt;T&gt;" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="21.25" Y="9.438" />
+        <Point X="19.935" Y="9.438" />
+        <Point X="19.935" Y="10.438" />
+        <Point X="19.5" Y="10.438" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Data\AccidentTypeData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Accident.Data.AdminData">
+    <Position X="20.25" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>Data\AdminData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Accident.Data.AttackerTypeData">
+    <Position X="22" Y="5.75" Width="1.5" />
+    <InheritanceLine Type="Accident.Data.EntityData&lt;T&gt;" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="21.875" Y="8.25" />
+        <Point X="21.875" Y="7.875" />
+        <Point X="22.688" Y="7.875" />
+        <Point X="22.688" Y="6.983" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Data\AttackerTypeData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Accident.Data.CityData">
+    <Position X="24.25" Y="6.5" Width="1.5" />
+    <InheritanceLine Type="Accident.Data.EntityData&lt;T&gt;" FixedFromPoint="true">
+      <Path>
+        <Point X="22.75" Y="9.125" />
+        <Point X="23.875" Y="9.125" />
+        <Point X="23.875" Y="6.999" />
+        <Point X="24.25" Y="6.999" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Data\CityData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Accident.Data.DB">
+    <Position X="30.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAQAAIAQMAAQAAAAAAAAAAAAIABEAAAEA=</HashCode>
+      <FileName>Data\DB.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Accident.Data.EntityData&lt;T&gt;">
+    <Position X="21.25" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAAAAAAAAAAAAAAAAAAAEAAAAAAgAAQAAAAAA=</HashCode>
+      <FileName>Data\EntityData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Accident.Data.IncidentData">
+    <Position X="18" Y="11.25" Width="1.5" />
+    <InheritanceLine Type="Accident.Data.EntityData&lt;T&gt;" ManuallyRouted="true" FixedFromPoint="true">
+      <Path>
+        <Point X="21.25" Y="9.438" />
+        <Point X="19.918" Y="9.438" />
+        <Point X="19.918" Y="11.963" />
+        <Point X="19.5" Y="11.963" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAg=</HashCode>
+      <FileName>Data\IncidentData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Accident.Data.LocationData">
+    <Position X="20.25" Y="5.75" Width="1.5" />
+    <InheritanceLine Type="Accident.Data.EntityData&lt;T&gt;" ManuallyRouted="true" FixedFromPoint="true">
+      <Path>
+        <Point X="21.875" Y="8.25" />
+        <Point X="21.875" Y="8.128" />
+        <Point X="21.888" Y="8.128" />
+        <Point X="21.888" Y="7.879" />
+        <Point X="21" Y="7.879" />
+        <Point X="21" Y="7.367" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAQA=</HashCode>
+      <FileName>Data\LocationData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Accident.Data.RoadFormData">
+    <Position X="22.25" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Data\RoadFormData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Accident.Data.StateData">
+    <Position X="24.25" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Data\StateData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Accident.Data.VictimTypeData">
+    <Position X="24.25" Y="10.5" Width="1.5" />
+    <InheritanceLine Type="Accident.Data.EntityData&lt;T&gt;" ManuallyRouted="true" FixedFromPoint="true">
+      <Path>
+        <Point X="22.75" Y="9.125" />
+        <Point X="23.883" Y="9.125" />
+        <Point X="23.883" Y="11.116" />
+        <Point X="24.25" Y="11.116" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Data\VictimTypeData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Accident.Data.ViolationData">
+    <Position X="18" Y="8.25" Width="1.5" />
+    <InheritanceLine Type="Accident.Data.EntityData&lt;T&gt;" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="21.25" Y="9.438" />
+        <Point X="19.935" Y="9.438" />
+        <Point X="19.935" Y="8.875" />
+        <Point X="19.5" Y="8.875" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Data\ViolationData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Accident.Data.DbContextFactory">
+    <Position X="32.5" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAEAAAAAAAAAAAAAAAAAAAAAAAEAAACBAAAEAAAA=</HashCode>
+      <FileName>DbContextFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Accident.Data.FuncPropose">
+    <Position X="29" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAAAAAAAAEAAAAAAAAAAAAAoAAAAAAAAAAAg=</HashCode>
+      <FileName>Entities\FuncPropose.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Accident.Data.FeedbackFile">
+    <Position X="27.25" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAIA=</HashCode>
+      <FileName>FeedbackFile.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="맑은 고딕" Size="9" />
+</ClassDiagram>
