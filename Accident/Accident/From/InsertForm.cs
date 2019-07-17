@@ -40,7 +40,7 @@ namespace Accident.From
 
         private void InsertForm_Load(object sender, EventArgs e)
         {
-            bdsIncident.DataSource = DB.Incident.GetAll();
+           // bdsIncident.DataSource = DB.Incident.GetAll();
         }
     }
 }
