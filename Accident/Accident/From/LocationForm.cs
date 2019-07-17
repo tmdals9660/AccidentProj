@@ -25,10 +25,10 @@ namespace Accident.From
         private void ReadFromEntity()
         {
             int incidentId = _incidentId.IncidentId;
-            string cityName = DB.Location.GetCitiesName(incidentId).ToString();
-            string stateName = DB.Location.GetStateName(incidentId).ToString();
-            double ratitude = _incidentId.Location.Ratitude;
-            double longitude = _incidentId.Location.Longitude;
+            string cityName = DB.Incident.GetCitiesName(incidentId).ToString();
+            string stateName = DB.Incident.GetStateName(incidentId).ToString();
+            double ratitude = _incidentId.Ratitude;
+            double longitude = _incidentId.Longitude;
 
 
             uscLocation.GetLocationInfo(cityName, stateName, ratitude, longitude);

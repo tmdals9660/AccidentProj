@@ -12,16 +12,12 @@ namespace Accident.Data
     using System;
     using System.Collections.Generic;
     
-    public partial class Location
+    public partial class sysdiagram
     {
-        public int IncidentId { get; set; }
-        public int CityId { get; set; }
-        public int StateId { get; set; }
-        public double Ratitude { get; set; }
-        public double Longitude { get; set; }
-    
-        public virtual City City { get; set; }
-        public virtual Incident Incident { get; set; }
-        public virtual State State { get; set; }
+        public string name { get; set; }
+        public int principal_id { get; set; }
+        public int diagram_id { get; set; }
+        public Nullable<int> version { get; set; }
+        public byte[] definition { get; set; }
     }
 }

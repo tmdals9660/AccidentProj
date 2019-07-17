@@ -28,12 +28,17 @@ namespace Accident.Data
         public int RoadFormId { get; set; }
         public int AttackerId { get; set; }
         public int VictimId { get; set; }
+        public int CityId { get; set; }
+        public int StateId { get; set; }
+        public double Ratitude { get; set; }
+        public double Longitude { get; set; }
     
         public virtual AccidentFiled AccidentFiled { get; set; }
         public virtual AccidentType AccidentType { get; set; }
         public virtual AttackerType AttackerType { get; set; }
-        public virtual Location Location { get; set; }
+        public virtual City City { get; set; }
         public virtual RoadForm RoadForm { get; set; }
+        public virtual State State { get; set; }
         public virtual VictimType VictimType { get; set; }
         public virtual Violation Violation { get; set; }
     }

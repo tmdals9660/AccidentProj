@@ -60,12 +60,6 @@
           <Property Name="RoadFormId" Type="int" Nullable="false" />
           <Property Name="AttackerId" Type="int" Nullable="false" />
           <Property Name="VictimId" Type="int" Nullable="false" />
-        </EntityType>
-        <EntityType Name="Location">
-          <Key>
-            <PropertyRef Name="IncidentId" />
-          </Key>
-          <Property Name="IncidentId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="CityId" Type="int" Nullable="false" />
           <Property Name="StateId" Type="int" Nullable="false" />
           <Property Name="Ratitude" Type="float" Nullable="false" />
@@ -85,6 +79,16 @@
           <Property Name="StateId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="StateName" Type="nvarchar" MaxLength="50" Nullable="false" />
         </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
         <EntityType Name="VictimType">
           <Key>
             <PropertyRef Name="VictimId" />
@@ -99,7 +103,7 @@
           <Property Name="ViolationId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="ViiolationName" Type="nvarchar" MaxLength="50" Nullable="false" />
         </EntityType>
-        <Association Name="FK_Incident_AccidentFiled">
+        <Association Name="FK_Incident_AccidentFiled1">
           <End Role="AccidentFiled" Type="Self.AccidentFiled" Multiplicity="1" />
           <End Role="Incident" Type="Self.Incident" Multiplicity="*" />
           <ReferentialConstraint>
@@ -111,7 +115,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Incident_AccidentType">
+        <Association Name="FK_Incident_AccidentType1">
           <End Role="AccidentType" Type="Self.AccidentType" Multiplicity="1" />
           <End Role="Incident" Type="Self.Incident" Multiplicity="*" />
           <ReferentialConstraint>
@@ -123,7 +127,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Incident_AttackerType">
+        <Association Name="FK_Incident_AttackerType1">
           <End Role="AttackerType" Type="Self.AttackerType" Multiplicity="1" />
           <End Role="Incident" Type="Self.Incident" Multiplicity="*" />
           <ReferentialConstraint>
@@ -135,19 +139,19 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Incident_Location">
-          <End Role="Location" Type="Self.Location" Multiplicity="1" />
-          <End Role="Incident" Type="Self.Incident" Multiplicity="0..1" />
+        <Association Name="FK_Incident_City">
+          <End Role="City" Type="Self.City" Multiplicity="1" />
+          <End Role="Incident" Type="Self.Incident" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="Location">
-              <PropertyRef Name="IncidentId" />
+            <Principal Role="City">
+              <PropertyRef Name="CityId" />
             </Principal>
             <Dependent Role="Incident">
-              <PropertyRef Name="IncidentId" />
+              <PropertyRef Name="CityId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Incident_RoadForm">
+        <Association Name="FK_Incident_RoadForm1">
           <End Role="RoadForm" Type="Self.RoadForm" Multiplicity="1" />
           <End Role="Incident" Type="Self.Incident" Multiplicity="*" />
           <ReferentialConstraint>
@@ -159,7 +163,19 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Incident_VictimType">
+        <Association Name="FK_Incident_State">
+          <End Role="State" Type="Self.State" Multiplicity="1" />
+          <End Role="Incident" Type="Self.Incident" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="State">
+              <PropertyRef Name="StateId" />
+            </Principal>
+            <Dependent Role="Incident">
+              <PropertyRef Name="StateId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Incident_VictimType1">
           <End Role="VictimType" Type="Self.VictimType" Multiplicity="1" />
           <End Role="Incident" Type="Self.Incident" Multiplicity="*" />
           <ReferentialConstraint>
@@ -171,7 +187,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Incident_Violation">
+        <Association Name="FK_Incident_Violation1">
           <End Role="Violation" Type="Self.Violation" Multiplicity="1" />
           <End Role="Incident" Type="Self.Incident" Multiplicity="*" />
           <ReferentialConstraint>
@@ -183,30 +199,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Location_City">
-          <End Role="City" Type="Self.City" Multiplicity="1" />
-          <End Role="Location" Type="Self.Location" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="City">
-              <PropertyRef Name="CityId" />
-            </Principal>
-            <Dependent Role="Location">
-              <PropertyRef Name="CityId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_Location_State">
-          <End Role="State" Type="Self.State" Multiplicity="1" />
-          <End Role="Location" Type="Self.Location" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="State">
-              <PropertyRef Name="StateId" />
-            </Principal>
-            <Dependent Role="Location">
-              <PropertyRef Name="StateId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <EntityContainer Name="AccidentModelStoreContainer">
           <EntitySet Name="AccidentFiled" EntityType="Self.AccidentFiled" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="AccidentType" EntityType="Self.AccidentType" Schema="dbo" store:Type="Tables" />
@@ -214,46 +206,42 @@
           <EntitySet Name="AttackerType" EntityType="Self.AttackerType" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="City" EntityType="Self.City" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Incident" EntityType="Self.Incident" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Location" EntityType="Self.Location" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="RoadForm" EntityType="Self.RoadForm" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="State" EntityType="Self.State" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="VictimType" EntityType="Self.VictimType" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Violation" EntityType="Self.Violation" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK_Incident_AccidentFiled" Association="Self.FK_Incident_AccidentFiled">
+          <AssociationSet Name="FK_Incident_AccidentFiled1" Association="Self.FK_Incident_AccidentFiled1">
             <End Role="AccidentFiled" EntitySet="AccidentFiled" />
             <End Role="Incident" EntitySet="Incident" />
           </AssociationSet>
-          <AssociationSet Name="FK_Incident_AccidentType" Association="Self.FK_Incident_AccidentType">
+          <AssociationSet Name="FK_Incident_AccidentType1" Association="Self.FK_Incident_AccidentType1">
             <End Role="AccidentType" EntitySet="AccidentType" />
             <End Role="Incident" EntitySet="Incident" />
           </AssociationSet>
-          <AssociationSet Name="FK_Incident_AttackerType" Association="Self.FK_Incident_AttackerType">
+          <AssociationSet Name="FK_Incident_AttackerType1" Association="Self.FK_Incident_AttackerType1">
             <End Role="AttackerType" EntitySet="AttackerType" />
             <End Role="Incident" EntitySet="Incident" />
           </AssociationSet>
-          <AssociationSet Name="FK_Incident_Location" Association="Self.FK_Incident_Location">
-            <End Role="Location" EntitySet="Location" />
+          <AssociationSet Name="FK_Incident_City" Association="Self.FK_Incident_City">
+            <End Role="City" EntitySet="City" />
             <End Role="Incident" EntitySet="Incident" />
           </AssociationSet>
-          <AssociationSet Name="FK_Incident_RoadForm" Association="Self.FK_Incident_RoadForm">
+          <AssociationSet Name="FK_Incident_RoadForm1" Association="Self.FK_Incident_RoadForm1">
             <End Role="RoadForm" EntitySet="RoadForm" />
             <End Role="Incident" EntitySet="Incident" />
           </AssociationSet>
-          <AssociationSet Name="FK_Incident_VictimType" Association="Self.FK_Incident_VictimType">
+          <AssociationSet Name="FK_Incident_State" Association="Self.FK_Incident_State">
+            <End Role="State" EntitySet="State" />
+            <End Role="Incident" EntitySet="Incident" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Incident_VictimType1" Association="Self.FK_Incident_VictimType1">
             <End Role="VictimType" EntitySet="VictimType" />
             <End Role="Incident" EntitySet="Incident" />
           </AssociationSet>
-          <AssociationSet Name="FK_Incident_Violation" Association="Self.FK_Incident_Violation">
+          <AssociationSet Name="FK_Incident_Violation1" Association="Self.FK_Incident_Violation1">
             <End Role="Violation" EntitySet="Violation" />
             <End Role="Incident" EntitySet="Incident" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Location_City" Association="Self.FK_Location_City">
-            <End Role="City" EntitySet="City" />
-            <End Role="Location" EntitySet="Location" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Location_State" Association="Self.FK_Location_State">
-            <End Role="State" EntitySet="State" />
-            <End Role="Location" EntitySet="Location" />
           </AssociationSet>
         </EntityContainer>
       </Schema>
@@ -267,7 +255,7 @@
           </Key>
           <Property Name="AccidentFieldId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="AccidentFieldName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <NavigationProperty Name="Incidents" Relationship="Self.FK_Incident_AccidentFiled" FromRole="AccidentFiled" ToRole="Incident" />
+          <NavigationProperty Name="Incidents" Relationship="Self.FK_Incident_AccidentFiled1" FromRole="AccidentFiled" ToRole="Incident" />
         </EntityType>
         <EntityType Name="AccidentType">
           <Key>
@@ -275,7 +263,7 @@
           </Key>
           <Property Name="AccidentTypeId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="AccidentTypeName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <NavigationProperty Name="Incidents" Relationship="Self.FK_Incident_AccidentType" FromRole="AccidentType" ToRole="Incident" />
+          <NavigationProperty Name="Incidents" Relationship="Self.FK_Incident_AccidentType1" FromRole="AccidentType" ToRole="Incident" />
         </EntityType>
         <EntityType Name="Admin">
           <Key>
@@ -292,7 +280,7 @@
           </Key>
           <Property Name="AttackerId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="AttackerTypeName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <NavigationProperty Name="Incidents" Relationship="Self.FK_Incident_AttackerType" FromRole="AttackerType" ToRole="Incident" />
+          <NavigationProperty Name="Incidents" Relationship="Self.FK_Incident_AttackerType1" FromRole="AttackerType" ToRole="Incident" />
         </EntityType>
         <EntityType Name="City">
           <Key>
@@ -300,7 +288,7 @@
           </Key>
           <Property Name="CityId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="CityName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <NavigationProperty Name="Locations" Relationship="Self.FK_Location_City" FromRole="City" ToRole="Location" />
+          <NavigationProperty Name="Incidents" Relationship="Self.FK_Incident_City" FromRole="City" ToRole="Incident" />
         </EntityType>
         <EntityType Name="Incident">
           <Key>
@@ -320,26 +308,18 @@
           <Property Name="RoadFormId" Type="Int32" Nullable="false" />
           <Property Name="AttackerId" Type="Int32" Nullable="false" />
           <Property Name="VictimId" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="AccidentFiled" Relationship="Self.FK_Incident_AccidentFiled" FromRole="Incident" ToRole="AccidentFiled" />
-          <NavigationProperty Name="AccidentType" Relationship="Self.FK_Incident_AccidentType" FromRole="Incident" ToRole="AccidentType" />
-          <NavigationProperty Name="AttackerType" Relationship="Self.FK_Incident_AttackerType" FromRole="Incident" ToRole="AttackerType" />
-          <NavigationProperty Name="Location" Relationship="Self.FK_Incident_Location" FromRole="Incident" ToRole="Location" />
-          <NavigationProperty Name="RoadForm" Relationship="Self.FK_Incident_RoadForm" FromRole="Incident" ToRole="RoadForm" />
-          <NavigationProperty Name="VictimType" Relationship="Self.FK_Incident_VictimType" FromRole="Incident" ToRole="VictimType" />
-          <NavigationProperty Name="Violation" Relationship="Self.FK_Incident_Violation" FromRole="Incident" ToRole="Violation" />
-        </EntityType>
-        <EntityType Name="Location">
-          <Key>
-            <PropertyRef Name="IncidentId" />
-          </Key>
-          <Property Name="IncidentId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="CityId" Type="Int32" Nullable="false" />
           <Property Name="StateId" Type="Int32" Nullable="false" />
           <Property Name="Ratitude" Type="Double" Nullable="false" />
           <Property Name="Longitude" Type="Double" Nullable="false" />
-          <NavigationProperty Name="City" Relationship="Self.FK_Location_City" FromRole="Location" ToRole="City" />
-          <NavigationProperty Name="Incident" Relationship="Self.FK_Incident_Location" FromRole="Location" ToRole="Incident" />
-          <NavigationProperty Name="State" Relationship="Self.FK_Location_State" FromRole="Location" ToRole="State" />
+          <NavigationProperty Name="AccidentFiled" Relationship="Self.FK_Incident_AccidentFiled1" FromRole="Incident" ToRole="AccidentFiled" />
+          <NavigationProperty Name="AccidentType" Relationship="Self.FK_Incident_AccidentType1" FromRole="Incident" ToRole="AccidentType" />
+          <NavigationProperty Name="AttackerType" Relationship="Self.FK_Incident_AttackerType1" FromRole="Incident" ToRole="AttackerType" />
+          <NavigationProperty Name="City" Relationship="Self.FK_Incident_City" FromRole="Incident" ToRole="City" />
+          <NavigationProperty Name="RoadForm" Relationship="Self.FK_Incident_RoadForm1" FromRole="Incident" ToRole="RoadForm" />
+          <NavigationProperty Name="State" Relationship="Self.FK_Incident_State" FromRole="Incident" ToRole="State" />
+          <NavigationProperty Name="VictimType" Relationship="Self.FK_Incident_VictimType1" FromRole="Incident" ToRole="VictimType" />
+          <NavigationProperty Name="Violation" Relationship="Self.FK_Incident_Violation1" FromRole="Incident" ToRole="Violation" />
         </EntityType>
         <EntityType Name="RoadForm">
           <Key>
@@ -347,7 +327,7 @@
           </Key>
           <Property Name="RoadFormId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="RoadFormName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <NavigationProperty Name="Incidents" Relationship="Self.FK_Incident_RoadForm" FromRole="RoadForm" ToRole="Incident" />
+          <NavigationProperty Name="Incidents" Relationship="Self.FK_Incident_RoadForm1" FromRole="RoadForm" ToRole="Incident" />
         </EntityType>
         <EntityType Name="State">
           <Key>
@@ -355,7 +335,17 @@
           </Key>
           <Property Name="StateId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="StateName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <NavigationProperty Name="Locations" Relationship="Self.FK_Location_State" FromRole="State" ToRole="Location" />
+          <NavigationProperty Name="Incidents" Relationship="Self.FK_Incident_State" FromRole="State" ToRole="Incident" />
+        </EntityType>
+        <EntityType Name="sysdiagram">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
         </EntityType>
         <EntityType Name="VictimType">
           <Key>
@@ -363,7 +353,7 @@
           </Key>
           <Property Name="VictimId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="VictimTypeName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="Incidents" Relationship="Self.FK_Incident_VictimType" FromRole="VictimType" ToRole="Incident" />
+          <NavigationProperty Name="Incidents" Relationship="Self.FK_Incident_VictimType1" FromRole="VictimType" ToRole="Incident" />
         </EntityType>
         <EntityType Name="Violation">
           <Key>
@@ -371,9 +361,9 @@
           </Key>
           <Property Name="ViolationId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="ViiolationName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <NavigationProperty Name="Incidents" Relationship="Self.FK_Incident_Violation" FromRole="Violation" ToRole="Incident" />
+          <NavigationProperty Name="Incidents" Relationship="Self.FK_Incident_Violation1" FromRole="Violation" ToRole="Incident" />
         </EntityType>
-        <Association Name="FK_Incident_AccidentFiled">
+        <Association Name="FK_Incident_AccidentFiled1">
           <End Role="AccidentFiled" Type="Self.AccidentFiled" Multiplicity="1" />
           <End Role="Incident" Type="Self.Incident" Multiplicity="*" />
           <ReferentialConstraint>
@@ -385,7 +375,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Incident_AccidentType">
+        <Association Name="FK_Incident_AccidentType1">
           <End Role="AccidentType" Type="Self.AccidentType" Multiplicity="1" />
           <End Role="Incident" Type="Self.Incident" Multiplicity="*" />
           <ReferentialConstraint>
@@ -397,7 +387,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Incident_AttackerType">
+        <Association Name="FK_Incident_AttackerType1">
           <End Role="AttackerType" Type="Self.AttackerType" Multiplicity="1" />
           <End Role="Incident" Type="Self.Incident" Multiplicity="*" />
           <ReferentialConstraint>
@@ -409,31 +399,19 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Location_City">
+        <Association Name="FK_Incident_City">
           <End Role="City" Type="Self.City" Multiplicity="1" />
-          <End Role="Location" Type="Self.Location" Multiplicity="*" />
+          <End Role="Incident" Type="Self.Incident" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="City">
               <PropertyRef Name="CityId" />
             </Principal>
-            <Dependent Role="Location">
+            <Dependent Role="Incident">
               <PropertyRef Name="CityId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Incident_Location">
-          <End Role="Location" Type="Self.Location" Multiplicity="1" />
-          <End Role="Incident" Type="Self.Incident" Multiplicity="0..1" />
-          <ReferentialConstraint>
-            <Principal Role="Location">
-              <PropertyRef Name="IncidentId" />
-            </Principal>
-            <Dependent Role="Incident">
-              <PropertyRef Name="IncidentId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_Incident_RoadForm">
+        <Association Name="FK_Incident_RoadForm1">
           <End Role="RoadForm" Type="Self.RoadForm" Multiplicity="1" />
           <End Role="Incident" Type="Self.Incident" Multiplicity="*" />
           <ReferentialConstraint>
@@ -445,7 +423,19 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Incident_VictimType">
+        <Association Name="FK_Incident_State">
+          <End Role="State" Type="Self.State" Multiplicity="1" />
+          <End Role="Incident" Type="Self.Incident" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="State">
+              <PropertyRef Name="StateId" />
+            </Principal>
+            <Dependent Role="Incident">
+              <PropertyRef Name="StateId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Incident_VictimType1">
           <End Role="VictimType" Type="Self.VictimType" Multiplicity="1" />
           <End Role="Incident" Type="Self.Incident" Multiplicity="*" />
           <ReferentialConstraint>
@@ -457,7 +447,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Incident_Violation">
+        <Association Name="FK_Incident_Violation1">
           <End Role="Violation" Type="Self.Violation" Multiplicity="1" />
           <End Role="Incident" Type="Self.Incident" Multiplicity="*" />
           <ReferentialConstraint>
@@ -469,18 +459,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Location_State">
-          <End Role="State" Type="Self.State" Multiplicity="1" />
-          <End Role="Location" Type="Self.Location" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="State">
-              <PropertyRef Name="StateId" />
-            </Principal>
-            <Dependent Role="Location">
-              <PropertyRef Name="StateId" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <EntityContainer Name="AccidentEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="AccidentFileds" EntityType="Self.AccidentFiled" />
           <EntitySet Name="AccidentTypes" EntityType="Self.AccidentType" />
@@ -488,46 +466,42 @@
           <EntitySet Name="AttackerTypes" EntityType="Self.AttackerType" />
           <EntitySet Name="Cities" EntityType="Self.City" />
           <EntitySet Name="Incidents" EntityType="Self.Incident" />
-          <EntitySet Name="Locations" EntityType="Self.Location" />
           <EntitySet Name="RoadForms" EntityType="Self.RoadForm" />
           <EntitySet Name="States" EntityType="Self.State" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
           <EntitySet Name="VictimTypes" EntityType="Self.VictimType" />
           <EntitySet Name="Violations" EntityType="Self.Violation" />
-          <AssociationSet Name="FK_Incident_AccidentFiled" Association="Self.FK_Incident_AccidentFiled">
+          <AssociationSet Name="FK_Incident_AccidentFiled1" Association="Self.FK_Incident_AccidentFiled1">
             <End Role="AccidentFiled" EntitySet="AccidentFileds" />
             <End Role="Incident" EntitySet="Incidents" />
           </AssociationSet>
-          <AssociationSet Name="FK_Incident_AccidentType" Association="Self.FK_Incident_AccidentType">
+          <AssociationSet Name="FK_Incident_AccidentType1" Association="Self.FK_Incident_AccidentType1">
             <End Role="AccidentType" EntitySet="AccidentTypes" />
             <End Role="Incident" EntitySet="Incidents" />
           </AssociationSet>
-          <AssociationSet Name="FK_Incident_AttackerType" Association="Self.FK_Incident_AttackerType">
+          <AssociationSet Name="FK_Incident_AttackerType1" Association="Self.FK_Incident_AttackerType1">
             <End Role="AttackerType" EntitySet="AttackerTypes" />
             <End Role="Incident" EntitySet="Incidents" />
           </AssociationSet>
-          <AssociationSet Name="FK_Location_City" Association="Self.FK_Location_City">
+          <AssociationSet Name="FK_Incident_City" Association="Self.FK_Incident_City">
             <End Role="City" EntitySet="Cities" />
-            <End Role="Location" EntitySet="Locations" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Incident_Location" Association="Self.FK_Incident_Location">
-            <End Role="Location" EntitySet="Locations" />
             <End Role="Incident" EntitySet="Incidents" />
           </AssociationSet>
-          <AssociationSet Name="FK_Incident_RoadForm" Association="Self.FK_Incident_RoadForm">
+          <AssociationSet Name="FK_Incident_RoadForm1" Association="Self.FK_Incident_RoadForm1">
             <End Role="RoadForm" EntitySet="RoadForms" />
             <End Role="Incident" EntitySet="Incidents" />
           </AssociationSet>
-          <AssociationSet Name="FK_Incident_VictimType" Association="Self.FK_Incident_VictimType">
+          <AssociationSet Name="FK_Incident_State" Association="Self.FK_Incident_State">
+            <End Role="State" EntitySet="States" />
+            <End Role="Incident" EntitySet="Incidents" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Incident_VictimType1" Association="Self.FK_Incident_VictimType1">
             <End Role="VictimType" EntitySet="VictimTypes" />
             <End Role="Incident" EntitySet="Incidents" />
           </AssociationSet>
-          <AssociationSet Name="FK_Incident_Violation" Association="Self.FK_Incident_Violation">
+          <AssociationSet Name="FK_Incident_Violation1" Association="Self.FK_Incident_Violation1">
             <End Role="Violation" EntitySet="Violations" />
             <End Role="Incident" EntitySet="Incidents" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Location_State" Association="Self.FK_Location_State">
-            <End Role="State" EntitySet="States" />
-            <End Role="Location" EntitySet="Locations" />
           </AssociationSet>
         </EntityContainer>
       </Schema>
@@ -595,13 +569,6 @@
                 <ScalarProperty Name="RoadFormId" ColumnName="RoadFormId" />
                 <ScalarProperty Name="AttackerId" ColumnName="AttackerId" />
                 <ScalarProperty Name="VictimId" ColumnName="VictimId" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Locations">
-            <EntityTypeMapping TypeName="AccidentModel.Location">
-              <MappingFragment StoreEntitySet="Location">
-                <ScalarProperty Name="IncidentId" ColumnName="IncidentId" />
                 <ScalarProperty Name="CityId" ColumnName="CityId" />
                 <ScalarProperty Name="StateId" ColumnName="StateId" />
                 <ScalarProperty Name="Ratitude" ColumnName="Ratitude" />
@@ -622,6 +589,17 @@
               <MappingFragment StoreEntitySet="State">
                 <ScalarProperty Name="StateId" ColumnName="StateId" />
                 <ScalarProperty Name="StateName" ColumnName="StateName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="AccidentModel.sysdiagram">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

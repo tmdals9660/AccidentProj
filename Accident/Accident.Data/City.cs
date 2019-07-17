@@ -17,13 +17,13 @@ namespace Accident.Data
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public City()
         {
-            this.Locations = new HashSet<Location>();
+            this.Incidents = new HashSet<Incident>();
         }
     
         public int CityId { get; set; }
         public string CityName { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Location> Locations { get; set; }
+        public virtual ICollection<Incident> Incidents { get; set; }
     }
 }

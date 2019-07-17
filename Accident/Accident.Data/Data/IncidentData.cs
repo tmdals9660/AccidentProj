@@ -10,7 +10,31 @@ namespace Accident.Data
         public IncidentData()
         {
         }
+        public string GetCitiesName(int incidentId)
+        {
+            using (AccidentEntities context = DbContextFactory.Create())
+            {
+                var query = from x in context.Incidents
+                            where x.IncidentId == incidentId
+                            select x.City.CityName;
 
+                return query.FirstOrDefault();
+            }
+
+        }
+
+        public string GetStateName(int incidentId)
+        {
+            using (AccidentEntities context = DbContextFactory.Create())
+            {
+                var query = from x in context.Incidents
+                            where x.IncidentId == incidentId
+                            select x.State.StateName;
+
+                return query.FirstOrDefault();
+            }
+
+        }
         public List<Incident> SearchIncident(int? id, DateTime? sdate, DateTime? fdate)
         {
             using (AccidentEntities context = DbContextFactory.Create())
@@ -21,19 +45,18 @@ namespace Accident.Data
                             select new
                             {
                                 Incident = x,
-                                LocationId = x.Location,
                                 FieldName = x.AccidentFiled.AccidentFieldName,
                                 TypeName = x.AccidentType.AccidentTypeName,
                                 ViolationName = x.Violation.ViiolationName,
                                 RoadFormName2 = x.RoadForm.RoadFormName,
                                 AttackerName = x.AttackerType.AttackerTypeName,
                                 VictimName = x.VictimType.VictimTypeName,
-                                CityName = x.Location.City.CityName,
-                                StateName = x.Location.State.StateName
+                                CityName = x.City.CityName,
+                                StateName = x.State.StateName
                             };
 
                 if (id.HasValue)
-                    query = query.Where(x => x.LocationId.CityId == id);
+                    query = query.Where(x => x.Incident.CityId == id);
 
                 var list = query.ToList();
 

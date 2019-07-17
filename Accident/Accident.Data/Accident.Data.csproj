@@ -91,12 +91,8 @@
     <Compile Include="DbContextFactory.cs" />
     <Compile Include="Entities\AccidentFiled.cs" />
     <Compile Include="Data\IncidentData.cs" />
-    <Compile Include="Data\LocationData.cs" />
     <Compile Include="FeedbackFile.cs" />
     <Compile Include="Incident.cs">
-      <DependentUpon>Accident.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Location.cs">
       <DependentUpon>Accident.tt</DependentUpon>
     </Compile>
     <Compile Include="Partial\AccidentEntities.cs" />
@@ -109,6 +105,9 @@
       <DependentUpon>Accident.tt</DependentUpon>
     </Compile>
     <Compile Include="State.cs">
+      <DependentUpon>Accident.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagram.cs">
       <DependentUpon>Accident.tt</DependentUpon>
     </Compile>
     <Compile Include="VictimType.cs">

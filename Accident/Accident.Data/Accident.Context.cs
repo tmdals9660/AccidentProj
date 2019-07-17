@@ -31,9 +31,9 @@ namespace Accident.Data
         public virtual DbSet<AttackerType> AttackerTypes { get; set; }
         public virtual DbSet<City> Cities { get; set; }
         public virtual DbSet<Incident> Incidents { get; set; }
-        public virtual DbSet<Location> Locations { get; set; }
         public virtual DbSet<RoadForm> RoadForms { get; set; }
         public virtual DbSet<State> States { get; set; }
+        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<VictimType> VictimTypes { get; set; }
         public virtual DbSet<Violation> Violations { get; set; }
     }

@@ -12,7 +12,6 @@ namespace Accident.Data
 		{
 			Incident = new IncidentData();
 			RoadForm = new RoadFormData();
-			Location = new LocationData();
 			Violation = new ViolationData();
 			AccidentFiled = new AccidentFiledData();
 			AccidentType = new AccidentTypeData();
@@ -25,7 +24,6 @@ namespace Accident.Data
 
 		public static IncidentData Incident { get; }
 		public static RoadFormData RoadForm { get; }
-		public static LocationData Location { get; }
 		public static ViolationData Violation { get; }
 		public static AccidentFiledData AccidentFiled { get; }
 		public static AccidentTypeData AccidentType { get; }

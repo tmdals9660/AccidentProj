@@ -204,9 +204,16 @@
     <None Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
     <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\Accident.Data.AccidentFiled.datasource" />
+    <None Include="Properties\DataSources\Accident.Data.AccidentType.datasource" />
     <None Include="Properties\DataSources\Accident.Data.Admin.datasource" />
+    <None Include="Properties\DataSources\Accident.Data.AttackerType.datasource" />
     <None Include="Properties\DataSources\Accident.Data.City.datasource" />
     <None Include="Properties\DataSources\Accident.Data.Incident.datasource" />
+    <None Include="Properties\DataSources\Accident.Data.RoadForm.datasource" />
+    <None Include="Properties\DataSources\Accident.Data.State.datasource" />
+    <None Include="Properties\DataSources\Accident.Data.VictimType.datasource" />
+    <None Include="Properties\DataSources\Accident.Data.Violation.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
