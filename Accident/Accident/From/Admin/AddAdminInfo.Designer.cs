@@ -35,12 +35,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txbCode = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.btnDelete = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnSaveAddimInfo
             // 
-            this.btnSaveAddimInfo.Location = new System.Drawing.Point(45, 105);
+            this.btnSaveAddimInfo.Location = new System.Drawing.Point(122, 105);
             this.btnSaveAddimInfo.Name = "btnSaveAddimInfo";
             this.btnSaveAddimInfo.Size = new System.Drawing.Size(75, 23);
             this.btnSaveAddimInfo.TabIndex = 0;
@@ -96,22 +95,11 @@
             this.label3.TabIndex = 6;
             this.label3.Text = "이름 : ";
             // 
-            // btnDelete
-            // 
-            this.btnDelete.Location = new System.Drawing.Point(124, 105);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(75, 23);
-            this.btnDelete.TabIndex = 7;
-            this.btnDelete.Text = "삭제(&D)";
-            this.btnDelete.UseVisualStyleBackColor = true;
-            this.btnDelete.Click += new System.EventHandler(this.BtnDelete_Click);
-            // 
             // AddAdminInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(211, 140);
-            this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txbCode);
             this.Controls.Add(this.label2);
@@ -135,6 +123,5 @@
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.TextBox txbCode;
 		private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button btnDelete;
     }
 }

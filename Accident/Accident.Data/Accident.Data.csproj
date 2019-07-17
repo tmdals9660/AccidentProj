@@ -128,6 +128,7 @@
     </None>
     <None Include="App.Config" />
     <None Include="bin\Debug\Accident.Data.dll.config" />
+    <None Include="ClassDiagram1.cd" />
     <None Include="obj\Debug\Accident.Data.csproj.CopyComplete" />
     <None Include="obj\Debug\Accident.Data.csproj.CoreCompileInputs.cache" />
     <None Include="obj\Debug\Accident.Data.csprojAssemblyReference.cache" />

@@ -26,5 +26,23 @@ namespace Accident.Data
 
             }
         }
+
+        public bool UserMakeCheck(Admin admin)
+        {
+            using (AccidentEntities context = DbContextFactory.Create())
+            {
+                var query = from x in context.Admins
+                            where x.AdminIdName.Contains(admin.AdminIdName)
+                            select x;
+
+                if (!query.Any())
+                {
+                    return true;
+                }
+
+                return false;
+
+            }
+        }
     }
 }

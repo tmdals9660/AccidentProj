@@ -1,4 +1,5 @@
 ﻿using Accident.Data;
+using Accident.Helpers;
 using Accident.Properties;
 using System;
 using System.Collections.Generic;
@@ -29,15 +30,14 @@ namespace Accident.From
             Admin admins = DB.Admin.LoginCheck(txbId.Text, txbPw.Text);
             if (admins != null)
             {
-                MessageBox.Show($"안녕하세요. {admins.AdminName.ToString()}님!" +
-                    $"\n로그인 되었습니다.");
+                FormHelper.LoginSucces(admins);
 
                 _form.ModeAdmin();
 
                 Close();
             }
-            else
-                MessageBox.Show("존재하지 않는 ID이거나\n비밀번호가 일치하지 않습니다.");
+            else FormHelper.LoginFail();
+               
         }
 
        
@@ -50,6 +50,35 @@ namespace Accident.From
         private void BtnSingUp_Click(object sender, EventArgs e)
         {
            
+        }
+
+        private void BtnLogin_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnLogin.PerformClick();
+                btnCancel.Focus();
+            }
+        }
+
+        private void TxbPw_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnLogin.PerformClick();
+                btnCancel.Focus();
+            }
+        }
+
+        private void TxbId_KeyUp(object sender, KeyEventArgs e)
+        {
+           
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnLogin.PerformClick();
+
+                btnCancel.Focus();
+            }
         }
     }
 }

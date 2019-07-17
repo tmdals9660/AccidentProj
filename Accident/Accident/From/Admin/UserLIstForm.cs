@@ -1,4 +1,5 @@
 ﻿using Accident.Data;
+using Accident.Helpers;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -40,7 +41,7 @@ namespace Accident.From
             if (e.KeyCode == Keys.Insert)
             {
                 Admin admin = new Admin();
-                AddAdminInfo form = new AddAdminInfo(admin);
+                AddAdminInfo form = new AddAdminInfo(admin, this);
                 form.Show();
 
             }
@@ -50,7 +51,13 @@ namespace Accident.From
 
                 if (admin == null) return;
 
-                DB.Admin.Delete(admin);
+                if (FormHelper.SureToDelete())
+                {
+                    DB.Admin.Delete(admin);
+                    Close();
+                }
+
+
             }
         }
     }
