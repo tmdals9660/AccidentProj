@@ -107,7 +107,7 @@ namespace Accident.Control
         {
             int? id = cbbCites.Enabled ? (int?)cbbCites.SelectedValue : null;
             DateTime? startDate = dateTimePicker1.Enabled ?
-                dateTimePicker1.Value : new DateTime(2017,12,31);
+                dateTimePicker1.Value : new DateTime(2011,12,31);
             DateTime? finishDate = dateTimePicker2.Enabled ?
                dateTimePicker2.Value : new DateTime(2019, 1, 1);
                      
