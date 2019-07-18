@@ -33,7 +33,7 @@ namespace Accident.From
 
         private void ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            bdsState.DataSource = DB.State.CityValues((int)cbbCity.SelectedValue);
+            ChangeCitiesIndex();
         }
 
         private void Label14_Click(object sender, EventArgs e)
@@ -50,9 +50,7 @@ namespace Accident.From
         {
 
             bdsCity.DataSource = DB.City.GetAll();
-            //MessageBox.Show($"{cbbCity.SelectedValue.ToString()}");
-            //bdsState.DataSource = DB.State.GetAll();
-            bdsState.DataSource = DB.State.CityValues((int)cbbCity.SelectedValue);
+            ChangeCitiesIndex();
             bdsAccidentFiled.DataSource = DB.AccidentFiled.GetAll();
             bdsAccidentType.DataSource = DB.AccidentType.GetAll();
             bdsViolation.DataSource = DB.Violation.GetAll();
@@ -62,6 +60,11 @@ namespace Accident.From
 
             DtpSetDay();
 
+        }
+
+        private void ChangeCitiesIndex()
+        {
+            bdsState.DataSource = DB.State.CityValues((int)cbbCity.SelectedValue);
         }
 
         private void BtnClose_Click(object sender, EventArgs e)
