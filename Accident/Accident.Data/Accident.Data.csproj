@@ -107,9 +107,6 @@
     <Compile Include="State.cs">
       <DependentUpon>Accident.tt</DependentUpon>
     </Compile>
-    <Compile Include="sysdiagram.cs">
-      <DependentUpon>Accident.tt</DependentUpon>
-    </Compile>
     <Compile Include="VictimType.cs">
       <DependentUpon>Accident.tt</DependentUpon>
     </Compile>

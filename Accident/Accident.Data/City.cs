@@ -18,6 +18,7 @@ namespace Accident.Data
         public City()
         {
             this.Incidents = new HashSet<Incident>();
+            this.States = new HashSet<State>();
         }
     
         public int CityId { get; set; }
@@ -25,5 +26,7 @@ namespace Accident.Data
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Incident> Incidents { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<State> States { get; set; }
     }
 }

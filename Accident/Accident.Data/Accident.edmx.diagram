@@ -4,26 +4,26 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="b6fc398357594c9cbeb94cd29171cf03" Name="Diagram1">
-        <EntityTypeShape EntityType="AccidentModel.AccidentFiled" Width="1.5" PointX="0.75" PointY="3.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="AccidentModel.AccidentType" Width="1.5" PointX="0.75" PointY="6.5" IsExpanded="true" />
+      <Diagram DiagramId="f05748b8eb0b479ab0a3e7c0b30e83aa" Name="Diagram1">
+        <EntityTypeShape EntityType="AccidentModel.AccidentFiled" Width="1.5" PointX="3" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="AccidentModel.AccidentType" Width="1.5" PointX="3" PointY="4.75" IsExpanded="true" />
         <EntityTypeShape EntityType="AccidentModel.Admin" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="AccidentModel.AttackerType" Width="1.5" PointX="0.75" PointY="8.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="AccidentModel.City" Width="1.5" PointX="0.75" PointY="11.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="AccidentModel.Incident" Width="1.5" PointX="3" PointY="1.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="AccidentModel.RoadForm" Width="1.5" PointX="0.75" PointY="13.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="AccidentModel.State" Width="1.5" PointX="0.75" PointY="15.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="AccidentModel.sysdiagram" Width="1.5" PointX="5.75" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="AccidentModel.VictimType" Width="1.5" PointX="0.75" PointY="18.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="AccidentModel.Violation" Width="1.5" PointX="0.75" PointY="20.5" IsExpanded="true" />
-        <AssociationConnector Association="AccidentModel.FK_Incident_AccidentFiled1" ManuallyRouted="false" />
-        <AssociationConnector Association="AccidentModel.FK_Incident_AccidentType1" ManuallyRouted="false" />
-        <AssociationConnector Association="AccidentModel.FK_Incident_AttackerType1" ManuallyRouted="false" />
-        <AssociationConnector Association="AccidentModel.FK_Incident_City" ManuallyRouted="false" />
-        <AssociationConnector Association="AccidentModel.FK_Incident_RoadForm1" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="AccidentModel.AttackerType" Width="1.5" PointX="3" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="AccidentModel.City" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AccidentModel.Incident" Width="1.5" PointX="5.25" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="AccidentModel.RoadForm" Width="1.5" PointX="3" PointY="14.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="AccidentModel.State" Width="1.5" PointX="3" PointY="11.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="AccidentModel.VictimType" Width="1.5" PointX="3" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AccidentModel.Violation" Width="1.5" PointX="3" PointY="19.125" IsExpanded="true" />
+        <AssociationConnector Association="AccidentModel.FK_Incident_AccidentFiled" ManuallyRouted="false" />
+        <AssociationConnector Association="AccidentModel.FK_Incident_AccidentType" ManuallyRouted="false" />
+        <AssociationConnector Association="AccidentModel.FK_Incident_AttackerType" ManuallyRouted="false" />
+        <AssociationConnector Association="AccidentModel.FK_Incident_City1" ManuallyRouted="false" />
+        <AssociationConnector Association="AccidentModel.FK_State_City" ManuallyRouted="false" />
+        <AssociationConnector Association="AccidentModel.FK_Incident_RoadForm" ManuallyRouted="false" />
         <AssociationConnector Association="AccidentModel.FK_Incident_State" ManuallyRouted="false" />
-        <AssociationConnector Association="AccidentModel.FK_Incident_VictimType1" ManuallyRouted="false" />
-        <AssociationConnector Association="AccidentModel.FK_Incident_Violation1" ManuallyRouted="false" />
+        <AssociationConnector Association="AccidentModel.FK_Incident_VictimType" ManuallyRouted="false" />
+        <AssociationConnector Association="AccidentModel.FK_Incident_Violation" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
