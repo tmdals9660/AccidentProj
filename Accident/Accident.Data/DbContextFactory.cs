@@ -41,7 +41,7 @@ namespace Accident.Data
 
         //public const string RawConnectionString = "data source=210.119.12.63;initial catalog=Accident;integrated security=True;";
 
-        public const string RawConnectionString = "data source=DESKTOP-EH3VH44;initial catalog=Accident;integrated security=True;";
+        public const string RawConnectionString = "data source=DESKTOP-ACVA1MU;initial catalog=Accident;integrated security=True;";
 
         private static string ConnectionString
         {
