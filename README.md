@@ -1,4 +1,4 @@
-# AccidentProj
+﻿# AccidentProj
 
 # **사망자발생 교통사고 조회 및 추가 프로그램**
 *공공데이터포털 2012~2018사망자발생교통사고 데이터 이용
@@ -17,6 +17,8 @@
  
  ## **3.프로그램 구조**
  
+![프로젝트구성](./image/프로젝트구성.JPG)
+
    본 프로그램은 하나의 솔루션에 두 개의 프로젝트로 구성되어있다. WinForm과 control들을 디자인하는 Accident프로젝트와 DB와 Data, Entity Framework가
   있는 Accident.Data프로젝트이다. 두 프로젝트는 참조 되어있다.
    
@@ -40,11 +42,22 @@
   
 ![5](./image/5.JPG)
 
-![자료추가](./image/자료추가.JPG)
- 
 ![추가](./image/추가.JPG)
   
 ![삭제](./image/삭제.JPG)
+
+![자료추가](./image/자료추가.JPG)
+
+![자료미입력](./image/자료추가미입력.JPG)
+
+![자료추가확인](./image/자료추가확인.JPG)
+
+![사고등록처리](./image/사고등록처리.JPG) 
+
+![추가데이터](./image/추가데이터.JPG) 
+
+![쿼리업로드](./image/쿼리업로드.JPG) 
+
       
 ![로그](./image/로그파일.JPG)
        
