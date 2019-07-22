@@ -151,7 +151,11 @@ namespace Accident.From
 
         private void DtpSetDay()
         {
-            txbDayOfWeeks.Text = dtpInsert.Value.ToString("dddd");
+            string str;
+
+            str = dtpInsert.Value.ToString("dddd");
+
+            txbDayOfWeeks.Text = str.Substring(0, str.Length - 2);
 
             int hour = dtpInsert.Value.Hour;
 
