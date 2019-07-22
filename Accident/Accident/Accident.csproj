@@ -93,52 +93,52 @@
     <Compile Include="Control\SearchSearchControl.Designer.cs">
       <DependentUpon>SearchSearchControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="From\Admin\AddAdminInfo.cs">
+    <Compile Include="Form\Admin\AddAdminInfo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="From\Admin\AddAdminInfo.Designer.cs">
+    <Compile Include="Form\Admin\AddAdminInfo.Designer.cs">
       <DependentUpon>AddAdminInfo.cs</DependentUpon>
     </Compile>
-    <Compile Include="From\Admin\UserListForm.cs">
+    <Compile Include="Form\Admin\UserListForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="From\Admin\UserListForm.Designer.cs">
+    <Compile Include="Form\Admin\UserListForm.Designer.cs">
       <DependentUpon>UserListForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="From\Feedback\FunctionPropose.cs">
+    <Compile Include="Form\Feedback\FunctionPropose.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="From\Feedback\FunctionPropose.Designer.cs">
+    <Compile Include="Form\Feedback\FunctionPropose.Designer.cs">
       <DependentUpon>FunctionPropose.cs</DependentUpon>
     </Compile>
-    <Compile Include="From\InsertForm.cs">
+    <Compile Include="Form\InsertForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="From\InsertForm.Designer.cs">
+    <Compile Include="Form\InsertForm.Designer.cs">
       <DependentUpon>InsertForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="From\LocationForm.cs">
+    <Compile Include="Form\LocationForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="From\LocationForm.Designer.cs">
+    <Compile Include="Form\LocationForm.Designer.cs">
       <DependentUpon>LocationForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="From\Admin\Login.cs">
+    <Compile Include="Form\Admin\Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="From\Admin\Login.Designer.cs">
+    <Compile Include="Form\Admin\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="From\MainForm.cs">
+    <Compile Include="Form\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="From\MainForm.Designer.cs">
+    <Compile Include="Form\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="From\SearchForm.cs">
+    <Compile Include="Form\SearchForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="From\SearchForm.Designer.cs">
+    <Compile Include="Form\SearchForm.Designer.cs">
       <DependentUpon>SearchForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Helpers\FormHelper.cs" />
@@ -156,28 +156,28 @@
     <EmbeddedResource Include="Control\SearchSearchControl.resx">
       <DependentUpon>SearchSearchControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="From\Admin\AddAdminInfo.resx">
+    <EmbeddedResource Include="Form\Admin\AddAdminInfo.resx">
       <DependentUpon>AddAdminInfo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="From\Admin\UserListForm.resx">
+    <EmbeddedResource Include="Form\Admin\UserListForm.resx">
       <DependentUpon>UserListForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="From\Feedback\FunctionPropose.resx">
+    <EmbeddedResource Include="Form\Feedback\FunctionPropose.resx">
       <DependentUpon>FunctionPropose.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="From\InsertForm.resx">
+    <EmbeddedResource Include="Form\InsertForm.resx">
       <DependentUpon>InsertForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="From\LocationForm.resx">
+    <EmbeddedResource Include="Form\LocationForm.resx">
       <DependentUpon>LocationForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="From\Admin\Login.resx">
+    <EmbeddedResource Include="Form\Admin\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="From\MainForm.resx">
+    <EmbeddedResource Include="Form\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="From\SearchForm.resx">
+    <EmbeddedResource Include="Form\SearchForm.resx">
       <DependentUpon>SearchForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="obj\Debug\Accident.Control.LocationInfoControl.resources" />
